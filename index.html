@@ -19,15 +19,10 @@
             max-width: 1200px; 
             margin: 0 auto; 
             padding: 20px; 
-            padding-top: 0; /* Compensar header flutuante */
         }
         
-        /* --- HEADER RESPONSIVO E FIXO --- */
         header { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            gap: 15px; 
+            display: flex; flex-direction: column; align-items: center; gap: 15px; 
             padding: 15px 20px; 
             background: rgba(21, 25, 43, 0.98); 
             border-bottom: 1px solid var(--border); 
@@ -38,73 +33,30 @@
             margin-bottom: 30px;
         }
         
-        h1 { 
-            margin: 0; 
-            color: var(--accent); 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            font-size: 1.8rem; 
-            text-shadow: 0 0 15px rgba(250, 204, 21, 0.3); 
-        }
+        h1 { margin: 0; color: var(--accent); text-transform: uppercase; letter-spacing: 3px; text-align: center; font-size: 2rem; text-shadow: 0 0 15px rgba(250, 204, 21, 0.3); }
         
-        .controls { 
-            display: flex; 
-            gap: 10px; 
-            justify-content: center; 
-            width: 100%; 
-            max-width: 800px;
-        }
+        .controls { display: flex; gap: 10px; justify-content: center; width: 100%; max-width: 800px; }
         
         input[type="text"], select, button { 
-            padding: 10px 15px; 
-            border-radius: 8px; 
-            border: 1px solid var(--border); 
-            font-size: 0.95rem; 
-            height: 42px; /* Altura unificada */
-            box-sizing: border-box;
+            padding: 10px 15px; border-radius: 8px; border: 1px solid var(--border); 
+            font-size: 0.95rem; height: 42px; box-sizing: border-box;
         }
         
-        input[type="text"] { 
-            background: #0f121f; 
-            color: white; 
-            flex-grow: 2; 
-        }
-        
-        select { 
-            background: #0f121f; 
-            color: white; 
-            cursor: pointer; 
-            flex-grow: 1;
-        }
+        input[type="text"] { background: #0f121f; color: white; flex-grow: 2; }
+        select { background: #0f121f; color: white; cursor: pointer; flex-grow: 1; }
         
         button { 
-            background: var(--accent); 
-            color: #000; 
-            font-weight: 800; 
-            cursor: pointer; 
-            text-transform: uppercase; 
-            white-space: nowrap;
-            flex-grow: 0;
-            transition: filter 0.2s;
+            background: var(--accent); color: #000; font-weight: 800; cursor: pointer; 
+            text-transform: uppercase; white-space: nowrap; flex-grow: 0; transition: filter 0.2s; 
         }
         button:hover { filter: brightness(1.1); }
         
-        /* --- ESTILOS ESPECÍFICOS PARA CELULAR --- */
+        /* Responsividade Mobile */
         @media (max-width: 600px) {
             header { padding: 10px; gap: 10px; }
             h1 { font-size: 1.4rem; }
-            
-            .controls { 
-                flex-direction: column; /* Empilha os controles */
-                gap: 8px; 
-            }
-            
-            input[type="text"], select, button {
-                width: 100%; /* Ocupa largura total */
-                font-size: 0.9rem; /* Texto um pouco menor */
-                padding: 8px;
-                height: 38px;
-            }
+            .controls { flex-direction: column; gap: 8px; }
+            input[type="text"], select, button { width: 100%; font-size: 0.9rem; padding: 8px; height: 38px; }
         }
 
         .alien-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding-bottom: 40px; }
@@ -114,6 +66,7 @@
             overflow: hidden; display: flex; flex-direction: column; 
             transition: transform 0.3s ease; position: relative; 
         }
+        .card:hover { transform: translateY(-8px); border-color: var(--accent); }
         
         .card-image-container { 
             width: 100%; height: 220px; overflow: hidden; position: relative; 
@@ -122,39 +75,37 @@
         
         .card-image { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
         
-        /* --- TÍTULO ALINHADO NA FAIXA BRANCA --- */
+        /* --- AJUSTE DE ALINHAMENTO (SUBIU MAIS) --- */
         .card-image-title { 
             position: absolute; 
-            top: 24px; /* Ajuste fino final */
+            top: 0; 
+            
+            /* Reduzi de 12px para 4px para subir o texto */
+            padding-top: 4px; 
+            
             left: 0;
             width: 100%; 
             text-align: center; 
             font-family: 'Impact', 'Arial Black', sans-serif; 
-            font-size: 1.5rem; /* Levemente menor para não tocar nas bordas */
+            font-size: 1.6rem; 
             color: #000; 
             text-transform: uppercase; 
             letter-spacing: 1px; 
             z-index: 10; 
-            padding: 0 40px; /* Margem segura */
+            padding-left: 35px; 
+            padding-right: 35px;
             box-sizing: border-box;
             
-            /* Contorno para garantir leitura */
             text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 
                          1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; 
             
             white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 
         }
         
-        /* No celular, ajusta o título da carta também */
         @media (max-width: 600px) {
-            .card-image-title {
-                font-size: 1.4rem;
-                top: 25px; 
-                padding: 0 30px;
-            }
-            .alien-grid {
-                grid-template-columns: 1fr; /* Uma coluna só no celular */
-            }
+            /* No mobile, talvez precise de um ajuste levemente diferente */
+            .card-image-title { font-size: 1.4rem; padding-top: 6px; padding-left: 25px; padding-right: 25px; }
+            .alien-grid { grid-template-columns: 1fr; }
         }
         
         .expansion-tag { 
