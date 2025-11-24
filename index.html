@@ -15,6 +15,7 @@
             --c-green: #22c55e; 
             --c-yellow: #eab308; 
             --c-red: #ef4444; 
+            --c-purple: #a855f7;
         }
         
         body { 
@@ -118,13 +119,16 @@
             width: 100%; height: 220px; overflow: hidden; position: relative; 
             background: #fff; border-bottom: 4px solid var(--accent); 
         }
+        /* Borda Roxa para Alternativos */
+        .card-image-container.alt-border { border-bottom-color: var(--c-purple); }
+
         .card-image { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
         
         /* Título do Alien na Faixa Branca */
         .card-image-title { 
             position: absolute; 
             top: 0; 
-            padding-top: 4px; /* Ajuste fino para centralizar na faixa */
+            padding-top: 4px; 
             left: 0; width: 100%; text-align: center; 
             font-family: 'Impact', 'Arial Black', sans-serif; 
             font-size: 1.6rem; color: #000; 
@@ -177,6 +181,51 @@
             text-align: justify; 
         }
         .history-text.show { display: block; }
+        
+        /* Botões de Ação (História e Flare) */
+        .action-btn { 
+            background: transparent; border: 1px solid var(--border); color: var(--text-muted); 
+            margin-top: 10px; width: 100%; padding: 8px; font-size: 0.8rem; cursor: pointer; 
+            border-radius: 6px; transition: all 0.2s;
+        }
+        .action-btn:hover { background: rgba(255,255,255,0.05); color: var(--text-main); border-color: var(--text-main); }
+        
+        /* Estilo Específico do Botão Flare */
+        .flare-btn {
+            border-color: var(--accent);
+            color: var(--accent);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .flare-btn:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        /* Áreas de Texto Expansíveis */
+        .expandable-text { 
+            display: none; margin-top: 10px; font-size: 0.85rem; 
+            padding: 10px; border-radius: 6px; text-align: justify;
+        }
+        .expandable-text.show { display: block; }
+        
+        /* Estilo da Área da Flare */
+        .flare-text {
+            background: rgba(250, 204, 21, 0.1);
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            color: #e2e8f0;
+        }
+        .flare-title {
+            color: var(--accent);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+            margin-top: 10px;
+            display: block;
+        }
+        .flare-title:first-child { margin-top: 0; }
+
     </style>
 </head>
 <body>
@@ -224,85 +273,62 @@
 <script>window.aliensData = [];</script>
 
 <script src="images.js"></script>
-<script src="aliens_a.js"></script>
-<script src="aliens_b.js"></script>
-<script src="aliens_c.js"></script>
-<script src="aliens_d.js"></script>
-<script src="aliens_e.js"></script>
-<script src="aliens_f.js"></script>
-<script src="aliens_g.js"></script>
-<script src="aliens_h.js"></script>
-<script src="aliens_i.js"></script>
-<script src="aliens_j.js"></script>
-<script src="aliens_k.js"></script>
-<script src="aliens_l.js"></script>
-<script src="aliens_m.js"></script>
-<script src="aliens_n.js"></script>
-<script src="aliens_o.js"></script>
-<script src="aliens_p.js"></script>
-<script src="aliens_q.js"></script>
-<script src="aliens_r.js"></script>
-<script src="aliens_s.js"></script>
-<script src="aliens_t.js"></script>
-<script src="aliens_u.js"></script>
-<script src="aliens_v.js"></script>
-<script src="aliens_w.js"></script>
-<script src="aliens_x.js"></script>
-<script src="aliens_y.js"></script>
-<script src="aliens_z.js"></script>
+<script src="aliens_base_game.js"></script>
+<script src="aliens_cosmic_incursion.js"></script>
+<script src="aliens_cosmic_conflict.js"></script>
+<script src="aliens_cosmic_alliance.js"></script>
+<script src="aliens_cosmic_storm.js"></script>
+<script src="aliens_cosmic_dominion.js"></script>
+<script src="aliens_cosmic_eons.js"></script>
+<script src="aliens_cosmic_odyssey.js"></script>
+<script src="aliens_expansion.js"></script>
 
 <script>
     let currentLang = 'pt';
 
-    // --- METADADOS OFICIAIS FFG ---
+    // --- METADADOS ATUALIZADOS ---
     const alienMetadata = {
-        // BASE GAME (50)
+        // --- COSMIC ENCOUNTER (FFG / BASE) ---
         amoeba: { color: 'yellow', comp: false, exp: 'Base Game' },
         anti_matter: { color: 'red', comp: false, exp: 'Base Game' },
         barbarian: { color: 'yellow', comp: false, exp: 'Base Game' },
         calculator: { color: 'yellow', comp: false, exp: 'Base Game' },
         chosen: { color: 'green', comp: false, exp: 'Base Game' },
-        chronos: { color: 'red', comp: false, exp: 'Base Game' },
         citadel: { color: 'green', comp: true, exp: 'Base Game' },
         clone: { color: 'green', comp: false, exp: 'Base Game' },
         cudgel: { color: 'green', comp: false, exp: 'Base Game' },
+        demon: { color: 'red', comp: false, exp: 'Base Game' },
         dictator: { color: 'yellow', comp: false, exp: 'Base Game' },
-        diplomat: { color: 'green', comp: false, exp: 'Base Game' },
         fido: { color: 'green', comp: false, exp: 'Base Game' },
         filch: { color: 'green', comp: false, exp: 'Base Game' },
         fodder: { color: 'green', comp: false, exp: 'Base Game' },
         gambler: { color: 'yellow', comp: false, exp: 'Base Game' },
-        ghoul: { color: 'yellow', comp: false, exp: 'Base Game' },
         grudge: { color: 'yellow', comp: true, exp: 'Base Game' },
+        hacker: { color: 'green', comp: false, exp: 'Base Game' },
         hate: { color: 'yellow', comp: false, exp: 'Base Game' },
         healer: { color: 'green', comp: false, exp: 'Base Game' },
         human: { color: 'green', comp: false, exp: 'Base Game' },
         kamikaze: { color: 'green', comp: false, exp: 'Base Game' },
-        klutz: { color: 'green', comp: false, exp: 'Base Game' },
-        laser: { color: 'green', comp: false, exp: 'Base Game' },
         loser: { color: 'green', comp: false, exp: 'Base Game' },
         machine: { color: 'green', comp: false, exp: 'Base Game' },
         macron: { color: 'green', comp: false, exp: 'Base Game' },
-        magician: { color: 'red', comp: false, exp: 'Base Game' },
         masochist: { color: 'red', comp: false, exp: 'Base Game' },
         mind: { color: 'green', comp: false, exp: 'Base Game' },
         mirror: { color: 'yellow', comp: false, exp: 'Base Game' },
         miser: { color: 'yellow', comp: true, exp: 'Base Game' },
-        mite: { color: 'green', comp: false, exp: 'Base Game' },
+        mite: { color: 'yellow', comp: false, exp: 'Base Game' },
         mutant: { color: 'green', comp: false, exp: 'Base Game' },
         observer: { color: 'green', comp: false, exp: 'Base Game' },
-        oracle: { color: 'green', comp: false, exp: 'Base Game' },
-        pacifist: { color: 'green', comp: false, exp: 'Base Game' },
-        parasite: { color: 'green', comp: false, exp: 'Base Game' },
+        oracle: { color: 'yellow', comp: false, exp: 'Base Game' },
+        pacifist: { color: 'yellow', comp: false, exp: 'Base Game' },
+        parasite: { color: 'yellow', comp: false, exp: 'Base Game' },
         philanthropist: { color: 'green', comp: false, exp: 'Base Game' },
-        reborn: { color: 'green', comp: false, exp: 'Base Game' },
         reincarnator: { color: 'red', comp: false, exp: 'Base Game' },
         remora: { color: 'green', comp: false, exp: 'Base Game' },
         reserve: { color: 'green', comp: false, exp: 'Base Game' },
         shadow: { color: 'red', comp: false, exp: 'Base Game' },
-        sniveler: { color: 'yellow', comp: false, exp: 'Base Game' },
         sorcerer: { color: 'red', comp: false, exp: 'Base Game' },
-        spiff: { color: 'green', comp: false, exp: 'Base Game' },
+        spiff: { color: 'yellow', comp: false, exp: 'Base Game' },
         tick_tock: { color: 'red', comp: true, exp: 'Base Game' },
         trader: { color: 'green', comp: false, exp: 'Base Game' },
         tripler: { color: 'green', comp: false, exp: 'Base Game' },
@@ -313,167 +339,237 @@
         warpish: { color: 'yellow', comp: false, exp: 'Base Game' },
         warrior: { color: 'green', comp: true, exp: 'Base Game' },
         will: { color: 'yellow', comp: false, exp: 'Base Game' },
-        worm: { color: 'red', comp: false, exp: 'Base Game' },
         zombie: { color: 'yellow', comp: false, exp: 'Base Game' },
 
-        // INCURSION (20)
-        bulwark: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
-        explorer: { color: 'green', comp: true, exp: 'Cosmic Incursion' },
+        // --- COSMIC INCURSION ---
+        bully: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
+        chronos: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
+        cryo: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' },
+        deuce: { color: 'green', comp: true, exp: 'Cosmic Incursion' },
+        disease: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
+        ethic: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' },
         fungus: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' },
-        glutton: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
+        fury: { color: 'red', comp: true, exp: 'Cosmic Incursion' },
+        genius: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
+        ghoul: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' },
         guerrilla: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
-        hacker: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
-        invader: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
+        leviathan: { color: 'red', comp: true, exp: 'Cosmic Incursion' },
         locust: { color: 'red', comp: true, exp: 'Cosmic Incursion' },
+        magician: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
         mercenary: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
         merchant: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
-        mimic: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
         plant: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
         seeker: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
-        sting: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' },
-        surgeon: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' },
+        sniveler: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' },
         symbiote: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' },
-        voyager: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' },
-        warhawk: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
-        winner: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
-        wormhole: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
-        yin_yang: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' },
-        
-        // CONFLICT (20)
-        bully: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
-        coordinator: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' },
-        disease: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
+
+        // --- COSMIC CONFLICT ---
+        cavalry: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
+        changeling: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
+        empath: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
         filth: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
-        fury: { color: 'red', comp: true, exp: 'Cosmic Conflict' },
+        glutton: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
+        graviton: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' },
         industrialist: { color: 'green', comp: true, exp: 'Cosmic Conflict' },
+        invader: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
         lunatic: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
-        poison: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
+        mimic: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
         prophet: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
-        reactor: { color: 'yellow', comp: true, exp: 'Cosmic Conflict' },
         relic: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
         saboteur: { color: 'yellow', comp: true, exp: 'Cosmic Conflict' },
+        sadist: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
+        siren: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
         the_claw: { color: 'red', comp: true, exp: 'Cosmic Conflict' },
         trickster: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' },
-        
-        // ALLIANCE (20)
+        visionary: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
+        warhawk: { color: 'red', comp: false, exp: 'Cosmic Conflict' },
+        xenophile: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
+
+        // --- COSMIC ALLIANCE ---
+        animal: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
+        bandit: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
         butler: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
-        cavalry: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
+        chrysalis: { color: 'yellow', comp: true, exp: 'Cosmic Alliance' },
+        crystal: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
         cyborg: { color: 'red', comp: true, exp: 'Cosmic Alliance' },
-        dervish: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' },
-        evil_twin: { color: 'red', comp: true, exp: 'Cosmic Alliance' },
+        extortionist: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' },
         general: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
         gorgon: { color: 'red', comp: false, exp: 'Cosmic Alliance' },
-        hunger: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' },
+        horde: { color: 'yellow', comp: true, exp: 'Cosmic Alliance' },
+        lightning: { color: 'yellow', comp: true, exp: 'Cosmic Alliance' },
+        poison: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
         pygmy: { color: 'yellow', comp: true, exp: 'Cosmic Alliance' },
+        reborn: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
         remote: { color: 'green', comp: true, exp: 'Cosmic Alliance' },
+        sapient: { color: 'yellow', comp: true, exp: 'Cosmic Alliance' },
         schizoid: { color: 'red', comp: true, exp: 'Cosmic Alliance' },
         skeptic: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' },
-        xenophile: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
+        sting: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' },
+        winner: { color: 'green', comp: false, exp: 'Cosmic Alliance' },
 
-        // STORM (25)
-        booster: { color: 'yellow', comp: false, exp: 'Cosmic Storm' },
+        // --- COSMIC STORM ---
+        arcade: { color: 'yellow', comp: true, exp: 'Cosmic Storm' },
         brute: { color: 'yellow', comp: false, exp: 'Cosmic Storm' },
-        cryo: { color: 'yellow', comp: true, exp: 'Cosmic Storm' },
-        fire_dancer: { color: 'yellow', comp: true, exp: 'Cosmic Storm' },
-        graviton: { color: 'yellow', comp: false, exp: 'Cosmic Storm' },
-        horde: { color: 'yellow', comp: true, exp: 'Cosmic Storm' },
-        lightning: { color: 'yellow', comp: true, exp: 'Cosmic Storm' },
+        bulwark: { color: 'green', comp: false, exp: 'Cosmic Storm' },
+        converter: { color: 'green', comp: false, exp: 'Cosmic Storm' },
+        coordinator: { color: 'yellow', comp: false, exp: 'Cosmic Storm' },
+        dervish: { color: 'yellow', comp: false, exp: 'Cosmic Storm' },
+        grumpus: { color: 'yellow', comp: false, exp: 'Cosmic Storm' },
         mouth: { color: 'red', comp: true, exp: 'Cosmic Storm' },
+        neighbor: { color: 'green', comp: false, exp: 'Cosmic Storm' },
+        outlaw: { color: 'yellow', comp: false, exp: 'Cosmic Storm' },
+        patriot: { color: 'green', comp: false, exp: 'Cosmic Storm' },
+        phantasm: { color: 'green', comp: false, exp: 'Cosmic Storm' },
+        porcupine: { color: 'green', comp: false, exp: 'Cosmic Storm' },
+        roach: { color: 'yellow', comp: true, exp: 'Cosmic Storm' },
+        scavenger: { color: 'green', comp: false, exp: 'Cosmic Storm' },
         sloth: { color: 'red', comp: true, exp: 'Cosmic Storm' },
+        sneak: { color: 'green', comp: false, exp: 'Cosmic Storm' },
         squee: { color: 'green', comp: false, exp: 'Cosmic Storm' },
         swindler: { color: 'red', comp: true, exp: 'Cosmic Storm' },
         sycophant: { color: 'yellow', comp: true, exp: 'Cosmic Storm' },
         tide: { color: 'yellow', comp: true, exp: 'Cosmic Storm' },
         tyrant: { color: 'red', comp: true, exp: 'Cosmic Storm' },
         vox: { color: 'green', comp: false, exp: 'Cosmic Storm' },
+        worm: { color: 'red', comp: false, exp: 'Cosmic Storm' },
+        wormhole: { color: 'red', comp: false, exp: 'Cosmic Storm' },
 
-        // DOMINION (30)
+        // --- COSMIC DOMINION ---
+        ace: { color: 'red', comp: false, exp: 'Cosmic Dominion' },
         alchemist: { color: 'red', comp: false, exp: 'Cosmic Dominion' },
-        anarchist: { color: 'red', comp: true, exp: 'Cosmic Dominion' },
+        angler: { color: 'green', comp: false, exp: 'Cosmic Dominion' },
+        aristocrat: { color: 'red', comp: false, exp: 'Cosmic Dominion' },
         bride: { color: 'green', comp: false, exp: 'Cosmic Dominion' },
         daredevil: { color: 'green', comp: false, exp: 'Cosmic Dominion' },
-        deuce: { color: 'green', comp: true, exp: 'Cosmic Dominion' },
+        diplomat: { color: 'green', comp: false, exp: 'Cosmic Dominion' },
+        doppelganger: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' },
         engineer: { color: 'red', comp: true, exp: 'Cosmic Dominion' },
+        explorer: { color: 'green', comp: true, exp: 'Cosmic Dominion' },
         greenhorn: { color: 'green', comp: false, exp: 'Cosmic Dominion' },
+        host: { color: 'red', comp: true, exp: 'Cosmic Dominion' },
         joker: { color: 'red', comp: true, exp: 'Cosmic Dominion' },
+        judge: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' },
+        laser: { color: 'green', comp: false, exp: 'Cosmic Dominion' },
+        lizard: { color: 'red', comp: true, exp: 'Cosmic Dominion' },
+        love: { color: 'green', comp: false, exp: 'Cosmic Dominion' },
         mesmer: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' },
-        outlaw: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' },
+        mirage: { color: 'red', comp: false, exp: 'Cosmic Dominion' },
+        muckraker: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' },
+        pentaform: { color: 'red', comp: true, exp: 'Cosmic Dominion' },
+        pickpocket: { color: 'green', comp: false, exp: 'Cosmic Dominion' },
+        pirate: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' },
         quartermaster: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' },
+        reactor: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' },
         tourist: { color: 'green', comp: true, exp: 'Cosmic Dominion' },
+        usurper: { color: 'red', comp: false, exp: 'Cosmic Dominion' },
+        voyager: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' },
         whirligig: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' },
+        yin_yang: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' },
 
-        // EONS (30)
-        ace: { color: 'red', comp: false, exp: 'Cosmic Eons' },
+        // --- COSMIC EONS ---
+        ai: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
         alien: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
+        anarchist: { color: 'red', comp: true, exp: 'Cosmic Eons' },
+        architect: { color: 'green', comp: false, exp: 'Cosmic Eons' },
         assistant: { color: 'green', comp: true, exp: 'Cosmic Eons' },
         bleeding_heart: { color: 'green', comp: false, exp: 'Cosmic Eons' },
         cloak: { color: 'green', comp: false, exp: 'Cosmic Eons' },
         coward: { color: 'green', comp: false, exp: 'Cosmic Eons' },
         crusher: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
         emperor: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
-        grumpus: { color: 'yellow', comp: false, exp: 'Cosmic Eons' },
-        host: { color: 'red', comp: true, exp: 'Cosmic Eons' },
+        evil_twin: { color: 'red', comp: true, exp: 'Cosmic Eons' },
+        fire_dancer: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
+        hunger: { color: 'yellow', comp: false, exp: 'Cosmic Eons' },
         hypochondriac: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
         klutz: { color: 'green', comp: false, exp: 'Cosmic Eons' },
         maven: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
         moocher: { color: 'red', comp: true, exp: 'Cosmic Eons' },
-        muckraker: { color: 'yellow', comp: false, exp: 'Cosmic Eons' },
         multitude: { color: 'red', comp: true, exp: 'Cosmic Eons' },
         nanny: { color: 'green', comp: true, exp: 'Cosmic Eons' },
         neighbor: { color: 'green', comp: false, exp: 'Cosmic Eons' },
         nightmare: { color: 'red', comp: true, exp: 'Cosmic Eons' },
         oligarch: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
+        pack_rat: { color: 'green', comp: false, exp: 'Cosmic Eons' },
         particle: { color: 'red', comp: true, exp: 'Cosmic Eons' },
         peddler: { color: 'green', comp: true, exp: 'Cosmic Eons' },
         perfectionist: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
         porcupine: { color: 'green', comp: false, exp: 'Cosmic Eons' },
         pretender: { color: 'red', comp: false, exp: 'Cosmic Eons' },
         sheriff: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
+        surgeon: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
         the_cult: { color: 'red', comp: true, exp: 'Cosmic Eons' },
         tortoise: { color: 'yellow', comp: true, exp: 'Cosmic Eons' },
 
-        // ODYSSEY
-        ai: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
-        angler: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
-        animal: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
-        arcade: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
-        architect: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
-        demon: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
-        
-        // EXTRAS/CORREÇÕES
-        lizard: { color: 'red', comp: true, exp: 'Cosmic Incursion' },
-        mirage: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
-        changeling: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
-        chrysalis: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' },
-        converter: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
-        crystal: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
-        doppelganger: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' },
-        ethic: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' },
-        extortionist: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' },
-        patriot: { color: 'green', comp: true, exp: 'Cosmic Incursion' },
-        pentaform: { color: 'red', comp: true, exp: 'Cosmic Incursion' },
-        phantasm: { color: 'green', comp: false, exp: 'Base Game' },
-        pirate: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' },
-        siren: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
-        sneak: { color: 'green', comp: false, exp: 'Cosmic Incursion' },
-        usurper: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
-        visionary: { color: 'red', comp: false, exp: 'Cosmic Incursion' },
-        voyager: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }
+        // --- COSMIC ODYSSEY ---
+        assessor: { color: 'green', comp: true, exp: 'Cosmic Odyssey' },
+        aura: { color: 'green', comp: true, exp: 'Cosmic Odyssey' },
+        boomerang: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
+        booster: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' },
+        brute_alternate: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
+        bubble: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' },
+        cosmos: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
+        daredevil_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' },
+        decoy: { color: 'green', comp: true, exp: 'Cosmic Odyssey' },
+        delegator: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' },
+        demon_alternate: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
+        dragon: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
+        extractor: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
+        force: { color: 'red', comp: false, exp: 'Cosmic Odyssey' },
+        geek: { color: 'green', comp: true, exp: 'Cosmic Odyssey' },
+        gremlin: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
+        grumpus_alternate: { color: 'red', comp: false, exp: 'Cosmic Odyssey' },
+        guardian: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
+        hurtz: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
+        inferno: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
+        insect: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
+        lemming: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' },
+        lloyd: { color: 'green', comp: true, exp: 'Cosmic Odyssey' },
+        locust_alternate: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
+        magnet: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
+        masochist_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' },
+        micron_alternate: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
+        negator: { color: 'green', comp: true, exp: 'Cosmic Odyssey' },
+        perfectionist_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
+        phantom: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
+        sadist_alternate: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' },
+        schizoid_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
+        silencer: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
+        tentacle: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
+        the_meek: { color: 'red', comp: false, exp: 'Cosmic Odyssey' },
+        throwback: { color: 'green', comp: false, exp: 'Cosmic Odyssey' },
+        vector: { color: 'green', comp: true, exp: 'Cosmic Odyssey' },
+        void_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
+        witch: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
+        wrack: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' },
+        zilch: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
+        zombie_alternate: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }
     };
     
     function enrichAlienData() {
         window.aliensData.forEach(alien => {
-            const meta = alienMetadata[alien.id];
+            // Normaliza ID (remove sufixos de Alternate se necessário para buscar, 
+            // mas aqui mapeamos os alternativos diretamente no alienMetadata)
+            let meta = alienMetadata[alien.id];
+            
+            if(!meta) {
+                 // Tenta achar a chave ignorando case
+                 const key = Object.keys(alienMetadata).find(k => k.toLowerCase() === alien.id.toLowerCase());
+                 if(key) meta = alienMetadata[key];
+            }
+
             if (meta) {
+                // Sobrescreve as propriedades com as do metadado oficial
                 alien.alert = meta.color;
                 alien.hasComponents = meta.comp;
                 alien.expansion = meta.exp; 
             } else {
-                alien.alert = 'green';
-                alien.hasComponents = false;
-                alien.expansion = 'Base Game';
+                // Fallback
+                if(!alien.alert) alien.alert = 'green';
+                if(alien.hasComponents === undefined) alien.hasComponents = false;
+                if(!alien.expansion) alien.expansion = 'Base Game';
             }
 
+            // Detecta Setup
             const ptPower = alien.power.pt || "";
             const enPower = alien.power.en || "";
             if (ptPower.includes("Preparação de Jogo:") || ptPower.includes("Game Setup:") || enPower.includes("Game Setup:")) {
@@ -498,6 +594,18 @@
         }
         updateExpansionCounts();
         filterAliens();
+    }
+    
+    function toggleFlare(btn) {
+        const flareText = btn.nextElementSibling;
+        flareText.classList.toggle('show');
+        const isPT = currentLang === 'pt';
+        
+        if (flareText.classList.contains('show')) {
+            btn.innerText = isPT ? 'Esconder Flare' : 'Hide Flare';
+        } else {
+            btn.innerText = isPT ? 'Ver Flare' : 'View Flare';
+        }
     }
 
     function getAlienImage(alienId) {
@@ -592,6 +700,9 @@
             const card = document.createElement('div');
             card.className = 'card';
             
+            const isAlternate = alien.id.toLowerCase().includes('_alternate');
+            const borderClass = isAlternate ? ' alt-border' : '';
+
             const imageUrl = getAlienImage(alien.id);
             const name = alien.name[currentLang] || alien.name.pt;
             const summary = alien.summary[currentLang] || alien.summary.pt;
@@ -614,8 +725,26 @@
                 akaField = `<div class="aka-info">Também conhecido como: <strong>${alien.aka}</strong></div>`;
             }
 
+            let flareHtml = '';
+            if (alien.flare) {
+                const wildText = alien.flare.wild[currentLang];
+                const superText = alien.flare.super[currentLang];
+                const btnText = currentLang === 'pt' ? 'Ver Flare' : 'View Flare';
+
+                flareHtml = `
+                    <button class="action-btn flare-btn" onclick="toggleFlare(this)">${btnText}</button>
+                    <div class="expandable-text flare-text">
+                        <span class="flare-title">Wild</span>
+                        <p>${wildText}</p>
+                        <div style="margin-top:10px;"></div>
+                        <span class="flare-title">Super</span>
+                        <p>${superText}</p>
+                    </div>
+                `;
+            }
+
             card.innerHTML = `
-                <div class="card-image-container">
+                <div class="card-image-container${borderClass}">
                     <img src="${imageUrl}" alt="${name}" class="card-image">
                     <div class="card-image-title">${name}</div>
                     <div class="expansion-tag">${alien.expansion}</div>
@@ -625,10 +754,11 @@
                     ${akaField}
                     <div class="power-summary">${summary}</div>
                     <div class="power-block">${powerText}</div>
-                    <button class="history-btn" onclick="toggleHistory(this)">
+                    ${flareHtml}
+                    <button class="action-btn history-btn" onclick="toggleHistory(this)">
                         ${currentLang === 'pt' ? 'Ver História' : 'Show History'}
                     </button>
-                    <div class="history-text">${history}</div>
+                    <div class="expandable-text history-text">${history}</div>
                 </div>
             `;
             grid.appendChild(card);

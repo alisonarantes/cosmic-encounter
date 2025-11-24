@@ -1,4 +1,5 @@
 window.alienImages = {
+    // --- BASE GAME & ANTERIORES (Mantive os links antigos ou locais) ---
     ACE: "img/ace.jpg",
     AI: "img/ai.jpg",
     ALCHEMIST: "img/alchemist.jpg",
@@ -195,5 +196,50 @@ window.alienImages = {
     WORMHOLE: "img/wormhole.jpg",
     XENOPHILE: "img/xenophile.jpg",
     YIN_YANG: "img/yin_yang.jpg",
-    ZOMBIE: "img/zombie.jpg"
+    ZOMBIE: "img/zombie.jpg",
+
+    // --- COSMIC ODYSSEY (Novos - Devem estar na pasta img/) ---
+    ASSESSOR: "img/assessor.jpg",
+    AURA: "img/aura.jpg",
+    BOOMERANG: "img/boomerang.jpg",
+    BUBBLE: "img/bubble.jpg",
+    COSMOS: "img/cosmos.jpg",
+    DECOY: "img/decoy.jpg",
+    DELEGATOR: "img/delegator.jpg",
+    DRAGON: "img/dragon.jpg",
+    EXTRACTOR: "img/extractor.jpg",
+    FORCE: "img/force.jpg",
+    GEEK: "img/geek.jpg",
+    GREMLIN: "img/gremlin.jpg",
+    GUARDIAN: "img/guardian.jpg",
+    HURTZ: "img/hurtz.jpg",
+    INFERNO: "img/inferno.jpg",
+    INSECT: "img/insect.jpg",
+    LEMMING: "img/lemming.jpg",
+    LLOYD: "img/lloyd.jpg",
+    MAGNET: "img/magnet.jpg",
+    NEGATOR: "img/negator.jpg",
+    PHANTOM: "img/phantom.jpg",
+    SILENCER: "img/silencer.jpg",
+    TENTACLE: "img/tentacle.jpg",
+    THE_MEEK: "img/the_meek.jpg",
+    THROWBACK: "img/throwback.jpg",
+    VECTOR: "img/vector.jpg",
+    WITCH: "img/witch.jpg",
+    WRACK: "img/wrack.jpg",
+    ZILCH: "img/zilch.jpg",
+
+    // --- ALTERNATE TIMELINE (Variantes) ---
+    BRUTE_ALTERNATE: "img/brute.jpg",
+    DAREDEVIL_ALTERNATE: "img/daredevil.jpg",
+    DEMON_ALTERNATE: "img/demon.jpg",
+    GRUMPUS_ALTERNATE: "img/grumpus.jpg",
+    LOCUST_ALTERNATE: "img/locust.jpg",
+    MASOCHIST_ALTERNATE: "img/masochist.jpg",
+    MICRON_ALTERNATE: "img/micron.jpg",
+    PERFECTIONIST_ALTERNATE: "img/perfectionist.jpg",
+    SADIST_ALTERNATE: "img/sadist.jpg",
+    SCHIZOID_ALTERNATE: "img/schizoid.jpg",
+    VOID_ALTERNATE: "img/void.jpg",
+    ZOMBIE_ALTERNATE: "img/zombie.jpg"
 };
