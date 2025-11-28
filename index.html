@@ -67,6 +67,29 @@
             flex-wrap: wrap;
         }
 
+        .search-wrapper {
+            position: relative;
+            display: flex;
+            flex: 2;
+            min-width: 200px;
+        }
+
+        .clear-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #94a3b8;
+            font-size: 1.2rem;
+            display: none;
+            user-select: none;
+        }
+
+        .clear-icon:hover {
+            color: white;
+        }
+
         input[type="text"],
         select,
         button {
@@ -81,7 +104,7 @@
         input[type="text"] {
             background: #0f121f;
             color: white;
-            flex: 2;
+            width: 100%;
             min-width: 200px;
         }
 
@@ -440,7 +463,10 @@
         <h1>Cosmic Encounter</h1>
 
         <div class="controls-row">
-            <input type="text" id="searchInput" placeholder="Buscar alien..." onkeyup="filterAliens()">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Buscar alien..." onkeyup="filterAliens()">
+                <span id="clearSearch" class="clear-icon" onclick="clearSearch()">×</span>
+            </div>
             <select id="expansionFilter" onchange="filterAliens()">
                 <option value="all">Todas as Expansões</option>
                 <option value="Base Game">Base Game</option>
@@ -458,7 +484,7 @@
 
         <div class="filters-row">
             <div class="filter-group">
-                <span class="filter-label">Alert:</span>
+                <span class="filter-label" id="labelAlert">Dificuldade:</span>
                 <label class="checkbox-label"><input type="checkbox" class="cb-green" value="green" checked
                         onchange="filterAliens()"> 🟢</label>
                 <label class="checkbox-label"><input type="checkbox" class="cb-yellow" value="yellow" checked
@@ -469,9 +495,9 @@
             <div class="filter-group" style="border-left: 1px solid var(--border); padding-left: 15px;">
                 <span class="filter-label">Extras:</span>
                 <label class="checkbox-label" title="Com Preparação"><input type="checkbox" id="checkSetup"
-                        onchange="filterAliens()"> ⚙️ Setup</label>
+                        onchange="filterAliens()"> ⚙️ <span id="labelSetup">Preparação</span></label>
                 <label class="checkbox-label" title="Com Componentes"><input type="checkbox" id="checkComponents"
-                        onchange="filterAliens()"> 📦 Tokens</label>
+                        onchange="filterAliens()"> 📦 <span id="labelTokens">Fichas</span></label>
             </div>
         </div>
     </header>
@@ -557,12 +583,22 @@
             const btn = document.getElementById('langBtn');
             const input = document.getElementById('searchInput');
 
+            const labelAlert = document.getElementById('labelAlert');
+            const labelSetup = document.getElementById('labelSetup');
+            const labelTokens = document.getElementById('labelTokens');
+
             if (currentLang === 'pt') {
                 btn.innerText = "🇺🇸 English";
                 input.placeholder = "Buscar alien...";
+                labelAlert.innerText = "Dificuldade:";
+                labelSetup.innerText = "Preparação";
+                labelTokens.innerText = "Fichas";
             } else {
                 btn.innerText = "🇧🇷 Português";
                 input.placeholder = "Search alien...";
+                labelAlert.innerText = "Difficulty:";
+                labelSetup.innerText = "Setup";
+                labelTokens.innerText = "Tokens";
             }
             updateExpansionCounts();
             filterAliens();
@@ -620,8 +656,23 @@
             }
         }
 
+        function clearSearch() {
+            const input = document.getElementById('searchInput');
+            input.value = '';
+            input.focus();
+            filterAliens();
+        }
+
         function filterAliens() {
             const textTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            const clearBtn = document.getElementById('clearSearch');
+            if (textTerm.length > 0) {
+                clearBtn.style.display = 'block';
+            } else {
+                clearBtn.style.display = 'none';
+            }
+
             const expansionTerm = document.getElementById('expansionFilter').value;
 
             const showGreen = document.querySelector('.cb-green').checked;
