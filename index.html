@@ -373,8 +373,15 @@
         });
 
         const filtered = sortedAliens.filter(alien => {
-            const name = alien.name[currentLang] || alien.name.pt;
-            const matchesText = name.toLowerCase().includes(textTerm);
+            const namePT = (alien.name.pt || "").toLowerCase();
+            const nameEN = (alien.name.en || "").toLowerCase();
+            const aka = (alien.aka || "").toLowerCase();
+            const id = (alien.id || "").toLowerCase();
+
+            const matchesText = namePT.includes(textTerm) || 
+                                nameEN.includes(textTerm) || 
+                                aka.includes(textTerm) || 
+                                id.includes(textTerm);
             
             let matchesExpansion = false;
             if (expansionTerm === 'all') {
