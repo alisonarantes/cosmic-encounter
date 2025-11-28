@@ -1,460 +1,729 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmic Encounter Database</title>
     <style>
-        :root { 
-            --bg-color: #0b0d17; 
-            --card-bg: #15192b; 
-            --text-main: #e0e6ed; 
-            --text-muted: #94a3b8; 
-            --accent: #facc15; 
-            --border: #2d3748; 
-            --c-green: #22c55e; 
-            --c-yellow: #eab308; 
-            --c-red: #ef4444; 
+        :root {
+            --bg-color: #0b0d17;
+            --card-bg: #15192b;
+            --text-main: #e0e6ed;
+            --text-muted: #94a3b8;
+            --accent: #facc15;
+            --border: #2d3748;
+            --c-green: #22c55e;
+            --c-yellow: #eab308;
+            --c-red: #ef4444;
             --c-purple: #a855f7;
         }
-        
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: var(--bg-color); 
-            color: var(--text-main); 
-            margin: 0; 
-            padding: 0; 
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
         }
-        
-        .container { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 20px; 
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
             padding-top: 0;
         }
-        
-        header { 
-            display: flex; flex-direction: column; align-items: center; gap: 15px; 
-            padding: 15px 20px; 
-            background: rgba(21, 25, 43, 0.98); 
-            border-bottom: 1px solid var(--border); 
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); 
-            position: sticky; top: 0; z-index: 1000; 
-            margin-bottom: 20px; 
-        }
-        
-        h1 { 
-            margin: 0; 
-            color: var(--accent); 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            font-size: 1.8rem; 
-            text-shadow: 0 0 15px rgba(250, 204, 21, 0.3); 
-        }
-        
-        .controls-row { 
-            display: flex; gap: 10px; justify-content: center; 
-            width: 100%; max-width: 900px; flex-wrap: wrap; 
-        }
-        
-        input[type="text"], select, button { 
-            padding: 8px 12px; border-radius: 6px; 
-            border: 1px solid var(--border); 
-            font-size: 0.95rem; height: 40px; 
-            box-sizing: border-box; 
-        }
-        
-        input[type="text"] { background: #0f121f; color: white; flex: 2; min-width: 200px; }
-        select { background: #0f121f; color: white; cursor: pointer; flex: 1; min-width: 150px; }
-        
-        button { 
-            background: var(--accent); color: #000; font-weight: 800; 
-            cursor: pointer; text-transform: uppercase; white-space: nowrap; 
-            flex: 0; transition: filter 0.2s; 
-        }
-        button:hover { filter: brightness(1.1); }
 
-        .filters-row { 
-            display: flex; gap: 20px; align-items: center; justify-content: center; 
-            flex-wrap: wrap; margin-top: 5px; 
-            background: rgba(0,0,0,0.3); padding: 8px 15px; 
-            border-radius: 20px; border: 1px solid var(--border); 
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: rgba(21, 25, 43, 0.98);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            margin-bottom: 20px;
         }
-        
-        .filter-group { display: flex; gap: 10px; align-items: center; }
-        .filter-label { font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); font-weight: bold; margin-right: 5px; }
-        .checkbox-label { display: flex; align-items: center; gap: 5px; cursor: pointer; font-size: 0.9rem; user-select: none; }
-        .cb-green { accent-color: var(--c-green); }
-        .cb-yellow { accent-color: var(--c-yellow); }
-        .cb-red { accent-color: var(--c-red); }
 
-        .result-count { text-align: center; color: var(--text-muted); margin-bottom: 20px; font-size: 1rem; font-weight: 500; }
-        .result-count span { color: var(--accent); font-weight: bold; }
-        
+        h1 {
+            margin: 0;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.8rem;
+            text-shadow: 0 0 15px rgba(250, 204, 21, 0.3);
+        }
+
+        .controls-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+            max-width: 900px;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"],
+        select,
+        button {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            font-size: 0.95rem;
+            height: 40px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            background: #0f121f;
+            color: white;
+            flex: 2;
+            min-width: 200px;
+        }
+
+        select {
+            background: #0f121f;
+            color: white;
+            cursor: pointer;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        button {
+            background: var(--accent);
+            color: #000;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            white-space: nowrap;
+            flex: 0;
+            transition: filter 0.2s;
+        }
+
+        button:hover {
+            filter: brightness(1.1);
+        }
+
+        .filters-row {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 5px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .filter-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            user-select: none;
+        }
+
+        .cb-green {
+            accent-color: var(--c-green);
+        }
+
+        .cb-yellow {
+            accent-color: var(--c-yellow);
+        }
+
+        .cb-red {
+            accent-color: var(--c-red);
+        }
+
+        .result-count {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .result-count span {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
         @media (max-width: 700px) {
-            header { padding: 10px; gap: 10px; }
-            h1 { font-size: 1.4rem; }
-            .controls-row { flex-direction: column; gap: 8px; }
-            input[type="text"], select, button { width: 100%; }
-            .filters-row { gap: 15px; justify-content: center; }
+            header {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            .controls-row {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            input[type="text"],
+            select,
+            button {
+                width: 100%;
+            }
+
+            .filters-row {
+                gap: 15px;
+                justify-content: center;
+            }
         }
 
-        .alien-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; padding-bottom: 40px; }
-        
-        .card { 
-            background: var(--card-bg); border: 1px solid var(--border); 
-            border-radius: 16px; overflow: hidden; display: flex; 
-            flex-direction: column; transition: transform 0.3s ease; 
-            position: relative; 
+        .alien-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding-bottom: 40px;
         }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        
-        .card-image-container { 
-            width: 100%; height: 220px; overflow: hidden; position: relative; 
-            background: #fff; border-bottom: 4px solid var(--accent); 
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+            position: relative;
         }
-        .card-image-container.alt-border { border-bottom-color: var(--c-purple); }
-        .card-image { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-        
-        .card-image-title { 
-            position: absolute; top: 0; padding-top: 4px; left: 0; width: 100%; text-align: center; 
-            font-family: 'Impact', 'Arial Black', sans-serif; font-size: 1.6rem; color: #000; 
-            text-transform: uppercase; letter-spacing: 1px; z-index: 10; 
-            padding-left: 35px; padding-right: 35px; box-sizing: border-box;
-            text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 
-                         1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; 
-            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
         }
-        
+
+        .card-image-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: #fff;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .card-image-container.alt-border {
+            border-bottom-color: var(--c-purple);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .card-image-title {
+            position: absolute;
+            top: 0;
+            padding-top: 4px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-size: 1.6rem;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 10;
+            padding-left: 35px;
+            padding-right: 35px;
+            box-sizing: border-box;
+            text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+                1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         @media (max-width: 600px) {
-            .card-image-title { font-size: 1.4rem; padding-top: 6px; padding-left: 25px; padding-right: 25px; }
-            .alien-grid { grid-template-columns: 1fr; }
+            .card-image-title {
+                font-size: 1.4rem;
+                padding-top: 6px;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .alien-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .badges-container { position: absolute; bottom: 5px; right: 5px; display: flex; gap: 5px; z-index: 10; }
-        .badge { background: rgba(0,0,0,0.8); color: #fff; padding: 3px 8px; font-size: 0.7rem; border-radius: 4px; display: flex; align-items: center; gap: 4px; }
-        .alert-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-        .expansion-tag { position: absolute; bottom: 5px; left: 5px; background: rgba(0,0,0,0.7); color: #fff; padding: 2px 8px; font-size: 0.7rem; border-radius: 4px; z-index: 5; }
-
-        .card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-        .aka-info { font-size: 0.9rem; color: var(--text-muted); text-align: center; margin-bottom: 10px; font-style: italic; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
-        .aka-info strong { color: var(--accent); text-transform: uppercase; font-style: normal; }
-        
-        .power-summary { font-size: 1rem; color: var(--accent); font-weight: bold; margin-bottom: 10px; text-align: center; }
-        
-        .power-block { 
-            background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; 
-            font-size: 0.95rem; line-height: 1.5; color: #cbd5e1; 
-            border-left: 2px solid var(--text-muted); 
-            text-align: justify; hyphens: auto; 
+        .badges-container {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            display: flex;
+            gap: 5px;
+            z-index: 10;
         }
-        .power-block b { color: #fff; font-weight: 700; }
-        
-        .action-btn { 
-            background: transparent; border: 1px solid var(--border); color: var(--text-muted); 
-            margin-top: 10px; width: 100%; padding: 8px; font-size: 0.8rem; cursor: pointer; 
-            border-radius: 6px; transition: all 0.2s;
-        }
-        .action-btn:hover { background: rgba(255,255,255,0.05); color: var(--text-main); border-color: var(--text-main); }
-        
-        .flare-btn { border-color: var(--accent); color: var(--accent); font-weight: bold; text-transform: uppercase; }
-        .flare-btn:hover { background: var(--accent); color: #000; }
 
-        .expandable-text { display: none; margin-top: 10px; font-size: 0.85rem; padding: 10px; border-radius: 6px; text-align: justify; }
-        .expandable-text.show { display: block; }
-        
-        .flare-text { background: rgba(250, 204, 21, 0.1); border: 1px solid rgba(250, 204, 21, 0.3); color: #e2e8f0; }
-        .flare-title { color: var(--accent); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 4px; margin-top: 10px; display: block; }
-        .flare-title:first-child { margin-top: 0; }
-        
-        .history-text { color: #94a3b8; font-style: italic; border-top: 1px solid var(--border); }
+        .badge {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 3px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .alert-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .expansion-tag {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            z-index: 5;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .aka-info {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 10px;
+            font-style: italic;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .aka-info strong {
+            color: var(--accent);
+            text-transform: uppercase;
+            font-style: normal;
+        }
+
+        .power-summary {
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .power-block {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #cbd5e1;
+            border-left: 2px solid var(--text-muted);
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .power-block b {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .action-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border-color: var(--text-main);
+        }
+
+        .flare-btn {
+            border-color: var(--accent);
+            color: var(--accent);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .flare-btn:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .expandable-text {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: justify;
+        }
+
+        .expandable-text.show {
+            display: block;
+        }
+
+        .flare-text {
+            background: rgba(250, 204, 21, 0.1);
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            color: #e2e8f0;
+        }
+
+        .flare-title {
+            color: var(--accent);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .flare-title:first-child {
+            margin-top: 0;
+        }
+
+        .history-text {
+            color: #94a3b8;
+            font-style: italic;
+            border-top: 1px solid var(--border);
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Cosmic Encounter</h1>
-    
-    <div class="controls-row">
-        <input type="text" id="searchInput" placeholder="Buscar alien..." onkeyup="filterAliens()">
-        <select id="expansionFilter" onchange="filterAliens()">
-            <option value="all">Todas as Expansões</option>
-            <option value="Base Game">Base Game</option>
-            <option value="Cosmic Incursion">Cosmic Incursion</option>
-            <option value="Cosmic Conflict">Cosmic Conflict</option>
-            <option value="Cosmic Alliance">Cosmic Alliance</option>
-            <option value="Cosmic Storm">Cosmic Storm</option>
-            <option value="Cosmic Dominion">Cosmic Dominion</option>
-            <option value="Cosmic Eons">Cosmic Eons</option>
-            <option value="Cosmic Odyssey">Cosmic Odyssey</option>
-            <option value="Expansion">Outras</option>
-        </select>
-        <button onclick="toggleLanguage()" id="langBtn">🇺🇸 English</button>
+    <header>
+        <h1>Cosmic Encounter</h1>
+
+        <div class="controls-row">
+            <input type="text" id="searchInput" placeholder="Buscar alien..." onkeyup="filterAliens()">
+            <select id="expansionFilter" onchange="filterAliens()">
+                <option value="all">Todas as Expansões</option>
+                <option value="Base Game">Base Game</option>
+                <option value="Cosmic Incursion">Cosmic Incursion</option>
+                <option value="Cosmic Conflict">Cosmic Conflict</option>
+                <option value="Cosmic Alliance">Cosmic Alliance</option>
+                <option value="Cosmic Storm">Cosmic Storm</option>
+                <option value="Cosmic Dominion">Cosmic Dominion</option>
+                <option value="Cosmic Eons">Cosmic Eons</option>
+                <option value="Cosmic Odyssey">Cosmic Odyssey</option>
+
+            </select>
+            <button onclick="toggleLanguage()" id="langBtn">🇺🇸 English</button>
+        </div>
+
+        <div class="filters-row">
+            <div class="filter-group">
+                <span class="filter-label">Alert:</span>
+                <label class="checkbox-label"><input type="checkbox" class="cb-green" value="green" checked
+                        onchange="filterAliens()"> 🟢</label>
+                <label class="checkbox-label"><input type="checkbox" class="cb-yellow" value="yellow" checked
+                        onchange="filterAliens()"> 🟡</label>
+                <label class="checkbox-label"><input type="checkbox" class="cb-red" value="red" checked
+                        onchange="filterAliens()"> 🔴</label>
+            </div>
+            <div class="filter-group" style="border-left: 1px solid var(--border); padding-left: 15px;">
+                <span class="filter-label">Extras:</span>
+                <label class="checkbox-label" title="Com Preparação"><input type="checkbox" id="checkSetup"
+                        onchange="filterAliens()"> ⚙️ Setup</label>
+                <label class="checkbox-label" title="Com Componentes"><input type="checkbox" id="checkComponents"
+                        onchange="filterAliens()"> 📦 Tokens</label>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="resultCount" class="result-count"></div>
+        <div id="alienGrid" class="alien-grid"></div>
     </div>
 
-    <div class="filters-row">
-        <div class="filter-group">
-            <span class="filter-label">Alert:</span>
-            <label class="checkbox-label"><input type="checkbox" class="cb-green" value="green" checked onchange="filterAliens()"> 🟢</label>
-            <label class="checkbox-label"><input type="checkbox" class="cb-yellow" value="yellow" checked onchange="filterAliens()"> 🟡</label>
-            <label class="checkbox-label"><input type="checkbox" class="cb-red" value="red" checked onchange="filterAliens()"> 🔴</label>
-        </div>
-        <div class="filter-group" style="border-left: 1px solid var(--border); padding-left: 15px;">
-            <span class="filter-label">Extras:</span>
-            <label class="checkbox-label" title="Com Preparação"><input type="checkbox" id="checkSetup" onchange="filterAliens()"> ⚙️ Setup</label>
-            <label class="checkbox-label" title="Com Componentes"><input type="checkbox" id="checkComponents" onchange="filterAliens()"> 📦 Tokens</label>
-        </div>
-    </div>
-</header>
+    <script>window.aliensData = [];</script>
 
-<div class="container">
-    <div id="resultCount" class="result-count"></div>
-    <div id="alienGrid" class="alien-grid"></div>
-</div>
+    <script src="images.js"></script>
+    <script src="aliens_base_game.js"></script>
+    <script src="aliens_cosmic_incursion.js"></script>
+    <script src="aliens_cosmic_conflict.js"></script>
+    <script src="aliens_cosmic_alliance.js"></script>
+    <script src="aliens_cosmic_storm.js"></script>
+    <script src="aliens_cosmic_dominion.js"></script>
+    <script src="aliens_cosmic_eons.js"></script>
+    <script src="aliens_cosmic_odyssey.js"></script>
+    <script src="aliens_expansion.js"></script>
 
-<script>window.aliensData = [];</script>
+    <script>
+        let currentLang = 'pt';
 
-<script src="images.js"></script>
-<script src="aliens_base_game.js"></script>
-<script src="aliens_cosmic_incursion.js"></script>
-<script src="aliens_cosmic_conflict.js"></script>
-<script src="aliens_cosmic_alliance.js"></script>
-<script src="aliens_cosmic_storm.js"></script>
-<script src="aliens_cosmic_dominion.js"></script>
-<script src="aliens_cosmic_eons.js"></script>
-<script src="aliens_cosmic_odyssey.js"></script>
-<script src="aliens_expansion.js"></script>
+        // --- METADADOS OFICIAIS FFG ---
+        const alienMetadata = {
+            // --- BASE GAME (50) ---
+            amoeba: { color: 'yellow', comp: false, exp: 'Base Game' }, anti_matter: { color: 'yellow', comp: false, exp: 'Base Game' }, barbarian: { color: 'green', comp: false, exp: 'Base Game' }, calculator: { color: 'yellow', comp: false, exp: 'Base Game' }, chosen: { color: 'green', comp: false, exp: 'Base Game' }, citadel: { color: 'red', comp: true, exp: 'Base Game' }, clone: { color: 'green', comp: false, exp: 'Base Game' }, cudgel: { color: 'green', comp: false, exp: 'Base Game' }, demon: { color: 'yellow', comp: false, exp: 'Base Game' }, dictator: { color: 'red', comp: false, exp: 'Base Game' }, fido: { color: 'yellow', comp: false, exp: 'Base Game' }, filch: { color: 'green', comp: false, exp: 'Base Game' }, fodder: { color: 'yellow', comp: false, exp: 'Base Game' }, gambler: { color: 'red', comp: false, exp: 'Base Game' }, grudge: { color: 'red', comp: true, exp: 'Base Game' }, hacker: { color: 'green', comp: false, exp: 'Base Game' }, hate: { color: 'yellow', comp: false, exp: 'Base Game' }, healer: { color: 'yellow', comp: false, exp: 'Base Game' }, human: { color: 'yellow', comp: false, exp: 'Base Game' }, kamikaze: { color: 'yellow', comp: false, exp: 'Base Game' }, loser: { color: 'green', comp: false, exp: 'Base Game' }, machine: { color: 'red', comp: false, exp: 'Base Game' }, macron: { color: 'green', comp: false, exp: 'Base Game' }, masochist: { color: 'red', comp: false, exp: 'Base Game' }, mind: { color: 'yellow', comp: false, exp: 'Base Game' }, mirror: { color: 'yellow', comp: false, exp: 'Base Game' }, miser: { color: 'green', comp: true, exp: 'Base Game' }, mite: { color: 'yellow', comp: false, exp: 'Base Game' }, mutant: { color: 'green', comp: false, exp: 'Base Game' }, observer: { color: 'green', comp: false, exp: 'Base Game' }, oracle: { color: 'green', comp: false, exp: 'Base Game' }, pacifist: { color: 'green', comp: false, exp: 'Base Game' }, parasite: { color: 'green', comp: false, exp: 'Base Game' }, philanthropist: { color: 'yellow', comp: false, exp: 'Base Game' }, reincarnator: { color: 'yellow', comp: false, exp: 'Base Game' }, remora: { color: 'yellow', comp: false, exp: 'Base Game' }, reserve: { color: 'green', comp: false, exp: 'Base Game' }, shadow: { color: 'yellow', comp: false, exp: 'Base Game' }, sorcerer: { color: 'green', comp: false, exp: 'Base Game' }, spiff: { color: 'green', comp: false, exp: 'Base Game' }, tick_tock: { color: 'yellow', comp: true, exp: 'Base Game' }, trader: { color: 'green', comp: false, exp: 'Base Game' }, tripler: { color: 'red', comp: false, exp: 'Base Game' }, vacuum: { color: 'green', comp: false, exp: 'Base Game' }, virus: { color: 'red', comp: false, exp: 'Base Game' }, void: { color: 'red', comp: false, exp: 'Base Game' }, vulch: { color: 'green', comp: false, exp: 'Base Game' }, warpish: { color: 'red', comp: false, exp: 'Base Game' }, warrior: { color: 'green', comp: true, exp: 'Base Game' }, will: { color: 'green', comp: false, exp: 'Base Game' }, zombie: { color: 'green', comp: false, exp: 'Base Game' },
+            // --- COSMIC INCURSION (20) ---
+            bully: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, chronos: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, cryo: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, deuce: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, disease: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, ethic: { color: 'green', comp: false, exp: 'Cosmic Incursion' }, fungus: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, fury: { color: 'green', comp: true, exp: 'Cosmic Incursion' }, genius: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, ghoul: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, guerrilla: { color: 'green', comp: false, exp: 'Cosmic Incursion' }, leviathan: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, locust: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, magician: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, mercenary: { color: 'green', comp: false, exp: 'Cosmic Incursion' }, merchant: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, plant: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, seeker: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, sniveler: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, symbiote: { color: 'green', comp: true, exp: 'Cosmic Incursion' },
+            // --- COSMIC CONFLICT (20) ---
+            cavalry: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, changeling: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, empath: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, filth: { color: 'red', comp: false, exp: 'Cosmic Conflict' }, glutton: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, graviton: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, industrialist: { color: 'yellow', comp: true, exp: 'Cosmic Conflict' }, invader: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, lunatic: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, mimic: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, prophet: { color: 'red', comp: false, exp: 'Cosmic Conflict' }, relic: { color: 'red', comp: false, exp: 'Cosmic Conflict' }, saboteur: { color: 'red', comp: true, exp: 'Cosmic Conflict' }, sadist: { color: 'red', comp: false, exp: 'Cosmic Conflict' }, siren: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, the_claw: { color: 'red', comp: true, exp: 'Cosmic Conflict' }, trickster: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, visionary: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, warhawk: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, xenophile: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
+            // --- COSMIC ALLIANCE (20) ---
+            animal: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, bandit: { color: 'red', comp: false, exp: 'Cosmic Alliance' }, butler: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, chrysalis: { color: 'red', comp: true, exp: 'Cosmic Alliance' }, crystal: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, cyborg: { color: 'yellow', comp: true, exp: 'Cosmic Alliance' }, extortionist: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, general: { color: 'green', comp: false, exp: 'Cosmic Alliance' }, gorgon: { color: 'red', comp: false, exp: 'Cosmic Alliance' }, horde: { color: 'red', comp: true, exp: 'Cosmic Alliance' }, lightning: { color: 'yellow', comp: true, exp: 'Cosmic Alliance' }, poison: { color: 'red', comp: false, exp: 'Cosmic Alliance' }, pygmy: { color: 'green', comp: true, exp: 'Cosmic Alliance' }, reborn: { color: 'green', comp: false, exp: 'Cosmic Alliance' }, remote: { color: 'red', comp: true, exp: 'Cosmic Alliance' }, sapient: { color: 'green', comp: true, exp: 'Cosmic Alliance' }, schizoid: { color: 'red', comp: true, exp: 'Cosmic Alliance' }, skeptic: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, sting: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, winner: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' },
+            // --- COSMIC STORM (25) ---
+            arcade: { color: 'yellow', comp: true, exp: 'Cosmic Storm' }, brute: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, bulwark: { color: 'green', comp: false, exp: 'Cosmic Storm' }, converter: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, coordinator: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, dervish: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, grumpus: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, mouth: { color: 'red', comp: true, exp: 'Cosmic Storm' }, neighbor: { color: 'green', comp: false, exp: 'Cosmic Storm' }, outlaw: { color: 'green', comp: false, exp: 'Cosmic Storm' }, patriot: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, phantasm: { color: 'green', comp: false, exp: 'Cosmic Storm' }, roach: { color: 'red', comp: true, exp: 'Cosmic Storm' }, scavenger: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, sloth: { color: 'yellow', comp: true, exp: 'Cosmic Storm' }, sneak: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, squee: { color: 'red', comp: false, exp: 'Cosmic Storm' }, swindler: { color: 'red', comp: true, exp: 'Cosmic Storm' }, sycophant: { color: 'yellow', comp: true, exp: 'Cosmic Storm' }, tide: { color: 'yellow', comp: true, exp: 'Cosmic Storm' }, tyrant: { color: 'red', comp: true, exp: 'Cosmic Storm' }, vox: { color: 'green', comp: false, exp: 'Cosmic Storm' }, worm: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, wormhole: { color: 'yellow', comp: false, exp: 'Cosmic Storm' },
+            // --- COSMIC DOMINION (30) ---
+            ace: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, alchemist: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, angler: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, aristocrat: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, bride: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, daredevil: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, diplomat: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, doppelganger: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, engineer: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, explorer: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, greenhorn: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, host: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, joker: { color: 'red', comp: true, exp: 'Cosmic Dominion' }, judge: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, laser: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, lizard: { color: 'green', comp: true, exp: 'Cosmic Dominion' }, love: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, mesmer: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, mirage: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, muckraker: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, pentaform: { color: 'red', comp: true, exp: 'Cosmic Dominion' }, pickpocket: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, pirate: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, quartermaster: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, reactor: { color: 'red', comp: true, exp: 'Cosmic Dominion' }, tourist: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, usurper: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, voyager: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, whirligig: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, yin_yang: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' },
+            // --- COSMIC EONS (30) ---
+            ai: { color: 'red', comp: true, exp: 'Cosmic Eons' }, alien: { color: 'red', comp: true, exp: 'Cosmic Eons' }, anarchist: { color: 'red', comp: true, exp: 'Cosmic Eons' }, architect: { color: 'red', comp: false, exp: 'Cosmic Eons' }, assistant: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, bleeding_heart: { color: 'green', comp: false, exp: 'Cosmic Eons' }, cloak: { color: 'red', comp: false, exp: 'Cosmic Eons' }, coward: { color: 'yellow', comp: false, exp: 'Cosmic Eons' }, crusher: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, emperor: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, evil_twin: { color: 'red', comp: true, exp: 'Cosmic Eons' }, fire_dancer: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, hunger: { color: 'green', comp: false, exp: 'Cosmic Eons' }, hypochondriac: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, klutz: { color: 'yellow', comp: false, exp: 'Cosmic Eons' }, maven: { color: 'red', comp: true, exp: 'Cosmic Eons' }, moocher: { color: 'red', comp: true, exp: 'Cosmic Eons' }, multitude: { color: 'green', comp: true, exp: 'Cosmic Eons' }, nanny: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, nightmare: { color: 'red', comp: true, exp: 'Cosmic Eons' }, oligarch: { color: 'red', comp: true, exp: 'Cosmic Eons' }, pack_rat: { color: 'yellow', comp: false, exp: 'Cosmic Eons' }, particle: { color: 'red', comp: true, exp: 'Cosmic Eons' }, peddler: { color: 'red', comp: true, exp: 'Cosmic Eons' }, perfectionist: { color: 'green', comp: true, exp: 'Cosmic Eons' }, porcupine: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, pretender: { color: 'red', comp: false, exp: 'Cosmic Eons' }, sheriff: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, surgeon: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, the_cult: { color: 'red', comp: true, exp: 'Cosmic Eons' }, tortoise: { color: 'red', comp: true, exp: 'Cosmic Eons' },
+            // --- COSMIC ODYSSEY (30) ---
+            assessor: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, aura: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, boomerang: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, booster: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, bubble: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, cosmos: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, decoy: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, delegator: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, dragon: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, extractor: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, force: { color: 'red', comp: false, exp: 'Cosmic Odyssey' }, geek: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, gremlin: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, guardian: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, hurtz: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, inferno: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, insect: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, lemming: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, lloyd: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, magnet: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, negator: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, phantom: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, silencer: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, tentacle: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, the_meek: { color: 'red', comp: false, exp: 'Cosmic Odyssey' }, throwback: { color: 'red', comp: false, exp: 'Cosmic Odyssey' }, vector: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, witch: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, wrack: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, zilch: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
+            // --- ALTERNATE TIMELINE (12) ---
+            brute_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, daredevil_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, demon_alternate: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, grumpus_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, locust_alternate: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, masochist_alternate: { color: 'red', comp: false, exp: 'Cosmic Odyssey' }, micron_alternate: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, perfectionist_alternate: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, sadist_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, schizoid_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, void_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, zombie_alternate: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }
+        };
 
-<script>
-    let currentLang = 'pt';
+        function enrichAlienData() {
+            window.aliensData.forEach(alien => {
+                let meta = alienMetadata[alien.id];
+                // Tenta busca normalizada caso não encontre direto
+                if (!meta) {
+                    const key = Object.keys(alienMetadata).find(k => k.toLowerCase() === alien.id.toLowerCase());
+                    if (key) meta = alienMetadata[key];
+                }
 
-    // --- METADADOS OFICIAIS FFG ---
-    const alienMetadata = {
-        // --- BASE GAME (50) ---
-        amoeba: { color: 'yellow', comp: false, exp: 'Base Game' }, anti_matter: { color: 'yellow', comp: false, exp: 'Base Game' }, barbarian: { color: 'green', comp: false, exp: 'Base Game' }, calculator: { color: 'yellow', comp: false, exp: 'Base Game' }, chosen: { color: 'green', comp: false, exp: 'Base Game' }, citadel: { color: 'red', comp: true, exp: 'Base Game' }, clone: { color: 'green', comp: false, exp: 'Base Game' }, cudgel: { color: 'green', comp: false, exp: 'Base Game' }, demon: { color: 'yellow', comp: false, exp: 'Base Game' }, dictator: { color: 'red', comp: false, exp: 'Base Game' }, fido: { color: 'yellow', comp: false, exp: 'Base Game' }, filch: { color: 'green', comp: false, exp: 'Base Game' }, fodder: { color: 'yellow', comp: false, exp: 'Base Game' }, gambler: { color: 'red', comp: false, exp: 'Base Game' }, grudge: { color: 'red', comp: true, exp: 'Base Game' }, hacker: { color: 'green', comp: false, exp: 'Base Game' }, hate: { color: 'yellow', comp: false, exp: 'Base Game' }, healer: { color: 'yellow', comp: false, exp: 'Base Game' }, human: { color: 'yellow', comp: false, exp: 'Base Game' }, kamikaze: { color: 'yellow', comp: false, exp: 'Base Game' }, loser: { color: 'green', comp: false, exp: 'Base Game' }, machine: { color: 'red', comp: false, exp: 'Base Game' }, macron: { color: 'green', comp: false, exp: 'Base Game' }, masochist: { color: 'red', comp: false, exp: 'Base Game' }, mind: { color: 'yellow', comp: false, exp: 'Base Game' }, mirror: { color: 'yellow', comp: false, exp: 'Base Game' }, miser: { color: 'green', comp: true, exp: 'Base Game' }, mite: { color: 'yellow', comp: false, exp: 'Base Game' }, mutant: { color: 'green', comp: false, exp: 'Base Game' }, observer: { color: 'green', comp: false, exp: 'Base Game' }, oracle: { color: 'green', comp: false, exp: 'Base Game' }, pacifist: { color: 'green', comp: false, exp: 'Base Game' }, parasite: { color: 'green', comp: false, exp: 'Base Game' }, philanthropist: { color: 'yellow', comp: false, exp: 'Base Game' }, reincarnator: { color: 'yellow', comp: false, exp: 'Base Game' }, remora: { color: 'yellow', comp: false, exp: 'Base Game' }, reserve: { color: 'green', comp: false, exp: 'Base Game' }, shadow: { color: 'yellow', comp: false, exp: 'Base Game' }, sorcerer: { color: 'green', comp: false, exp: 'Base Game' }, spiff: { color: 'green', comp: false, exp: 'Base Game' }, tick_tock: { color: 'yellow', comp: true, exp: 'Base Game' }, trader: { color: 'green', comp: false, exp: 'Base Game' }, tripler: { color: 'red', comp: false, exp: 'Base Game' }, vacuum: { color: 'green', comp: false, exp: 'Base Game' }, virus: { color: 'red', comp: false, exp: 'Base Game' }, void: { color: 'red', comp: false, exp: 'Base Game' }, vulch: { color: 'green', comp: false, exp: 'Base Game' }, warpish: { color: 'red', comp: false, exp: 'Base Game' }, warrior: { color: 'green', comp: true, exp: 'Base Game' }, will: { color: 'green', comp: false, exp: 'Base Game' }, zombie: { color: 'green', comp: false, exp: 'Base Game' },
-        // --- COSMIC INCURSION (20) ---
-        bully: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, chronos: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, cryo: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, deuce: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, disease: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, ethic: { color: 'green', comp: false, exp: 'Cosmic Incursion' }, fungus: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, fury: { color: 'green', comp: true, exp: 'Cosmic Incursion' }, genius: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, ghoul: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, guerrilla: { color: 'green', comp: false, exp: 'Cosmic Incursion' }, leviathan: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, locust: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, magician: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, mercenary: { color: 'green', comp: false, exp: 'Cosmic Incursion' }, merchant: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, plant: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, seeker: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, sniveler: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, symbiote: { color: 'green', comp: true, exp: 'Cosmic Incursion' },
-        // --- COSMIC CONFLICT (20) ---
-        cavalry: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, changeling: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, empath: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, filth: { color: 'red', comp: false, exp: 'Cosmic Conflict' }, glutton: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, graviton: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, industrialist: { color: 'yellow', comp: true, exp: 'Cosmic Conflict' }, invader: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, lunatic: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, mimic: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, prophet: { color: 'red', comp: false, exp: 'Cosmic Conflict' }, relic: { color: 'red', comp: false, exp: 'Cosmic Conflict' }, saboteur: { color: 'red', comp: true, exp: 'Cosmic Conflict' }, sadist: { color: 'red', comp: false, exp: 'Cosmic Conflict' }, siren: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, the_claw: { color: 'red', comp: true, exp: 'Cosmic Conflict' }, trickster: { color: 'green', comp: false, exp: 'Cosmic Conflict' }, visionary: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, warhawk: { color: 'yellow', comp: false, exp: 'Cosmic Conflict' }, xenophile: { color: 'green', comp: false, exp: 'Cosmic Conflict' },
-        // --- COSMIC ALLIANCE (20) ---
-        animal: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, bandit: { color: 'red', comp: false, exp: 'Cosmic Alliance' }, butler: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, chrysalis: { color: 'red', comp: true, exp: 'Cosmic Alliance' }, crystal: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, cyborg: { color: 'yellow', comp: true, exp: 'Cosmic Alliance' }, extortionist: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, general: { color: 'green', comp: false, exp: 'Cosmic Alliance' }, gorgon: { color: 'red', comp: false, exp: 'Cosmic Alliance' }, horde: { color: 'red', comp: true, exp: 'Cosmic Alliance' }, lightning: { color: 'yellow', comp: true, exp: 'Cosmic Alliance' }, poison: { color: 'red', comp: false, exp: 'Cosmic Alliance' }, pygmy: { color: 'green', comp: true, exp: 'Cosmic Alliance' }, reborn: { color: 'green', comp: false, exp: 'Cosmic Alliance' }, remote: { color: 'red', comp: true, exp: 'Cosmic Alliance' }, sapient: { color: 'green', comp: true, exp: 'Cosmic Alliance' }, schizoid: { color: 'red', comp: true, exp: 'Cosmic Alliance' }, skeptic: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, sting: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' }, winner: { color: 'yellow', comp: false, exp: 'Cosmic Alliance' },
-        // --- COSMIC STORM (25) ---
-        arcade: { color: 'yellow', comp: true, exp: 'Cosmic Storm' }, brute: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, bulwark: { color: 'green', comp: false, exp: 'Cosmic Storm' }, converter: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, coordinator: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, dervish: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, grumpus: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, mouth: { color: 'red', comp: true, exp: 'Cosmic Storm' }, neighbor: { color: 'green', comp: false, exp: 'Cosmic Storm' }, outlaw: { color: 'green', comp: false, exp: 'Cosmic Storm' }, patriot: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, phantasm: { color: 'green', comp: false, exp: 'Cosmic Storm' },roach: { color: 'red', comp: true, exp: 'Cosmic Storm' }, scavenger: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, sloth: { color: 'yellow', comp: true, exp: 'Cosmic Storm' }, sneak: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, squee: { color: 'red', comp: false, exp: 'Cosmic Storm' }, swindler: { color: 'red', comp: true, exp: 'Cosmic Storm' }, sycophant: { color: 'yellow', comp: true, exp: 'Cosmic Storm' }, tide: { color: 'yellow', comp: true, exp: 'Cosmic Storm' }, tyrant: { color: 'red', comp: true, exp: 'Cosmic Storm' }, vox: { color: 'green', comp: false, exp: 'Cosmic Storm' }, worm: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, wormhole: { color: 'yellow', comp: false, exp: 'Cosmic Storm' },
-        // --- COSMIC DOMINION (30) ---
-        ace: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, alchemist: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, angler: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, aristocrat: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, bride: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, daredevil: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, diplomat: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, doppelganger: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, engineer: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, explorer: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, greenhorn: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, host: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, joker: { color: 'red', comp: true, exp: 'Cosmic Dominion' }, judge: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, laser: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, lizard: { color: 'green', comp: true, exp: 'Cosmic Dominion' }, love: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, mesmer: { color: 'red', comp: false, exp: 'Cosmic Dominion' }, mirage: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, muckraker: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, pentaform: { color: 'red', comp: true, exp: 'Cosmic Dominion' }, pickpocket: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, pirate: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, quartermaster: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, reactor: { color: 'red', comp: true, exp: 'Cosmic Dominion' }, tourist: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' }, usurper: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, voyager: { color: 'yellow', comp: false, exp: 'Cosmic Dominion' }, whirligig: { color: 'green', comp: false, exp: 'Cosmic Dominion' }, yin_yang: { color: 'yellow', comp: true, exp: 'Cosmic Dominion' },
-        // --- COSMIC EONS (30) ---
-        ai: { color: 'red', comp: true, exp: 'Cosmic Eons' }, alien: { color: 'red', comp: true, exp: 'Cosmic Eons' }, anarchist: { color: 'red', comp: true, exp: 'Cosmic Eons' }, architect: { color: 'red', comp: false, exp: 'Cosmic Eons' }, assistant: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, bleeding_heart: { color: 'green', comp: false, exp: 'Cosmic Eons' }, cloak: { color: 'red', comp: false, exp: 'Cosmic Eons' }, coward: { color: 'yellow', comp: false, exp: 'Cosmic Eons' }, crusher: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, emperor: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, evil_twin: { color: 'red', comp: true, exp: 'Cosmic Eons' }, fire_dancer: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, hunger: { color: 'green', comp: false, exp: 'Cosmic Eons' }, hypochondriac: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, klutz: { color: 'yellow', comp: false, exp: 'Cosmic Eons' }, maven: { color: 'red', comp: true, exp: 'Cosmic Eons' }, moocher: { color: 'red', comp: true, exp: 'Cosmic Eons' }, multitude: { color: 'green', comp: true, exp: 'Cosmic Eons' }, nanny: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, nightmare: { color: 'red', comp: true, exp: 'Cosmic Eons' }, oligarch: { color: 'red', comp: true, exp: 'Cosmic Eons' }, pack_rat: { color: 'yellow', comp: false, exp: 'Cosmic Eons' }, particle: { color: 'red', comp: true, exp: 'Cosmic Eons' }, peddler: { color: 'red', comp: true, exp: 'Cosmic Eons' }, perfectionist: { color: 'green', comp: true, exp: 'Cosmic Eons' }, porcupine: { color: 'yellow', comp: false, exp: 'Cosmic Storm' }, pretender: { color: 'red', comp: false, exp: 'Cosmic Eons' }, sheriff: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, surgeon: { color: 'yellow', comp: true, exp: 'Cosmic Eons' }, the_cult: { color: 'red', comp: true, exp: 'Cosmic Eons' }, tortoise: { color: 'red', comp: true, exp: 'Cosmic Eons' },
-        // --- COSMIC ODYSSEY (30) ---
-        assessor: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, aura: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, boomerang: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, booster: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, bubble: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, cosmos: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, decoy: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, delegator: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, dragon: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, extractor: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, force: { color: 'red', comp: false, exp: 'Cosmic Odyssey' }, geek: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, gremlin: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, guardian: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, hurtz: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, inferno: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, insect: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, lemming: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, lloyd: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, magnet: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, negator: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, phantom: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, silencer: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, tentacle: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, the_meek: { color: 'red', comp: false, exp: 'Cosmic Odyssey' }, throwback: { color: 'red', comp: false, exp: 'Cosmic Odyssey' }, vector: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, witch: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, wrack: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, zilch: { color: 'red', comp: true, exp: 'Cosmic Odyssey' },
-        // --- ALTERNATE TIMELINE (12) ---
-        brute_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, daredevil_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, demon_alternate: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, grumpus_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, locust_alternate: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, masochist_alternate: { color: 'red', comp: false, exp: 'Cosmic Odyssey' }, micron_alternate: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, perfectionist_alternate: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, sadist_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, schizoid_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, void_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, zombie_alternate: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }
-    };
-    
-    function enrichAlienData() {
-        window.aliensData.forEach(alien => {
-            let meta = alienMetadata[alien.id];
-            // Tenta busca normalizada caso não encontre direto
-            if(!meta) {
-                 const key = Object.keys(alienMetadata).find(k => k.toLowerCase() === alien.id.toLowerCase());
-                 if(key) meta = alienMetadata[key];
-            }
-
-            if (meta) {
-                alien.alert = meta.color;
-                alien.hasComponents = meta.comp;
-                alien.expansion = meta.exp; 
-            } else {
-                // Fallback para Base Game e Verde se não achar
-                if(!alien.alert) alien.alert = 'green';
-                if(alien.hasComponents === undefined) alien.hasComponents = false;
-                if(!alien.expansion) alien.expansion = 'Base Game';
-            }
-
-            // Detecta Setup no texto se não tiver sido definido
-            if (alien.hasSetup === undefined) {
-                const ptPower = alien.power.pt || "";
-                const enPower = alien.power.en || "";
-                if (ptPower.includes("Preparação de Jogo:") || ptPower.includes("Game Setup:") || enPower.includes("Game Setup:")) {
-                    alien.hasSetup = true;
+                if (meta) {
+                    alien.alert = meta.color;
+                    alien.hasComponents = meta.comp;
+                    alien.expansion = meta.exp;
                 } else {
-                    alien.hasSetup = false;
+                    // Fallback para Base Game e Verde se não achar
+                    if (!alien.alert) alien.alert = 'green';
+                    if (alien.hasComponents === undefined) alien.hasComponents = false;
+                    if (!alien.expansion) alien.expansion = 'Base Game';
                 }
-            }
-        });
-    }
 
-    function toggleLanguage() {
-        currentLang = currentLang === 'pt' ? 'en' : 'pt';
-        const btn = document.getElementById('langBtn');
-        const input = document.getElementById('searchInput');
-        
-        if (currentLang === 'pt') {
-            btn.innerText = "🇺🇸 English";
-            input.placeholder = "Buscar alien...";
-        } else {
-            btn.innerText = "🇧🇷 Português";
-            input.placeholder = "Search alien...";
+                // Detecta Setup no texto se não tiver sido definido
+                if (alien.hasSetup === undefined) {
+                    const ptPower = alien.power.pt || "";
+                    const enPower = alien.power.en || "";
+                    if (ptPower.includes("Preparação de Jogo:") || ptPower.includes("Game Setup:") || enPower.includes("Game Setup:")) {
+                        alien.hasSetup = true;
+                    } else {
+                        alien.hasSetup = false;
+                    }
+                }
+            });
         }
-        updateExpansionCounts();
-        filterAliens();
-    }
-    
-    function toggleFlare(btn) {
-        const flareText = btn.nextElementSibling;
-        flareText.classList.toggle('show');
-        const isPT = currentLang === 'pt';
-        if (flareText.classList.contains('show')) {
-            btn.innerText = isPT ? 'Esconder Flare' : 'Hide Flare';
-        } else {
-            btn.innerText = isPT ? 'Ver Flare' : 'View Flare';
-        }
-    }
 
-    function getAlienImage(alienId) {
-        const key = alienId.toUpperCase();
-        // Tenta carregar do mapa de imagens
-        if (window.alienImages && window.alienImages[key]) {
-            return window.alienImages[key];
-        }
-        // Fallback para imagem local se não estiver no mapa
-        return 'img/vazio.jpg';
-    }
+        function toggleLanguage() {
+            currentLang = currentLang === 'pt' ? 'en' : 'pt';
+            const btn = document.getElementById('langBtn');
+            const input = document.getElementById('searchInput');
 
-    function toggleHistory(btn) {
-        const text = btn.nextElementSibling;
-        text.classList.toggle('show');
-        btn.innerText = text.classList.contains('show') ? 
-            (currentLang === 'pt' ? 'Esconder História' : 'Hide History') : 
-            (currentLang === 'pt' ? 'Ver História' : 'Show History');
-    }
-
-    function updateExpansionCounts() {
-        const counts = {};
-        let total = 0;
-        window.aliensData.forEach(alien => {
-            total++;
-            const exp = alien.expansion;
-            counts[exp] = (counts[exp] || 0) + 1;
-        });
-
-        const select = document.getElementById('expansionFilter');
-        const allText = currentLang === 'pt' ? "Todas as Expansões" : "All Expansions";
-        select.options[0].text = `${allText} (${total})`;
-
-        for (let i = 1; i < select.options.length; i++) {
-            const opt = select.options[i];
-            const key = opt.value;
-            const count = counts[key] || 0;
-            let baseName = key;
-            if(key === 'Expansion') baseName = currentLang === 'pt' ? "Outras / Expansão" : "Others / Expansion";
-            opt.text = `${baseName} (${count})`;
-        }
-    }
-
-    function filterAliens() {
-        const textTerm = document.getElementById('searchInput').value.toLowerCase();
-        const expansionTerm = document.getElementById('expansionFilter').value;
-        
-        const showGreen = document.querySelector('.cb-green').checked;
-        const showYellow = document.querySelector('.cb-yellow').checked;
-        const showRed = document.querySelector('.cb-red').checked;
-
-        const requireSetup = document.getElementById('checkSetup').checked;
-        const requireComponents = document.getElementById('checkComponents').checked;
-
-        const grid = document.getElementById('alienGrid');
-        const resultCount = document.getElementById('resultCount');
-        grid.innerHTML = '';
-
-        const sortedAliens = window.aliensData.sort((a, b) => {
-            const nameA = a.name[currentLang] || a.name.pt;
-            const nameB = b.name[currentLang] || b.name.pt;
-            return nameA.localeCompare(nameB);
-        });
-
-        const filtered = sortedAliens.filter(alien => {
-            const namePT = (alien.name.pt || "").toLowerCase();
-            const nameEN = (alien.name.en || "").toLowerCase();
-            const aka = (alien.aka || "").toLowerCase();
-            const id = (alien.id || "").toLowerCase();
-
-            const matchesText = namePT.includes(textTerm) || 
-                                nameEN.includes(textTerm) || 
-                                aka.includes(textTerm) || 
-                                id.includes(textTerm);
-            
-            let matchesExpansion = false;
-            if (expansionTerm === 'all') {
-                matchesExpansion = true;
-            } else {
-                matchesExpansion = alien.expansion === expansionTerm;
-            }
-
-            let matchesColor = false;
-            if (alien.alert === 'green' && showGreen) matchesColor = true;
-            if (alien.alert === 'yellow' && showYellow) matchesColor = true;
-            if (alien.alert === 'red' && showRed) matchesColor = true;
-            if (!alien.alert && showGreen) matchesColor = true; 
-
-            let matchesSetup = true;
-            if (requireSetup && !alien.hasSetup) matchesSetup = false;
-
-            let matchesComp = true;
-            if (requireComponents && !alien.hasComponents) matchesComp = false;
-
-            return matchesText && matchesExpansion && matchesColor && matchesSetup && matchesComp;
-        });
-
-        const foundText = currentLang === 'pt' ? 'encontrado(s)' : 'found';
-        resultCount.innerHTML = `<span>${filtered.length}</span> alien(s) ${foundText}`;
-
-        filtered.forEach(alien => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            
-            const isAlternate = alien.id.toLowerCase().includes('_alternate');
-            const borderClass = isAlternate ? ' alt-border' : '';
-
-            const imageUrl = getAlienImage(alien.id);
-            // Sempre exibe título em inglês conforme solicitado
-            const name = alien.name.en || alien.name.pt;
-            const summary = alien.summary[currentLang] || alien.summary.pt;
-            const powerText = alien.power[currentLang] || alien.power.pt;
-            const history = alien.history[currentLang] || alien.history.pt;
-
-            let badgesHtml = '';
-            let colorClass = '';
-            if (alien.alert === 'green') colorClass = 'var(--c-green)';
-            else if (alien.alert === 'yellow') colorClass = 'var(--c-yellow)';
-            else if (alien.alert === 'red') colorClass = 'var(--c-red)';
-            else colorClass = '#999';
-            
-            badgesHtml += `<div class="badge"><span class="alert-dot" style="background:${colorClass}"></span></div>`;
-            if (alien.hasSetup) badgesHtml += `<div class="badge">⚙️</div>`;
-            if (alien.hasComponents) badgesHtml += `<div class="badge">📦</div>`;
-
-            // AKA Lógica: Se PT, mostra AKA ou Nome PT se diferente do EN
-            let akaField = '';
             if (currentLang === 'pt') {
-                let akaText = '';
-                if (alien.aka) {
-                    akaText = alien.aka;
-                } else if (alien.name.pt && alien.name.pt !== alien.name.en) {
-                    akaText = alien.name.pt;
-                }
-                
-                if (akaText) {
-                    akaField = `<div class="aka-info">Também conhecido como: <strong>${akaText}</strong></div>`;
-                }
+                btn.innerText = "🇺🇸 English";
+                input.placeholder = "Buscar alien...";
+            } else {
+                btn.innerText = "🇧🇷 Português";
+                input.placeholder = "Search alien...";
             }
+            updateExpansionCounts();
+            filterAliens();
+        }
 
-            let flareHtml = '';
-            if (alien.flare) {
-                const wildText = alien.flare.wild[currentLang];
-                const superText = alien.flare.super[currentLang];
-                const btnText = currentLang === 'pt' ? 'Ver Flare' : 'View Flare';
+        function toggleFlare(btn) {
+            const flareText = btn.nextElementSibling;
+            flareText.classList.toggle('show');
+            const isPT = currentLang === 'pt';
+            if (flareText.classList.contains('show')) {
+                btn.innerText = isPT ? 'Esconder Flare' : 'Hide Flare';
+            } else {
+                btn.innerText = isPT ? 'Ver Flare' : 'View Flare';
+            }
+        }
 
-                flareHtml = `
+        function getAlienImage(alienId) {
+            const key = alienId.toUpperCase();
+            // Tenta carregar do mapa de imagens
+            if (window.alienImages && window.alienImages[key]) {
+                return window.alienImages[key];
+            }
+            // Fallback para imagem local se não estiver no mapa
+            return 'img/vazio.jpg';
+        }
+
+        function toggleHistory(btn) {
+            const text = btn.nextElementSibling;
+            text.classList.toggle('show');
+            btn.innerText = text.classList.contains('show') ?
+                (currentLang === 'pt' ? 'Esconder História' : 'Hide History') :
+                (currentLang === 'pt' ? 'Ver História' : 'Show History');
+        }
+
+        function updateExpansionCounts() {
+            const counts = {};
+            let total = 0;
+            window.aliensData.forEach(alien => {
+                total++;
+                const exp = alien.expansion;
+                counts[exp] = (counts[exp] || 0) + 1;
+            });
+
+            const select = document.getElementById('expansionFilter');
+            const allText = currentLang === 'pt' ? "Todas as Expansões" : "All Expansions";
+            select.options[0].text = `${allText} (${total})`;
+
+            for (let i = 1; i < select.options.length; i++) {
+                const opt = select.options[i];
+                const key = opt.value;
+                const count = counts[key] || 0;
+                let baseName = key;
+
+                opt.text = `${baseName} (${count})`;
+            }
+        }
+
+        function filterAliens() {
+            const textTerm = document.getElementById('searchInput').value.toLowerCase();
+            const expansionTerm = document.getElementById('expansionFilter').value;
+
+            const showGreen = document.querySelector('.cb-green').checked;
+            const showYellow = document.querySelector('.cb-yellow').checked;
+            const showRed = document.querySelector('.cb-red').checked;
+
+            const requireSetup = document.getElementById('checkSetup').checked;
+            const requireComponents = document.getElementById('checkComponents').checked;
+
+            const grid = document.getElementById('alienGrid');
+            const resultCount = document.getElementById('resultCount');
+            grid.innerHTML = '';
+
+            const sortedAliens = window.aliensData.sort((a, b) => {
+                const nameA = a.name[currentLang] || a.name.pt;
+                const nameB = b.name[currentLang] || b.name.pt;
+                return nameA.localeCompare(nameB);
+            });
+
+            const filtered = sortedAliens.filter(alien => {
+                const namePT = (alien.name.pt || "").toLowerCase();
+                const nameEN = (alien.name.en || "").toLowerCase();
+                const aka = (alien.aka || "").toLowerCase();
+                const id = (alien.id || "").toLowerCase();
+
+                const matchesText = namePT.includes(textTerm) ||
+                    nameEN.includes(textTerm) ||
+                    aka.includes(textTerm) ||
+                    id.includes(textTerm);
+
+                let matchesExpansion = false;
+                if (expansionTerm === 'all') {
+                    matchesExpansion = true;
+                } else {
+                    matchesExpansion = alien.expansion === expansionTerm;
+                }
+
+                let matchesColor = false;
+                if (alien.alert === 'green' && showGreen) matchesColor = true;
+                if (alien.alert === 'yellow' && showYellow) matchesColor = true;
+                if (alien.alert === 'red' && showRed) matchesColor = true;
+                if (!alien.alert && showGreen) matchesColor = true;
+
+                let matchesSetup = true;
+                if (requireSetup && !alien.hasSetup) matchesSetup = false;
+
+                let matchesComp = true;
+                if (requireComponents && !alien.hasComponents) matchesComp = false;
+
+                return matchesText && matchesExpansion && matchesColor && matchesSetup && matchesComp;
+            });
+
+            const foundText = currentLang === 'pt' ? 'encontrado(s)' : 'found';
+            resultCount.innerHTML = `<span>${filtered.length}</span> alien(s) ${foundText}`;
+
+            filtered.forEach(alien => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const isAlternate = alien.id.toLowerCase().includes('_alternate');
+                const borderClass = isAlternate ? ' alt-border' : '';
+
+                const imageUrl = getAlienImage(alien.id);
+                // Sempre exibe título em inglês conforme solicitado
+                const name = alien.name.en || alien.name.pt;
+                const summary = alien.summary[currentLang] || alien.summary.pt;
+                const powerText = alien.power[currentLang] || alien.power.pt;
+                const history = alien.history[currentLang] || alien.history.pt;
+
+                let badgesHtml = '';
+                let colorClass = '';
+                if (alien.alert === 'green') colorClass = 'var(--c-green)';
+                else if (alien.alert === 'yellow') colorClass = 'var(--c-yellow)';
+                else if (alien.alert === 'red') colorClass = 'var(--c-red)';
+                else colorClass = '#999';
+
+                badgesHtml += `<div class="badge"><span class="alert-dot" style="background:${colorClass}"></span></div>`;
+                if (alien.hasSetup) badgesHtml += `<div class="badge">⚙️</div>`;
+                if (alien.hasComponents) badgesHtml += `<div class="badge">📦</div>`;
+
+                // AKA Lógica: Se PT, mostra AKA ou Nome PT se diferente do EN
+                let akaField = '';
+                if (currentLang === 'pt') {
+                    let akaText = '';
+                    if (alien.aka) {
+                        akaText = alien.aka;
+                    } else if (alien.name.pt && alien.name.pt !== alien.name.en) {
+                        akaText = alien.name.pt;
+                    }
+
+                    if (akaText) {
+                        akaField = `<div class="aka-info">Também conhecido como: <strong>${akaText}</strong></div>`;
+                    }
+                }
+
+                let flareHtml = '';
+                if (alien.flare) {
+                    const wildText = alien.flare.wild[currentLang];
+                    const superText = alien.flare.super[currentLang];
+                    const btnText = currentLang === 'pt' ? 'Ver Flare' : 'View Flare';
+
+                    flareHtml = `
                     <button class="action-btn flare-btn" onclick="toggleFlare(this)">${btnText}</button>
                     <div class="expandable-text flare-text">
                         <span class="flare-title">Wild</span>
@@ -464,10 +733,10 @@
                         <p>${superText}</p>
                     </div>
                 `;
-            }
+                }
 
-            // Adiciona fallback de imagem vazio.jpg no onError
-            card.innerHTML = `
+                // Adiciona fallback de imagem vazio.jpg no onError
+                card.innerHTML = `
                 <div class="card-image-container${borderClass}">
                     <img src="${imageUrl}" alt="${name}" class="card-image" onerror="this.onerror=null;this.src='img/vazio.jpg';">
                     <div class="card-image-title">${name}</div>
@@ -485,19 +754,19 @@
                     <div class="expandable-text history-text">${history}</div>
                 </div>
             `;
-            grid.appendChild(card);
-        });
-        
-        if (filtered.length === 0) {
-            grid.innerHTML = `<div style="color: #94a3b8; grid-column: 1/-1; text-align: center; padding: 40px; font-size: 1.2rem;">
+                grid.appendChild(card);
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div style="color: #94a3b8; grid-column: 1/-1; text-align: center; padding: 40px; font-size: 1.2rem;">
                 Nenhum alien encontrado. / No aliens found.
             </div>`;
+            }
         }
-    }
 
-    window.onload = function() { 
-        enrichAlienData();
-        updateExpansionCounts();
-        filterAliens(); 
-    };
-</script>
+        window.onload = function () {
+            enrichAlienData();
+            updateExpansionCounts();
+            filterAliens();
+        };
+    </script>
