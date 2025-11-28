@@ -477,6 +477,7 @@
                 <option value="Cosmic Dominion">Cosmic Dominion</option>
                 <option value="Cosmic Eons">Cosmic Eons</option>
                 <option value="Cosmic Odyssey">Cosmic Odyssey</option>
+                <option value="flares">Flares</option>
 
             </select>
             <button onclick="toggleLanguage()" id="langBtn">🇺🇸 English</button>
@@ -640,6 +641,9 @@
                 total++;
                 const exp = alien.expansion;
                 counts[exp] = (counts[exp] || 0) + 1;
+                if (alien.flare) {
+                    counts['flares'] = (counts['flares'] || 0) + 1;
+                }
             });
 
             const select = document.getElementById('expansionFilter');
@@ -651,6 +655,9 @@
                 const key = opt.value;
                 const count = counts[key] || 0;
                 let baseName = key;
+                if (key === 'flares') {
+                    baseName = 'Flares';
+                }
 
                 opt.text = `${baseName} (${count})`;
             }
@@ -706,6 +713,8 @@
                 let matchesExpansion = false;
                 if (expansionTerm === 'all') {
                     matchesExpansion = true;
+                } else if (expansionTerm === 'flares') {
+                    matchesExpansion = !!alien.flare;
                 } else {
                     matchesExpansion = alien.expansion === expansionTerm;
                 }
