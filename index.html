@@ -541,7 +541,7 @@
 
         <div class="filters-row">
             <div class="filter-group">
-                <span class="filter-label" id="labelAlert">Dificuldade:</span>
+                <span class="filter-label" id="labelAlert">Nível:</span>
                 <label class="checkbox-label"><input type="checkbox" class="cb-green" value="green" checked
                         onchange="filterAliens()"> 🟢</label>
                 <label class="checkbox-label"><input type="checkbox" class="cb-yellow" value="yellow" checked
@@ -555,6 +555,8 @@
                         onchange="filterAliens()"> ⚙️ <span id="labelSetup">Preparação</span></label>
                 <label class="checkbox-label" title="Com Componentes"><input type="checkbox" id="checkComponents"
                         onchange="filterAliens()"> 📦 <span id="labelTokens">Fichas</span></label>
+                <label class="checkbox-label" title="Com Cartas de Essência"><input type="checkbox" id="checkEssence"
+                        onchange="filterAliens()"> ✨ <span id="labelEssence">Essência</span></label>
             </div>
         </div>
     </header>
@@ -602,6 +604,12 @@
             brute_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, daredevil_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, demon_alternate: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, grumpus_alternate: { color: 'yellow', comp: false, exp: 'Cosmic Odyssey' }, locust_alternate: { color: 'yellow', comp: true, exp: 'Cosmic Odyssey' }, masochist_alternate: { color: 'red', comp: false, exp: 'Cosmic Odyssey' }, micron_alternate: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }, perfectionist_alternate: { color: 'green', comp: true, exp: 'Cosmic Odyssey' }, sadist_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, schizoid_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, void_alternate: { color: 'red', comp: true, exp: 'Cosmic Odyssey' }, zombie_alternate: { color: 'green', comp: false, exp: 'Cosmic Odyssey' }
         };
 
+        const essenceAliens = [
+            'ai', 'alien', 'anarchist', 'assistant', 'evil_twin', 'host', 'nanny', 'nightmare',
+            'oligarch', 'pack_rat', 'pretender', 'sapient', 'sheriff', 'cosmos', 'negator',
+            'witch', 'zilch', 'schizoid'
+        ];
+
         function enrichAlienData() {
             window.aliensData.forEach(alien => {
                 let meta = alienMetadata[alien.id];
@@ -632,6 +640,12 @@
                         alien.hasSetup = false;
                     }
                 }
+
+                if (essenceAliens.includes(alien.id.toLowerCase())) {
+                    alien.hasEssence = true;
+                } else {
+                    alien.hasEssence = false;
+                }
             });
         }
 
@@ -647,15 +661,17 @@
             if (currentLang === 'pt') {
                 btn.innerText = "🇺🇸 English";
                 input.placeholder = "Buscar alien...";
-                labelAlert.innerText = "Dificuldade:";
+                labelAlert.innerText = "Nível:";
                 labelSetup.innerText = "Preparação";
                 labelTokens.innerText = "Fichas";
+                if (document.getElementById('labelEssence')) document.getElementById('labelEssence').innerText = "Essência";
             } else {
                 btn.innerText = "🇧🇷 Português";
                 input.placeholder = "Search alien...";
-                labelAlert.innerText = "Difficulty:";
+                labelAlert.innerText = "Level:";
                 labelSetup.innerText = "Setup";
                 labelTokens.innerText = "Tokens";
+                if (document.getElementById('labelEssence')) document.getElementById('labelEssence').innerText = "Essence";
             }
             updateExpansionCounts();
             filterAliens();
@@ -788,6 +804,7 @@
 
             const requireSetup = document.getElementById('checkSetup').checked;
             const requireComponents = document.getElementById('checkComponents').checked;
+            const requireEssence = document.getElementById('checkEssence').checked;
 
             const grid = document.getElementById('alienGrid');
             const resultCount = document.getElementById('resultCount');
@@ -831,7 +848,10 @@
                 let matchesComp = true;
                 if (requireComponents && !alien.hasComponents) matchesComp = false;
 
-                return matchesText && matchesExpansion && matchesColor && matchesSetup && matchesComp;
+                let matchesEssence = true;
+                if (requireEssence && !alien.hasEssence) matchesEssence = false;
+
+                return matchesText && matchesExpansion && matchesColor && matchesSetup && matchesComp && matchesEssence;
             });
 
             const foundText = currentLang === 'pt' ? 'encontrado(s)' : 'found';
@@ -861,6 +881,7 @@
                 badgesHtml += `<div class="badge"><span class="alert-dot" style="background:${colorClass}"></span></div>`;
                 if (alien.hasSetup) badgesHtml += `<div class="badge">⚙️</div>`;
                 if (alien.hasComponents) badgesHtml += `<div class="badge">📦</div>`;
+                if (alien.hasEssence) badgesHtml += `<div class="badge">✨</div>`;
 
                 // AKA Lógica: Se PT, mostra AKA ou Nome PT se diferente do EN
                 let akaField = '';
