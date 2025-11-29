@@ -454,6 +454,59 @@
             font-style: italic;
             border-top: 1px solid var(--border);
         }
+
+        .timing-block {
+            margin-top: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        .timing-header {
+            color: var(--text-muted);
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+
+        .timing-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .timing-value {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .phases-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            margin-top: 8px;
+        }
+
+        .phase-tag {
+            background: #1e293b;
+            color: #64748b;
+            padding: 4px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            border: 1px solid #334155;
+        }
+
+        .phase-tag.active {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            border-color: #22c55e;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -795,6 +848,49 @@
                 `;
                 }
 
+                let timingHtml = '';
+                if (alien.timing) {
+                    const player = alien.timing.player[currentLang];
+                    const choice = alien.timing.choice[currentLang];
+                    const phases = alien.timing.phases;
+
+                    const phaseNames = {
+                        startTurn: currentLang === 'pt' ? 'Início' : 'Start',
+                        regroup: currentLang === 'pt' ? 'Reagrupar' : 'Regroup',
+                        destiny: currentLang === 'pt' ? 'Destino' : 'Destiny',
+                        launch: currentLang === 'pt' ? 'Lançar' : 'Launch',
+                        alliance: currentLang === 'pt' ? 'Aliança' : 'Alliance',
+                        planning: currentLang === 'pt' ? 'Planejar' : 'Planning',
+                        reveal: currentLang === 'pt' ? 'Revelar' : 'Reveal',
+                        resolution: currentLang === 'pt' ? 'Resolução' : 'Resolution'
+                    };
+
+                    let phasesHtml = '';
+                    for (const [key, label] of Object.entries(phaseNames)) {
+                        const isActive = phases[key] ? ' active' : '';
+                        phasesHtml += `<div class="phase-tag${isActive}">${label}</div>`;
+                    }
+
+                    const usageLabel = currentLang === 'pt' ? 'Uso:' : 'Usage:';
+                    const choiceLabel = currentLang === 'pt' ? 'Tipo:' : 'Type:';
+
+                    timingHtml = `
+                        <div class="timing-block">
+                            <div class="timing-row">
+                                <span class="timing-header">${usageLabel}</span>
+                                <span class="timing-value">${player}</span>
+                            </div>
+                            <div class="timing-row">
+                                <span class="timing-header">${choiceLabel}</span>
+                                <span class="timing-value">${choice}</span>
+                            </div>
+                            <div class="phases-grid">
+                                ${phasesHtml}
+                            </div>
+                        </div>
+                    `;
+                }
+
                 // Adiciona fallback de imagem vazio.jpg no onError
                 card.innerHTML = `
                 <div class="card-image-container${borderClass}">
@@ -807,6 +903,7 @@
                     ${akaField}
                     <div class="power-summary">${summary}</div>
                     <div class="power-block">${powerText}</div>
+                    ${timingHtml}
                     ${flareHtml}
                     <button class="action-btn history-btn" onclick="toggleHistory(this)">
                         ${currentLang === 'pt' ? 'Ver História' : 'Show History'}

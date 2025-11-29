@@ -1,5 +1,5 @@
 window.aliensData.push(
-    {
+{
         "id": "assessor",
         "expansion": "Cosmic Odyssey",
         "name": {
@@ -27,6 +27,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Quando você usar seu poder, você pode resolver seu efeito duas vezes. Ao dar um reembolso, você pode substituir duas cartas (em vez de uma).",
                 "en": "When you use your power, you may resolve its effect twice. When giving a refund, you may replace two cards (instead of one)."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": true,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -59,6 +79,26 @@ window.aliensData.push(
                 "pt": "Quando você usar seu poder, você pode colocar duas cartas de tipos diferentes. Cada jogador afetado deve revelar todas as suas cartas de ambos os tipos.",
                 "en": "When you use your power, you may place two cards of different types. Each affected player must reveal all of their cards of both types."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
         }
     },
     {
@@ -89,6 +129,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Durante cada uma de suas fases de reagrupamento, você pode mover uma de suas naves da sua ficha de alienígena para uma de suas colônias natais.",
                 "en": "During each of your regroup phases, you may move one of your ships from your alien sheet to one of your home colonies."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Ataque ou Aliado",
+                "en": "Offense or Ally Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": true,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -121,6 +181,26 @@ window.aliensData.push(
                 "pt": "Como aliado, quando você enviar três ou mais naves para o encontro, você pode comprar uma carta para cada nave enviada. Então, descarte o mesmo número de cartas.",
                 "en": "As an ally, when you send three or more ships into the encounter, you may draw one card for each ship sent. Then, discard the same number of cards."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Ataque ou Aliado",
+                "en": "Offense or Ally Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": true,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
         }
     },
     {
@@ -151,6 +231,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Você pode usar seu poder como jogador principal.",
                 "en": "You may use your power as a main player"
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Aliado",
+                "en": "Ally Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -183,6 +283,26 @@ window.aliensData.push(
                 "pt": "Quando você usar seu poder, você pode jogar este flare. Se o jogador principal do seu lado não selecionar uma carta de reforço, cada aliado (de ambos os lados) pode jogar uma carta de encontro como uma carta de reforço do seu lado.",
                 "en": "When you use your power, you may play this flare. If the main player on your side does not select a reinforcement card, each ally (on both sides) can play an encounter card as a reinforcement card on their side."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Jogador",
+                "en": "Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": false,
+                "resolution": false
+            }
         }
     },
     {
@@ -213,6 +333,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Depois de usar uma de suas regras, você pode ganhar uma recompensa.",
                 "en": "After you use one of your rules, you may gain one reward."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Não Ataque",
+                "en": "Not Offense"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": true
             }
         }
     },
@@ -245,6 +385,26 @@ window.aliensData.push(
                 "pt": "Você pode fazer com que os jogadores do seu lado recebam recompensas se você vencer por 7 ou menos (em vez de por 5 ou menos).",
                 "en": "You may cause the players on your side to receive rewards if you win by 7 or less (instead of by 5 or less)."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": true,
+                "resolution": false
+            }
         }
     },
     {
@@ -275,6 +435,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Você pode usar seu poder como aliado. O jogador principal do seu lado escolhe se quer ou não trocar sua carta.",
                 "en": "You may use your power as an ally. The main player on your side choose whether or not to swap their card."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -307,6 +487,26 @@ window.aliensData.push(
                 "pt": "Ao usar seu poder, você pode delegar um jogador não envolvido no encontro para ser um jogador principal em qualquer um dos lados.",
                 "en": "When using your power, you may delegate a player not involved in the encounter to be a main player on either side."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal ou Aliado",
+                "en": "Main Player or Ally Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
         }
     },
     {
@@ -337,6 +537,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Você pode usar seu poder como aliado. Você não pode ter mais do que seu limite normal de naves no encontro após dominar naves.",
                 "en": "You may use your power as an ally. You cannot have more than your normal limit of ships in the encounter after dominating ships."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Não Jogador Principal ou Aliado",
+                "en": "Not Main Player or Ally"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -369,6 +589,26 @@ window.aliensData.push(
                 "pt": "Você pode usar seu poder quando uma segunda carta de destino da cor de um jogador for colocada em sua ficha. Você não pode usar cartas de destino selvagens para este efeito.",
                 "en": "You may use your power when a second destiny card of a player's color is placed on your sheet. You cannot use wild destiny cards for this effect."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
         }
     },
     {
@@ -399,6 +639,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Ao usar seu poder, você pode extrair as naves de dois jogadores do planeta alvo, enviando-as para o mesmo planeta.",
                 "en": "When using your power, you may extract two players' ships from the targeted planet, sending them to the same planet."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Ataque ou Aliado Ofensivo",
+                "en": "Offense or Offensive Ally Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": true
             }
         }
     },
@@ -431,6 +691,26 @@ window.aliensData.push(
                 "pt": "Você pode usar seu poder como aliado.",
                 "en": "You may use your power as an ally."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Não Jogador Principal ou Aliado",
+                "en": "Not Main Player or Ally"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": false,
+                "resolution": false
+            }
         }
     },
     {
@@ -461,6 +741,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Antes de ganhar um companheiro, você pode jogar esta carta para manter até cinco companheiros ao mesmo tempo. Se você perder esta carta, escolha um companheiro para manter e remova o restante.",
                 "en": "Before you gain a buddy, you may play this card to keep up to five buddies at one time. If you lose this card, choose one buddy to keep and remove the rest."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -493,6 +793,26 @@ window.aliensData.push(
                 "pt": "Como ataque, se um aviso de perigo foi comprado, você pode comprar uma carta de perigo e colocá-la em sua ficha. Então, você pode usar seu poder (mesmo que um aviso de perigo tenha sido comprado).",
                 "en": "As the offense, if a hazard warning was drawn, you may draw a hazard card and place it on your sheet. Then, you can use your power (even though a hazard warning was drawn)."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
         }
     },
     {
@@ -523,6 +843,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Quando você usar seu poder, você pode forçar cada jogador a enviar duas naves para a dobra (em vez de uma).",
                 "en": "When you use your power, you may force each player to send two ships to the warp (instead of one)."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": true
             }
         }
     },
@@ -555,6 +895,26 @@ window.aliensData.push(
                 "pt": "Como jogador principal, você pode jogar este flare. Cada uma de suas naves vale o triplo do número de aliados do seu lado. Por exemplo, se você tivesse três aliados, cada uma de suas naves valeria nove para os totais do encontro.",
                 "en": "As a main player, you may play this flare. Each of your ships is worth thrice the number of allies on your side. For example, if you had three allies, each of your ships is worth nine for encounter totals."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Aliado",
+                "en": "Ally Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": true,
+                "resolution": false
+            }
         }
     },
     {
@@ -585,6 +945,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Quando você usar seu poder, você pode ganhar três fichas (em vez de uma ou duas).",
                 "en": "When you use your power, you may gain three tokens (instead of one or two)."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": true,
+                "resolution": false
             }
         }
     },
@@ -617,6 +997,26 @@ window.aliensData.push(
                 "pt": "Você pode jogar este flare a qualquer momento. Então, devolva esta carta para sua mão. Então, se você tiver cinco flares em sua mão, dois dos quais são flares do Inferno, você vence o jogo.",
                 "en": "You may play this flare at any time. Then, return this card to your hand. Then if you have five flares in your hand, two of which are Inferno flares, you win the game."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal ou Aliado",
+                "en": "Main Player or Ally Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
         }
     },
     {
@@ -647,6 +1047,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Quando você usar seu poder, você pode comprar e descartar um flare do baralho de flares não utilizado, mesmo se tiver um flare em sua mão.",
                 "en": "When you use your power, you may draw and discard a flare from the unused flare deck even if you have a flare in your hand."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
             }
         }
     },
@@ -679,6 +1099,26 @@ window.aliensData.push(
                 "pt": "Quando você usar seu poder, você pode mover de uma a três naves da dobra (em vez de quatro).",
                 "en": "When you use your power, you may move one to three ships from the warp (instead of four)."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
         }
     },
     {
@@ -709,6 +1149,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Uma vez por encontro, se um jogador de sua escolha concordar, você pode usar seu poder para segurar uma carta em sua mão ou suas naves no encontro. Esse jogador pode ganhar uma recompensa por concordar.",
                 "en": "Once per encounter, if a player of your choice agrees to it, you may use your power to insure one card in your hand or your ships in the encounter. That player may gain one reward for agreeing."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
             }
         }
     },
@@ -741,6 +1201,26 @@ window.aliensData.push(
                 "pt": "Você pode usar seu poder mesmo se outros jogadores tiverem naves no planeta alvo. Essas naves retornam para suas colônias.",
                 "en": "You may use your power even if other players have ships on the targeted planet. Those ships return to their colonies."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Ataque ou Aliado Ofensivo",
+                "en": "Offense or Offensive Ally Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": true
+            }
         }
     },
     {
@@ -771,6 +1251,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Durante este encontro, você pode usar ambas as partes do seu poder em qualquer ordem.",
                 "en": "During this encounter, you may use both parts of your power in either order."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal ou Aliado",
+                "en": "Main Player or Ally Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -803,6 +1303,26 @@ window.aliensData.push(
                 "pt": "Durante sua fase de reagrupamento, você pode enviar uma de suas naves para a dobra em vez de recuperar uma.",
                 "en": "During your regroup phase, you may send one of your ships to the warp instead of retrieving one."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": true,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
         }
     },
     {
@@ -833,6 +1353,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Quando você usar seu poder, você pode fazer com que cada uma de suas naves valha 3 (em vez de 2).",
                 "en": "When you use your power, you may let each of your ships be worth 3 (instead of 2)."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal ou Aliado",
+                "en": "Main Player or Ally Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -865,6 +1405,26 @@ window.aliensData.push(
                 "pt": "Você pode usar seu poder duas vezes por encontro.",
                 "en": "You may use your power twice per encounter."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
         }
     },
     {
@@ -895,6 +1455,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Quando você usar seu poder para colocar cartas nesta ficha, você pode ganhar cartas da mesma fonte igual ao número de cartas que você colocou. Você pode usar seu poder nessas cartas também, mas se o fizer, não resolva este efeito para essas cartas colocadas.",
                 "en": "When you use your power to place cards on this sheet, you may gain cards from the same source equal to the number of cards that you placed. You may use your power on these cards as well, but if you do, do not resolve this effect for those placed cards."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
             }
         }
     },
@@ -927,6 +1507,26 @@ window.aliensData.push(
                 "pt": "Você pode usar seu poder como aliado.",
                 "en": "You may use your power as an ally"
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": true,
+                "resolution": false
+            }
         }
     },
     {
@@ -957,6 +1557,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Ao usar seu poder para forçar os jogadores a perder uma nave adicional, você pode forçá-los a perder duas naves adicionais.",
                 "en": "When using your power to force players to lose one additional ship, you may force them to lose two additional ships instead."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": true
             }
         }
     },
@@ -989,6 +1609,26 @@ window.aliensData.push(
                 "pt": "Como ataque, no final do encontro, você pode escolher uma condição do seu conjunto de essência e trocá-la com a carta de condição em sua ficha, apenas se nenhum jogador cumprir sua condição.",
                 "en": "As the offense, at the end of the encounter, you may choose a condition from your essence set and swap it with the condition card on your sheet, only if no player fulfills its condition."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Jogador",
+                "en": "Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
         }
     },
     {
@@ -1019,6 +1659,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Quando você usar seu poder, você pode virar uma ou duas fichas de silêncio parcial para o lado de silêncio total.",
                 "en": "When you use your power, you may flip one or two partial silence tokens to the total silence side."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -1051,6 +1711,26 @@ window.aliensData.push(
                 "pt": "Quando você usar seu poder, você pode adicionar os dígitos de ambas as cartas de encontro reveladas ao total de encontro de um lado (em vez de apenas uma das cartas de encontro).",
                 "en": "When you use your power, you may add the digits of both revealed encounter cards to one side's encounter total (instead of just one of the encounter cards)."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal ou Aliado",
+                "en": "Main Player or Ally Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": true,
+                "resolution": false
+            }
         }
     },
     {
@@ -1081,6 +1761,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Como ataque, se você perdeu seu primeiro encontro, você pode ter um segundo encontro.",
                 "en": "As the offense, if you lost your first encounter, you may have a second encounter."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": true
             }
         }
     },
@@ -1113,6 +1813,26 @@ window.aliensData.push(
                 "pt": "A qualquer momento antes que o resultado de um desafio seja final, você pode declarar que esse desafio é \"retrô\". Todas as cartas de reforço jogadas valem zero, e qualquer jogador principal que revelou um Morph perde imediatamente o desafio.",
                 "en": "Any time before the outcome of a challenge is final, you may declare that challenge to be \"retro.\" All reinforcement cards played are worth zero, and any main player who revealed a Morph immediately loses the challenge."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
         }
     },
     {
@@ -1143,6 +1863,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Como aliado, você pode escolher qualquer número de aliados do seu lado para ganhar o efeito do lado virado para cima da sua ficha de vetor.",
                 "en": "As an ally, you may choose any number of allies on your side to gain the effect of your vector token's faceup side."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Aliado",
+                "en": "Ally Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
             }
         }
     },
@@ -1175,6 +1915,26 @@ window.aliensData.push(
                 "pt": "Depois de usar seu poder, você pode forçar cada jogador de quem você capturou naves a escolher uma de suas naves em uma de suas colônias. Capture a(s) nave(s) escolhida(s) também.",
                 "en": "After you use your power, you may force each player from whom you captured ships to choose one of their ships on one of their colonies. Capture the chosen ship(s) as well."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Jogador",
+                "en": "Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": true
+            }
         }
     },
     {
@@ -1205,6 +1965,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Você pode usar seu poder em jogadores amaldiçoados. Quando o fizer, coloque a maldição anterior do jogador em sua pilha de indisponíveis e envie quaisquer naves nela para a dobra.",
                 "en": "You may use your power on cursed players. When you do, place the player's previous curse in your unavailable pile and send any ships on it to the warp."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal ou Aliado",
+                "en": "Main Player or Ally Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": true
             }
         }
     },
@@ -1237,6 +2017,26 @@ window.aliensData.push(
                 "pt": "Como jogador principal, depois que as alianças forem formadas, você pode oferecer um acordo ao seu oponente. Se for aceito, prossiga para a resolução. Se for rejeitado, envie uma de suas naves em uma colônia para a dobra e você pode oferecer acordos adicionais; você pode oferecer um número de acordos até o número de naves que você tem no encontro. Se ele rejeitar todos os seus acordos, o encontro termina como uma derrota para o seu lado.",
                 "en": "As a main player, after alliances are formed, you may offer your opponent a deal. If it is accepted, proceed to resolution. If it is rejected, send one of their ships on a colony to the warp and you may offer additional deals; you may offer a number of deals up to the number of ships you have in the encounter. If they reject all of your deals, the encounter ends as a loss for your side."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal ou Aliado",
+                "en": "Main Player or Ally Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
         }
     },
     {
@@ -1267,6 +2067,26 @@ window.aliensData.push(
             "super": {
                 "pt": "Você pode \"anular\" qualquer carta. Se você anular uma carta de encontro, ela é tratada como um ataque 00. Caso contrário, a carta não tem efeito para este encontro (e é descartada se fosse normalmente). Então, descarte esta carta.",
                 "en": "You may \"nullify\" any card. If you nullify an encounter card, it is treated as an attack 00. Otherwise, the card has no effect for this encounter (and is discarded if it would be normally). Then, discard this card."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
             }
         }
     },
@@ -1299,7 +2119,26 @@ window.aliensData.push(
                 "pt": "Depois que um jogador concordar em se aliar a você, em vez de enviar naves de suas colônias, você pode deixá-lo enviar qualquer número de suas naves da dobra. Isso pode permitir que eles fiquem acima do limite normal de naves.",
                 "en": "After a player agrees to ally with you, instead of sending ships from their colonies, you may let them send any number of their ships from the warp. This can allow them to be above their normal ship limit."
             }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": true,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
         }
     }
-
 );

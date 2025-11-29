@@ -1,22 +1,1022 @@
 window.aliensData.push(
-    { "id": "cavalry", "expansion": "Cosmic Conflict", "name": { "pt": "Cavalry", "en": "Cavalry" }, "aka": "Cavalaria", "summary": { "pt": "Joga Carta de Encontro como Aliado", "en": "Plays Encounter Card as Ally" }, "power": { "pt": "<b>Você tem o poder do Reforço.</b> Como um aliado, depois das cartas de encontros serem escolhidas mas antes de serem reveladas, você <b>pode usar</b> este poder para jogar uma carta de ataque ou negociação da sua mão virada para baixo e deixa-la de lado. Esta segunda carta não é considerada uma carta de encontro do seu lado e não é afetada por efeitos de jogos que almejam a carta de encontro do seu lado, como o Oráculo ou o Feiticeiro. Se você revelar que sua carta é um ataque, adicione-a ao total do seu lado. Isso não tem efeito se a carta de encontro do seu lado for uma negociação. Se você revelar uma negociação do seu lado e perder o encontro, você recebe compensação depois que o jogador principal do seu lado receber compensação, se aplicável. Em qualquer caso, sua carta é descartada depois do uso.", "en": "<b>You have the power to Reinforce.</b> As an ally, after encounters are selected but before they are revealed, you <b>may use</b> this power to play an attack or negotiate facedown from your hand off to one side. This second card is not considered your side's encounter card and isn't affected by game effects that target your side's encounter card, such as Oracle or Sorcerer. If you reveal your card to be an attack, add it to your side's total. This has no effect if your side's encounter card is a negotiate. If you reveal a negotiate and your side loses the encounter, you receive compensation after your side's main player has received compensation, if applicable. In any case, your card is discarded after use." }, "history": { "pt": "Essa raça de policiais interestelares ganhou uma grande reputação por manter a paz nas periferias do espaço. Muitos aliens diferentes convocaram a Cavalaria para ajudar a suprimir as revoluções dos postos avançados. Agora a Cavalaria espera governar o Cosmos tornando-se indispensável.", "en": "This race of interstellar policemen has gained quite a reputation for keeping peace on the fringes of space. Many diverse aliens have called upon the Cavalry to help suppress outpost revolutions. Now the Cavalry hope to rule the Cosmos by becoming indispensable." }, "flare": { "wild": { "pt": "Como jogador principal, quando seu oponente precisar de uma nova mão, as cartas são compradas uma de cada vez até que ele ou ela tenha as cartas necessárias para o encontro (geralmente uma carta de encontro). Seu oponente compra o restante da nova mão no final do encontro.", "en": "As a main player, when your opponent needs a new hand, cards are drawn one at a time until he or she has the cards needed for the encounter (usually one encounter card). Your opponent draws the balance of the new hand at the end of the encounter." }, "super": { "pt": "Como jogador principal, antes das cartas de encontro serem escolhidas, escolha um jogador aliado a você. Aquele jogador deve jogar uma carta de encontro para reforçar você, se possível, como se ele ou ela tivesse seu poder alienígena.", "en": "As a main player, before encounter cards are selected, choose one player allied with you. That player must play an encounter card to reinforce you, if able, as though he or she had your alien power." } } },
-    { "id": "changeling", "expansion": "Cosmic Conflict", "name": { "pt": "Changeling", "en": "Changeling" }, "aka": "Metamorfo", "summary": { "pt": "Troca de Poderes com Oponente", "en": "Swaps Powers with Opponent" }, "power": { "pt": "<b>Você tem o poder de Mudar a Forma.</b> Como um jogador principal, depois da defesa ser determinada, <b>use</b> este poder. Compre uma carta do baralho e adicione-a para sua mão ou troque de poderes de alien com o seu oponente. Este poder só pode ser usado uma vez por encontro. Quando trocar de poder de alien, você ganha todas as facetas do poder - ex.: o tesourou do Avarento, os marcadores do Guerreiro, a garra do Garra, etc..", "en": "<b>You have the power to Change Form.</b> As a main player, after the defense is determined, <b>use</b> this power. Either draw a card from the deck and add it to your hand or swap alien powers with your opponent. This power may be used only once per encounter. When swapping alien powers, you get all facets of that power – e.g., the Miser's hoard, the Warrior's tokens, The Claw's claw, etc." }, "history": { "pt": "Os Metamorfos infantis adoram brincar e antecipam alegremente novas experiências. Recentemente, eles desenvolveram a capacidade perturbadora de trocar sua psique pela de outras pessoas. Sua saudação padrão de \"Eu simplesmente não pareço ser eu mesmo hoje \" provoca pânico em muitos conhecidos passageiros enquanto os Metamorfos saltam sobre o Cosmos.", "en": "The childlike Changelings love to play, and gleefully anticipate new experiences. Recently they have developed the unsettling ability to shed their psyches in exchange for those of others. Their standard greeting of \"I just don't seem to be myself today\" provokes panic in many a passing acquaintance as the Changelings leapfrog about the Cosmos." }, "flare": { "wild": { "pt": "A qualquer momento, você pode comprar uma carta aleatória da mão do jogador à sua esquerda. Depois, devolva essa carta para aquele jogador. Este flare só pode ser usado uma vez por encontro.", "en": "At any time, you may draw a card at random from the hand of the player to your left. Afterwards, give this card to that player. This flare may be used only once per encounter." }, "super": { "pt": "Quando você usar seu poder, você pode trocar de poderes com qualquer jogador no jogo.", "en": "When you use your power, you may swap powers with any player in the game." } } },
-    { "id": "empath", "expansion": "Cosmic Conflict", "name": { "pt": "Empath", "en": "Empath" }, "aka": "Empata", "summary": { "pt": "Pode Mudar Ataque Para Negociação", "en": "May Change Attack to Negotiate" }, "power": { "pt": "<b>Você tem o poder da Harmonia.</b> Como um jogador principal, depois que qualquer jogador principal revela uma carta de negociação e o outro jogador principal revela uma carta de ataque, você <b>pode usar</b> este poder para mudar a carta de ataque revelada em uma carta padrão de negociação. Você e o outro jogador principal tentam então fazer um acordo.", "en": "<b>You have the power of Harmony.</b> As a main player, after either main player reveals any negotiate card and the other main player reveals an attack card, you <b>may use</b> this power to change the revealed attack card into a regular negotiate card. You and the other main player then attempt to make a deal." }, "history": { "pt": "Eras de superpopulação forçaram os Empatas altamente sociais a cooperar para sobreviver. Em seu planeta tropical exuberante, eles aprenderam o valor da defesa e da submissão. Agora, eles estão se esforçando para ensinar harmonia a todas as outras formas de vida cósmica.", "en": "Eons of overpopulation forced the highly social Empaths to cooperate in order to survive. On their lush, tropical planet, they learned the value of defense and yielding. Now, they are striving to teach harmony to all other Cosmic life forms." }, "flare": { "wild": { "pt": "Jogue este flare quando você tentar fazer um acordo. Se você fizer um acordo com sucesso, você e o outro jogador no acordo recebem três recompensas de defensor cada.", "en": "Play this flare when you attempt to make a deal. If you successfully make a deal, you and the other player in the deal each receive three defender rewards." }, "super": { "pt": "Como jogador principal ou aliado, se o jogador principal oponente ao seu lado revelar uma carta de negociação, você pode trocá-la por uma carta de ataque da sua mão. Conclua o encontro como se ele ou ela tivesse revelado aquela carta de ataque.", "en": "As a main player or an ally, if the main player opposing your side reveals a negotiate card, you may exchange it for an attack card from your hand. Conclude the encounter as if he or she revealed that attack card." } } },
-    { "id": "filth", "expansion": "Cosmic Conflict", "name": { "pt": "Filth", "en": "Filth" }, "aka": "Sujeira", "summary": { "pt": "Dispersa Naves de Outros", "en": "Drives Away Others' Ships" }, "power": { "pt": "<b>Você tem o poder de Feder.</b> A qualquer hora que suas naves coexistirem no mesmo planeta que quaisquer naves de outros jogadores, <b>use</b> este poder para forçar que as naves dos outros jogadores retornem para as outras colônias dele ou dela.<br/><br/>Quando você for o atacante ou um aliado defensivo, seus aliados em um encontro vencedor não pousam no planeta alvo com você. Entretanto, eles ainda podem ganhar uma colônia em qualquer outro planeta da escolha deles (cada jogador escolhe separadamente) no sistem defensivo.<br/><br/>Como um Defensor, quando você perde um encontro em um planeta onde você tenha naves, <b>use</b> este poder para forçar que todas as naves opositoras retornem para suas outras colônias ao invés de pousarem naquele planeta. Suas naves perdidas vão para o warp normalmente e o planeta é então \"detetizado.\" Quando você negocia uma colônia com ou de outro jogador em um acordo, cada jogador concedendo uma colônia deve desocupar um planeta para o outro jogador pousar.", "en": "<b>You have the power to Reek.</b> Any time any of your ships are coexisting on the same planet as any other player's ships, <b>use</b> this power to force the other player's ships to return to his or her other colonies.<br/><br/>When you are the offense or an offensive ally, your allies in a winning  encounter do not land on the targeted planet with you. However, they each still gain a colony on any other planet of their choice (each player chooses separately) in the defending system.<br/><br/>As the defense, when you lose an encounter on a planet where you have ships, <b>use</b> this power to force all opposing ships to return to their other colonies instead of landing on that planet. Your losing ships go to the warp normally and the planet is then \"fumigated.\"When you trade a colony to or from another player in a deal, each player granting a colony must vacate a planet for the other player to land on." }, "history": { "pt": "A reverência do Sujeira pelo passado o deixa incapaz de remover qualquer vestígio de eventos anteriores - sejam as manchas glatorp de ontem ou o kinzosh doente do ano passado. Tendo expulsado todas as outras formas de vida de seus mundos natais, eles estão lentamente se estendendo para deixar sua marca - um anel ao redor do Cosmos.", "en": "The Filth's reverence for the past leaves it unable to remove any trace of earlier events – whether yesterday's glatorp stains or last year's diseased kinzosh. Having driven all other life forms from their homeworlds, they are slowly extending out to leave their mark – a ring around the Cosmos." }, "flare": { "wild": { "pt": "A qualquer momento, você pode declarar um planeta como \"sujo\". Todas as naves lá são retornadas para suas outras colônias (ou para o warp se elas não tiverem outras colônias). Quaisquer naves que deveriam pousar lá durante este encontro retornam para suas outras colônias. Dê este flare para o Sujeira após o uso (ou descarte-o, se o Sujeira não estiver jogando).", "en": "At any time, you may declare one planet to be \"filthy\". All ships there are returned to their other colonies (or to the warp if they have no other colonies). Any ships that should land there during this encounter instead return to their other colonies. Give this flare to the Filth after use (or discard it, if Filth isn't playing)." }, "super": { "pt": "Como atacante, quando você mirar o portão hiperespacial em um planeta, todas as naves de outros jogadores naquele planeta (incluindo a defesa) devem imediatamente retornar para suas outras colônias (ou para o warp se elas não tiverem outras colônias).", "en": "As the offense, when you aim the hyperspace gate at a planet, all other players' ships on that planet (including the defense) must immediately return to their other colonies (or to the warp if they have no other colonies)." } } },
-    { "id": "glutton", "expansion": "Cosmic Conflict", "name": { "pt": "Glutton", "en": "Glutton" }, "aka": "Glutão", "summary": { "pt": "Recebe Naves e Cartas Extras", "en": "Gets Extra Ships and Cards" }, "power": { "pt": "<b>Você tem o poder da Garganta.</b> Sempre que você recuperar uma ou mais de suas naves do warp, <b>use</b> este poder para recuperar até duas de suas naves extras do warp.<br/><br/>Sempre que você comprar uma ou mais cartas do baralho (incluindo quando você está recebendo sua mão inicial) ou pegando uma ou mais cartas da mão de outro jogador, <b>use</b> este poder para comprar duas cartas extras da mesma fonte.", "en": "<b>You have the power to Gorge.</b> Whenever you retrieve one or more of your ships from the warp, <b>use</b> this power to retrieve up to two extra ships of yours from the warp.<br/><br/>Whenever you draw one or more cards from the deck (including when you are dealt your starting hand) or take one or more cards from another player's hand, <b>use</b> this power to draw two extra cards from the same source." }, "history": { "pt": "Uma vez descritos como 50%% de boca, 50%% de estômago e 50%% de apetite, os Glutões insaciáveis devoraram seu caminho através do Cosmos desde que (literalmente) se comiam fora de casa. Aqueles que lidam com os Glutões são aconselhados a contar seus dígitos depois e a sempre manter um ou dois olhos em sua prole \"tenra e suculenta\".", "en": "Once described as 50%% mouth, 50%% stomach, and 50%% appetite, the insatiable Gluttons have devoured their way across the Cosmos ever since they (quite literally) ate themselves out of house and home. Those dealing with the Gluttons are advised to count their digits afterwards and to always keep an eyestalk or two on their \"tender, succulent\" offspring." }, "flare": { "wild": { "pt": "Ao receber recompensas de defensor, você recebe duas vezes mais recompensas de defensor do que o normal.", "en": "When receiving defender rewards, you receive twice as many defender rewards as normal." }, "super": { "pt": "Quando um terremoto cósmico ocorrer, você vence o jogo imediatamente.", "en": "When a cosmic quake occurs, you immediately win the game." } } },
-    { "id": "graviton", "expansion": "Cosmic Conflict", "name": { "pt": "Graviton", "en": "Graviton" }, "aka": "Gráviton", "summary": { "pt": "Comprimir Ataques a 1 Dígito", "en": "Compresses Attacks to 1 Digit" }, "power": { "pt": "<b>Você tem o poder da Gravidade.</b> Como um jogador principal, depois das cartas de encontro serem escolhidas mas antes de serem reveladas, você <b>pode usar</b> este poder e dizer \"dezenas\" ou \"unidades\". Se o fizer, quaisquer cartas de ataques reveladas no encontro somente usarão aquele dígito como valor. Por exemplo, se você disser \"dezenas\", um ataque 40 vira um ataque 04 e um ataque 09 vira um ataque 00. Se você disser \"unidades\", aquelas mesmas cartas se tornariam um ataque 00 e um ataque 09.", "en": "<b>You have the power of Gravity.</b> As a main player, after encounter cards are selected but before they are revealed, you <b>may use</b> this power and say either \"tens\" or \"ones\". If you do so, any attack cards revealed in the encounter only use that digit as their value. For instance, if you said \"tens\", an attack 40 would become an attack 04 and an attack 09 would become an attack 00, but if you said \"ones\", those same cards would become an attack 00 and an attack 09." }, "history": { "pt": "Uma raça astuta e inteligente de uma estrela binária perto de um buraco negro, os Gravitons dominaram a habilidade de manipular a gravidade. Conduzindo e comprimindo seus inimigos em formações cada vez mais rígidas, os Gravitons dependem fortemente de seus aliados e reforços para terminar a luta.", "en": "A cunning, intelligent race from a binary star near a black hole, the Gravitons have mastered the ability to manipulate gravity. Herding and squeezing their enemies into tighter and tighter formations, the Gravitons rely heavily on their allies and reinforcements to finish the fight." }, "flare": { "wild": { "pt": "Como jogador principal (se o Gráviton não for seu oponente), jogue este flare antes das cartas de encontro serem escolhidas. Quaisquer cartas de ataque reveladas neste encontro usam apenas o dígito das unidades como valor (por exemplo, um ataque 21 seria considerado um ataque 1).", "en": "As a main player (if the Graviton is not your opponent), play this flare before encounter cards are selected. Any attack cards revealed in this encounter only use their ones digit as their value (e.g., an attack 21 would be considered an attack 1)." }, "super": { "pt": "Ao usar seu poder, você pode declarar que ele afeta apenas a sua carta ou a carta do seu oponente. A declaração ainda é feita antes das cartas serem reveladas, no entanto.", "en": "When using your power, you may declare that it affects only your card or your opponent's card. The declaration is still made before cards are revealed, however." } } },
-    { "id": "industrialist", "expansion": "Cosmic Conflict", "name": { "pt": "Industrialist", "en": "Industrialist" }, "aka": "Industrialista", "summary": { "pt": "Adiciona Cartas de Ataque Perdedoras", "en": "Adds Losing Attack Cards" }, "power": { "pt": "<b>Você tem o poder de Construir.</b> Como um jogador principal, depois de você perder um encontro no qual você revelou uma carta de ataque, seu oponente deve permitir que você vença o encontro ao invés de perder ou permitir que você coloque sua carta de ataque virada para cima nesta ficha, adicionando-a para sua \"pilha.\" Sua pilha não é parte da sua mão e não pode ser comprada por outros jogadores ou ser afetada por poderes dos outros.<br/><br/>Como um jogador principal, após você revelar uma carta de ataque, <b>use</b> este poder para adicionar ou subtrair o total de todas as cartas de ataque em sua pilha do seu total. Por exemplo, se você tem um ataque 08 e um ataque 12 nesta ficha, você poderia adicionar ou subtrair 20 do seu total.", "en": "<b>You tem o poder de Build.</b> As a main player, after you lose an encounter in which you have revealed an attack card, your opponent must either allow you to win the encounter instead of losing, or else allow you to place your attack card faceup on this sheet, adding it to your \"stack.\" Your stack is not part of your hand and cannot be drawn from by other players or affected by other powers.<br/><br/>As a main player, after you reveal an attack card, <b>use</b> this power to either add or subtract the total of all the attack cards in your stack from your total. For instance, if you have an attack 08 and an attack 12 on this sheet, you would add or subtract 20 from your total." }, "history": { "pt": "Os Industrialistas mostraram-se mestres em aprender com seus próprios erros. Das cinzas de cada derrota surge um ataque mais poderoso da próxima vez. Mesmo que os Industrialistas não pareçam aprender tanto com seus sucessos, a força que eles ganharam com suas derrotas é suficiente para eles esculpirem um pedaço do Cosmos para eles.", "en": "The Industrialists have shown themselves to be masters at learning from their own mistakes. From the ashes of each defeat arises a more powerful assault the next time. Even though the Industrialists don't seem to learn as much from their successes, the strength they've gained from their defeats is sufficient for them to carve out a piece of the Cosmos for themselves." }, "flare": { "wild": { "pt": "Como jogador principal, depois de revelar uma carta de ataque, compre uma carta aleatória da mão do seu oponente. Se for uma carta de ataque, adicione-a ao total do seu lado e descarte-a. Caso contrário, devolva-a para a mão do seu oponente.", "en": "As a main player, after you reveal an attack card, draw a card at random from your opponent's hand. If it's an attack card, add it to your side's total, then discard it. Otherwise, return it to your opponent's hand." }, "super": { "pt": "Ao adicionar uma carta à sua pilha, você pode adicionar a carta de encontro revelada de qualquer jogador principal (desde que seja um ataque) à sua pilha.", "en": "When adding a card to your stack, you may add either main player's revealed encounter card (as long as it's an attack) to your stack." } } },
-    { "id": "invader", "expansion": "Cosmic Conflict", "name": { "pt": "Invader", "en": "Invader" }, "aka": "Invasor", "summary": { "pt": "Lança Ataques Sorrateiros", "en": "Launches Sneak Attacks" }, "power": { "pt": "<b>Preparação de Jogo:</b> Embaralhe as três cartas de destino de \"Invasion!\" no baralho de destino. Estas cartas de destino fazem com que você tenha um encontro extra na compra durante o turno de outro jogador. Depois que você tem um encontro extra por causa de uma carta de destino de  \"Invasion!\", o jogador que a comprou durante o turno dele ou dela reinicia o encontro dele ou dela.<br/><br/><b>Você tem o poder de Invadir.</b> Como um jogador principal, depois que uma carta de destino de \"Invasion!\" ou uma carta de destino da sua cor de jogador for comprada, você <b>pode usar</b> este poder para descartar toda a sua mão e comprar uma nova mão de oito cartas. <b>Use</b> este poder somente uma vez por encontro.", "en": "<b>Game Setup:</b> Shuffle the three \"Invasion!\" destiny cards into the destiny deck. These destiny cards cause you to have an extra encounter when drawn during another player's turn. After you have an extra encounter due to an \"Invasion!\" destiny card, the player who drew it during his or her turn restarts his or her encounter.<br/><br/><b>You have the power of Invasion.</b> As a main player, after an \"Invasion!\" destiny card or a destiny card of your player color is drawn, you <b>may use</b> this power to discard your entire hand and draw a new hand of eight cards. <b>Use</b> this power only once per encounter." }, "history": { "pt": "Originários de um lugar além do espaço e do tempo, os Invasores lentamente erodiram as barreiras entre Lá e Aqui, sempre planejando sua invasão do nosso Universo. Agora, finalmente seu tempo está próximo, e eles começaram a rasgar seu caminho através dos véus que permanecem, surgindo em um instante para causar estragos em tudo o que encontram neste lugar novo e não natural.", "en": "Originating in a place beyond space and time, the Invaders have slowly eroded away the barriers between There and Here, planning their invasion of our Universe all the while. Now, at last, their time is at hand, and they have begun tearing their way through the veils that remain, popping up in an instant to wreak havoc on everything they find in this new, unnatural place." }, "flare": { "wild": { "pt": "A qualquer momento, descarte sua mão e compre uma nova mão de oito cartas. Depois, dê esta carta para o Invasor, ou descarte-a se o Invasor não estiver jogando.", "en": "At any time, discard your hand and draw a new hand of eight cards. Afterwards, give this card to the Invader, or discard it if the Invader isn't playing." }, "super": { "pt": "Durante um encontro de Invasão!, você pode enviar naves do warp para o encontro (o máximo normal se aplica). Se as naves sobreviverem ao encontro, elas não retornam para o warp.", "en": "During an Invasion! encounter, you may send ships from the warp into the encounter (normal max applies). If the ships survive the encounter, they do not return to the warp." } } },
-    { "id": "lunatic", "expansion": "Cosmic Conflict", "name": { "pt": "Lunatic", "en": "Lunatic" }, "aka": "Lunático", "summary": { "pt": "Alia Contra Você Mesmo", "en": "Allies Against Self" }, "power": { "pt": "<b>Você tem o poder da Insanidade.</b> Como um jogador principal, depois dos aliados serem convidados, você <b>pode usar</b> este poder para aliar contra você mesmo sem ser convidado. Suas naves no lado perdedor são enviadas para o warp normalmente enquanto suas naves do lado vencedor recebem o que elas normalmente receberiam por ganhar como recompensas ou uma colônia no planeta alvo.", "en": "<b>You have the power of Insanity.</b> As a main player, after allies are invited, you <b>may use</b> this power to ally against yourself without being invited. Your ships on the losing side are sent to the warp as usual, while your ships on the winning side receive whatever they would normally receive for winning, such as rewards or a colony on the targeted planet." }, "history": { "pt": "Não conhecidos por seu comportamento racional, os Lunáticos têm existido até agora por estar do lado vencedor em todas as batalhas de uma forma ou de outra.", "en": "Not known for their rational behavior, the Lunatics have existed thus far by being on the winning side of every battle in some form or another." }, "flare": { "wild": { "pt": "Para cada recompensa que você receber, você pode ambos comprar uma carta do baralho e recuperar uma nave do warp. Você não precisa escolher um ou outro.", "en": "For each reward you recieve, you may both draw a card from the deck and retrieve a ship from the warp. You do not have to choose one or the other." }, "super": { "pt": "Quando não for um jogador principal, você pode se aliar a ambos os lados se for convidado por ambos os jogadores principais.", "en": "When not a main player, you may ally with both sides if invited by both main players." } } },
-    { "id": "mimic", "expansion": "Cosmic Conflict", "name": { "pt": "Mimic", "en": "Mimic" }, "aka": "Mímico", "summary": { "pt": "Copia o Tamanho da Mão do Oponente", "en": "Copies Opponent's Hand Size" }, "power": { "pt": "<b>Você tem o poder de Imitar.</b> Como um jogador principal, antes das cartas de encontro serem escolhidas, <b>use</b> este poder. Se o seu oponente tem mais cartas na mão que você, compre cartas do baralho até você ter o mesmo número de cartas que seu oponente. Se o seu oponente tem menos cartas na mão que você, descarte cartas de sua escolha até você ter o mesmo número de cartas que seu oponente.", "en": "<b>You have the power to Imitate.</b> As a main player, before encounter cards are selected, <b>use</b> this power. If your opponent has more cards in hand than you, draw cards from the deck until you have just as many cards in your hand. If your opponent has fewer cards in hand than you, discard cards of your choice until you have just as few cards in your hand." }, "history": { "pt": "Evoluindo de uma pequena criatura insetoide que tinha um dom incrível para imitar a aparência dos outros seres em seu mundo natal, os Mímicos passaram a ser conhecidos como alguns dos maiores imitadores do Cosmos. Assistir a uma mudança de forma do Mímico é um processo de dar água nos olhos, um pouco como assistir a um escultor gigante e invisível trabalhando. Os Mímicos esperam que sua habilidade de se misturar em todo o Cosmos lhes permitam ascender ao domínio Cósmico, mas só o tempo dirá.", "en": "Evolving from a small insectoid creature that had an incredible gift for imitating the appearance of the other beings on their homeworld, the Mimics have come to be known as some of the greatest copycats in the Cosmos. Watching a Mimic change form is an eye-watering process, a bit like watching a giant, invisible sculptor at work. The Mimics hope that their ability to blend in throughout the Cosmos will allow them to ascend to Cosmic dominance, but only time will tell." }, "flare": { "wild": { "pt": "Duplique os efeitos de um flare selvagem ou carta de artefato que outro jogador acabou de jogar. Os efeitos ocorrem como se você tivesse jogado a carta. Então, dê esta carta para o Mímico, ou descarte-a se o Mímico não estiver jogando.", "en": "Duplicate the effects of a wild flare or artifact card that another player just played. The effects take place as though you had played the card yourself. Then, give this card to the Mimic, or discard it if the Mimic is not playing." }, "super": { "pt": "Ao usar seu poder, você pode comprar até ou descartar até oito cartas em vez do tamanho real da mão do seu oponente.", "en": "When using your power, you may draw up to or discard down to eight cards instead of your opponent's actual hand size." } } },
-    { "id": "prophet", "expansion": "Cosmic Conflict", "name": { "pt": "Prophet", "en": "Prophet" }, "aka": "Profeta", "summary": { "pt": "Prevê o Vencedor do Encontro", "en": "Predicts Encounter Winner" }, "power": { "pt": "<b>Você tem o poder de Prever.</b> Quando você não for um jogador principal ou aliado, você <b>pode usar</b> este poder antes das cartas de encontro serem escolhidas para predizer qual jogador principal (atacante ou defensor) vencerá. Um acordo conta como um vitória para este propósito. Se você estiver correto, você ganha uma colônia em qualquer planeta de sua escolha. Se você estiver errado, o vencedor escolhe quaisquer duas de suas naves e as envia para o warp. Se não houver vencedor, este poder não tem efeito.", "en": "<b>You have the power to Predict.</b> When you are not a main player or ally, you <b>may use</b> this power before encounter cards are selected to predict aloud which main player (offense or defense) will win. A deal counts as a win for this purpose. If you are correct, you gain a colony on any one planet of your choice. If you are not correct, the winner selects any two of your ships and sends them to the warp. If there is no winner, this power has no effect." }, "history": { "pt": "Declarando-se oniscientes, os Profetas partiram para o prometido vácuo do espaço em busca de um novo lar no deserto interestelar. Esses profetas são falsos? Apenas as Eras julgarão.", "en": "Declaring themselves to be omniscient, the Prophets set forth into the promised vacuum of space to seek a new home in the interstellar wilderness. Are these Prophets false? Only the Eons will judge." }, "flare": { "wild": { "pt": "Antes das cartas de encontro serem escolhidas em um encontro, jogue esta carta e secretamente preveja se uma ou duas cartas de negociação serão jogadas. Esconda essa quantidade de tokens cósmicos em sua mão para indicar sua previsão. Se sua previsão estiver correta, cada outro jogador no jogo deve perder uma nave de sua escolha para o warp. Se você estiver errado, passe esta carta para o jogador à sua esquerda.", "en": "Before encounter cards are selected in an encounter, play this card and secretly predict whether one or two negotiate cards will be played. Conceal that many cosmic tokens in your hand to indicate your prediction. If your prediction is correct, each other player in the game must lose a ship of their choice to the warp. If you are wrong, pass this card to the player on your left." }, "super": { "pt": "Você pode prever depois que as cartas forem jogadas, mas antes de serem reveladas.", "en": "You may predict after cards are played, but before they are revealed." } } },
-    { "id": "relic", "expansion": "Cosmic Conflict", "name": { "pt": "Relic", "en": "Relic" }, "aka": "Relíquia", "summary": { "pt": "Ganha Poder de Novas Mãos", "en": "Gains Power from New Hands" }, "power": { "pt": "<b>Você tem o poder de Despertar.</b> A qualquer hora que outro jogador comprar uma nova mão de cartas (depois da mão inicial dele ou dela), <b>use</b> este poder para imediatamente ganhar uma colônia estrangeira grátis no sistema natal dele ou dela no planeta de sua escolha.<br/><br/>A qualquer hora que você comprar uma nova mão de cartas (depois de sua mão inicial), <b>use</b> este poder para recuperar todas as suas naves do warp, retornando-as para suas colônias.", "en": "<b>You have the power to Awaken.</b> Any time another player draws a new hand of cards (after his or her starting hand), <b>use</b> this power to immediately gain a free foreign colony in his or her home system on a planet of your choice.<br/><br/>Any time you draw a new hand of cards (after your starting hand), <b>use</b> this power to retrieve all of your ships from the warp, returning them to your colonies." }, "history": { "pt": "Eras atrás, uma raça guerreira de máquinas varreu o Cosmos, conquistando um planeta após o outro. No entanto, antes que pudessem completar seu terrível objetivo, eles começaram a fechar as portas, buscando refúgio em cavernas escondidas e sob mares turvos em mundos incontáveis. Agora, essas máquinas começaram a despertar mais uma vez, prontas para continuar seus antigos sonhos de dominação Cósmica.", "en": "Eons ago, a warlike race of machines swept across the Cosmos, conquering one planet after another. However, before they could complete their terrible goal, they began to shut down, seeking refuge in hidden caves and beneath murky seas on countless worlds. Now, these machines have begun to awaken once more, ready to continue their ancient dreams of Cosmic domination." }, "flare": { "wild": { "pt": "Ao recuperar uma ou mais naves do warp, retorne-as para qualquer um dos seus planetas natais, mesmo se você atualmente não tiver naves naquele planeta.", "en": "When retrieving one or more ships from the warp, return them to any one of your home planets, even if you currently have no ships on that planet." }, "super": { "pt": "No início do turno de qualquer jogador, escolha qualquer jogador além de você mesmo. Aquele jogador escolhe e descarta uma carta da mão dele ou dela.", "en": "At the start of any player's turn, choose any player other than yourself. That player chooses and discards one card from his or her hand." } } },
-    { "id": "saboteur", "expansion": "Cosmic Conflict", "name": { "pt": "Saboteur", "en": "Saboteur" }, "aka": "Sabotador", "summary": { "pt": "Armadilhas em Planetas", "en": "Booby Traps Planets" }, "power": { "pt": "<b>Preparação de Jogo:</b> Pegue um marcador de armadilha e dois marcadores de iscas por jogador (incluindo você). Coloque estes marcadores virados para baixo próximos a quaisquer planetas de sua escolha. Não coloque mais do que um marcador próximo a um dado planeta.<br/><br/><b>Você tem o poder da Armadilha.</b> A qualquer hora que naves aterrizarem  no planeta com um ou mais marcadores próximos a ele, <b>use</b> este poder para revelar um marcador. Se o marcador revelado for uma isca, retorne o marcador para esta ficha. Se o marcador é uma armadilha, envie todas as naves naquele planeta (incluindo aquelas que acabaram de pousar) para o warp e então retorne o marcador para esta ficha.<br/><br/>No início de cada encontro, você pode trocar quaisquer dois de seus marcadores (seja próximo a um planeta ou nesta ficha) ou pegar um marcador nesta ficha e colocá-lo virado para baixo próximo a qualquer planeta que ainda não tem um de seus marcadores perto dele.", "en": "<b>Game Setup:</b> Take one trap token and two decoy tokens per player (including yourself). Place these tokens facedown next to any planets of your choice. Place no more than one token next to a given planet.<br/><br/><b>You have the power to Booby Trap.</b> Any time ships land on a planet with one of your tokens next to it, <b>use</b> this power to reveal the token. If the revealed token is a decoy, return the token to this sheet. If the token is a trap, send all ships on the planet (including those that just landed) to the warp and then return the token to this sheet.<br/><br/>At the start of each encounter, you may either swap any two of your tokens (whether next to a planet or on this sheet) or take a token on this sheet and place it facedown next to any planet that doesn't already have one of your tokens next to it." }, "history": { "pt": "Há muito tempo enlouquecidos pelo desequilíbrio magnético de seu próprio planeta, os Sabotadores não conseguem ver outro caminho senão o seu próprio e estão determinados a alcançá-lo pela violência.", "en": "Long demented by the magnetic unbalance of their own planet, the Saboteurs can see no way but their own and are determined to achieve it by violence." }, "flare": { "wild": { "pt": "Se você for um jogador principal e compartilhar uma colônia com seu oponente, declare as naves do seu oponente em uma dessas colônias como reféns antes das cartas de encontro serem escolhidas. Se você perder o encontro ou falhar em fazer um acordo, as naves reféns vão imediatamente para o warp. Naves reféns não podem ser removidas da colônia até que o encontro termine, exceto como parte de um acordo, independentemente de outros efeitos de jogo.", "en": "If you are a main player and share a colony with your opponent, declare your opponent's ships on one such colony hostage before encounter cards are selected. If you lose the encounter or fail to deal, the hostage ships immediately go to the warp. Hostage ships may not be removed from the colony until the encounter is ended, other than as part of a deal, regardless of other game effects." }, "super": { "pt": "Após revelar um marcador de isca, descarte uma carta de negociação da sua mão para tratar a isca como se fosse um marcador de armadilha.", "en": "After revealing a decoy token, discard a negotiate card from your hand to treat the decoy as though it were a trap token." } } },
-    { "id": "sadist", "expansion": "Cosmic Conflict", "name": { "pt": "Sadist", "en": "Sadist" }, "aka": "Sádico", "summary": { "pt": "Vence Matando Naves de Outros", "en": "Wins by Killing Others' Ships" }, "power": { "pt": "<b>Você tem o poder de Infligir Dor.</b> No início de qualquer fase de reagrupar (antes do atacante recuperar uma nave do warp), <b>use</b> este poder para vencer o jogo se todos os outros jogadores tiverem perdido pelo menos oito naves cada. Naves perdidas incluem naves no warp, naves removidas de jogo e naves capturadas por outros jogadores.<br/><br/>Você pode vencer ainda pelo método tradicional.", "en": "<b>You have o poder de Inflict Pain.</b> At the start of any regroup phase (before the offense retrieves a ship from the warp), <b>use</b> this power to win the game if all other players have lost at least eight ships each. Lost ships include ships in the warp, ships removed from the game, and ships captured by other players.<br/><br/>You may still win the game via the normal method." }, "history": { "pt": "Uma civilização que glorifica a dor e o prazer em rituais primitivos e brutais, os Sádicos mal conseguem manter sua própria raça viva. Desejando espalhar sua marca de adoração por todo o Universo, esses seres entram no Cosmos com olhos perscrutadores, sangue nas mãos e o desejo de matar o máximo possível de seres vivos.", "en": "A civilization that glorifies pain and pleasure in primal, brutal rituals, the Sadists barely manage to keep their own race alive. Desiring to spread their brand of worship across the Universe, these being enter the Cosmos with peering eyes, blood on their hands, and the desire to kill as many living things as possible." }, "flare": { "wild": { "pt": "Sempre que você enviar naves de outro jogador para o warp, você pode comprar uma carta do baralho para cada jogador que perdeu naves para você.", "en": "Whenever you send another player's ships to the warp, you may draw one card from the deck for each player who lost ships to you." }, "super": { "pt": "No início de qualquer encontro, escolha um jogador com pelo menos uma nave no warp (incluindo você mesmo) e qualquer outro jogador. O primeiro jogador recupera uma nave do warp, então o outro jogador envia uma de suas naves (escolha dele ou dela) para o warp.", "en": "At the start of any encounter, choose a player with at least one ship in the warp (including yourself) and any other player. The first player retrieves a ship from the warp, then the other player sends one of his or her ships (his or her choice) to the warp." } } },
-    { "id": "siren", "expansion": "Cosmic Conflict", "name": { "pt": "Siren", "en": "Siren" }, "aka": "Sereia", "summary": { "pt": "Seduz Competidores", "en": "Entices Challengers" }, "power": { "pt": "<b>Você tem o poder de Seduzir.</b> Sempre que um jogador naquele sistema natal que você tem uma colônia é escolhido como defensor, você <b>pode usar</b> este poder para mirar o portão Hiperespacial em um de seus planetas natais que você tenha uma colônia (sua escolha qual) e se tornar a defesa ao invés. O encontro então continua normalmente.<br/><br/>Sempre que você vencer um encontro como defesa, você imediatamente ganha uma colônia estrangeira grátis no sistema natal do atacante em um planeta de sua escolha.", "en": "<b>You have the power to Lure.</b> Whenever a player in whose home system you have a colony is chosen as the defense, you <b>may use</b> this power to aim the hyperspace gate at one of your home planets on which you have a colony (your choice which) and become the defense instead. The encounter then continues normally.<br/><br/>Whenever you win an encounter as the defense, you immediately gain a free foreign colony in the offense's home system on a planet of your choice." }, "history": { "pt": "Nascida em um planeta de beleza e ilusão, a Sereia atrai viajantes desavisados para suas armadilhas. Seduzidos por seu chamado, os infelizes convidados desconhecem totalmente a destruição que os espera.", "en": "Born on a planet of beauty and illusion, the Siren entices unsuspecting travelers into her traps. Seduced by her call, the luckless guests are totally unaware of the destruction awaiting them." }, "flare": { "wild": { "pt": "Pelo resto deste encontro, cada vez que cartas forem compradas do baralho, você pode nomear uma carta (por exemplo, ataque 30). Se aquela carta for comprada, ela deve ser dada a você.", "en": "For the rest of this encounter, each time cards are drawn from the deck, you may name a card (e.g., attack 30). If that card is drawn, it must be given to you." }, "super": { "pt": "Como defesa, antes dos aliados serem convidados, você pode oferecer uma colônia no sistema do atacante para cada aliado defensivo caso você vença o encontro. Se você fizer tal oferta e vencer, então quando você ganhar uma colônia estrangeira grátis no sistema natal do atacante, cada aliado defensivo pode ou ganhar uma colônia grátis naquele planeta com você ou receber recompensas de defensor normalmente.", "en": "As the defense, before allies are invited, you may offer a colony in the offense's system to each defensive ally should you win the encounter. If you make such an offer and win, then when you gain a free foreign colony in the offense's home system, each defensive ally may either gain a free colony on that planet with you or take defender rewards as normal" } } },
-    { "id": "the_claw", "expansion": "Cosmic Conflict", "name": { "pt": "The Claw", "en": "The Claw" }, "aka": "A Garra", "summary": { "pt": "Rouba Planetas", "en": "Steals Planets" }, "power": { "pt": "<b>Preparação de Jogo:</b> Escolha uma carta da sua mão inicial para ser a sua \"garra\" e coloque-a virada para baixo nesta ficha; então compre uma carta do baralho.<br/><br/><b>Você tem o poder da Garra.</b> Sua garra não é parte de sua mão. Outros jogadores não podem olhá-la ou comprá-la. No início de qualquer fase de reagrupar, você pode trocar uma carta da sua mão com a sua garra.<br/><br/>Uma vez por encontro, quando outro jogador jogar ou revelar uma cópia da carta que você tem como sua garra, se ela não for uma carta de negociação, <b>use</b> este poder e mostre a sua garra. Após o final do encontro, escolha um planeta no sistema natal daquele jogador e mande todas as naves nele para o warp e mova-o para o seu sistema natal para que ele se torne um novo planeta natal para você (não estabeleça automaticamente uma colônia nele). Então, retorne sua carta de garra para sua mão e escolha qualquer carta da sua mão para ser tornar sua nova garra.<br/><br/>Cada planeta roubado no seu sistema natal conta como uma colônia estrangeira para você para vencer, mesmo se não habitada por outros jogadores. (Se você ganhar uma colônia aqui, a colônia é um colônia natal e o planeta por si só ainda conta como uma colônia estrangeira.)", "en": "<b>Game Setup:</b> Choose one card from your starting hand to be your \"claw\" and place it facedown on this sheet; then draw a card from the deck.<br/><br/><b>You have the power of The Claw.</b> Your claw is not part of your hand. Other players may not look at or draw it. At the start of any regroup phase, you may swap a card from your hand with your claw.<br/><br/>Once per encounter, when another player plays or reveals a copy of the card you have as your claw, if it is not a negotiate card, <b>use</b> this power and show your claw. After the end of the encounter, choose a planet in that player's home system, send all ships on it to the warp, and move it to your home system to become a new home planet for yourself (do not automatically establish a colony on it). Then, return your claw card to your hand and choose any card from your hand to become your new claw.<br/><br/>Each stolen planet in your home system counts as a foreign colony toward your win, even if inhabited by other players. (If you gain a colony there, the colony is a home colony and the planet itself still counts as a foreign colony.)" }, "history": { "pt": "Recentemente, planetas inteiros desapareceram deixando para trás apenas luas órfãs e desoladas - uma das quais foi marcada por enormes marcas de garras.", "en": "Recently, entire planets have gone missing, leaving behind only orphaned, desolate moons – one of which was marred by enormous claw marks." }, "flare": { "wild": { "pt": "Como jogador principal ou aliado, se ambas as cartas de encontro reveladas forem cartas de ataque de mesmo valor, seu lado vence automaticamente o encontro.", "en": "As a main player or ally, if both revealed encounter cards are attack cards of the same value, your side automatically wins the encounter." }, "super": { "pt": "Você pode usar seu poder a qualquer momento que dois jogadores principais revelarem cartas de encontro idênticas. Quando isso acontecer, escolha de qual jogador principal roubar um planeta (seu oponente, se você for um jogador principal). Você ainda só pode ativar seu poder de alien uma vez por encontro.", "en": "You may use your power any time two main players reveal identical encounter cards. When this happens, choose which main player to steal a plane from (your opponent, if you are a main player). You may still only activate your alien power once per encounter." } } },
-    { "id": "trickster", "expansion": "Cosmic Conflict", "name": { "pt": "Trickster", "en": "Trickster" }, "aka": "Trapaceiro", "summary": { "pt": "Vence um Encontro 50%% das Vezes", "en": "Wins Encounters 50%% of the Time" }, "power": { "pt": "<b>Você tem o poder das Possibilidades.</b> Como um jogador principal, depois das alianças serem formadas, você <b>pode usar</b> este poder para manipular a probabilidade ao invés de ter um encontro normalmente. Se você o fizer, pegue um marcador e o esconda secretamente em uma de suas mãos. O outro jogador principal então escolhe um dos punhos fechados. Você então abre ambos os punhos, revelando em qual mão o marcador está. Se o seu oponente escolheu a mão contendo o marcador, você perdeu o encontro. Se ele ou ela escolher sua mão vazia, você venceu o encontro. Em qualquer caso, a fase de resolução prossegue normalmente.", "en": "<b>You have the power of Possibilities.</b> As a main player, after alliances are formed, you <b>may use</b> this power to manipulate probability instead of having a normal encounter. If you do so, take a token and conceal it secretly in one of your hands. The other main player then chooses one of your closed fists. You then open both of your fists, revealing which hand held the token. If your opponent chose the hand containing the token, you lose the encounter. If he or she chose your empty hand, you win the encounter. In either case, the resolution phase is then carried out as usual." }, "history": { "pt": "Os Trapaceiros são uma raça de seres incrivelmente poderosos, capazes de manipular a própria estrutura do Cosmos com suas mentes sem nunca deixar seu mundo natal. Felizmente, eles têm poucos sonhos de conquista, preferindo selecionar membros de outras raças alienígenas para brincar. Ainda assim, devido ao seu poder, sempre há a chance de que eles possam assumir o controle do Cosmos por acidente.", "en": "The Tricksters are a race of incredibly powerful beings, able to manipulate the very fabric of the Cosmos with their minds without ever leaving their homeworld. Fortunately, they have few dreams of conquest, instead preferring to select members of other alien races to toy with. Still, given their power, there's always the chance that they could take over the Cosmos by accident." }, "flare": { "wild": { "pt": "Como jogador principal ou aliado, após as cartas de encontro serem reveladas, jogue uma moeda. Se der cara, adicione 10 ao total do seu lado. Se der coroa, subtraia 10 do total do seu lado.", "en": "As a main player or ally, after encounter cards are revealed, flip a coin. If it lands on heads, add 10 to your side's total. If the coin lands on tails, subtract 10 from your side's total." }, "super": { "pt": "Você pode usar seu poder após perder um encontro em vez de antes das cartas serem escolhidas. O resultado do seu poder substitui o resultado do encontro.", "en": "You may use your power after losing an encounter instead of before cards are selected. The outcome of your power replaces the outcome of the encounter." } } },
-    { "id": "visionary", "expansion": "Cosmic Conflict", "name": { "pt": "Visionary", "en": "Visionary" }, "aka": "Visionário", "summary": { "pt": "Dita as Cartas de Encontro", "en": "Dictates Encounter Card" }, "power": { "pt": "<b>Você tem o poder da Percepção.</b> Como um jogador principal, antes das cartas de encontro serem escolhidas, você <b>pode usar</b> este poder para especificar uma carta de encontro que o seu oponente deve jogar (por exemplo: \"Você deve jogar um ataque 06\"). Se o seu oponente não tem a carta, ele ou ela pode jogar qualquer carta de encontro que ele ou ela desejar. Se o seu oponente tem a carta, ele ou ela deve jogá-la ao menos que seja impedido por outro jogador.", "en": "<b>You have the power of Perception.</b> As a main player, before encounter cards are selected, you <b>may use</b> this power to specify an encounter card which your opponent must play (for instance: \"You will play an attack 06\"). If your opponent does not have such a card, he or she may play any encounter card he or she wishes. If your opponent does have the card, however, he or she must play it unless prevented by another player." }, "history": { "pt": "Outrora uma raça ancestral de videntes errantes, os Visionários recentemente geraram debates entre filósofos de todo o Cosmos. A visão mística do Visionário prediz o futuro ou o molda? Esse debate intelectual entre os defensores do causacionalismo e do livre arbítrio tendeu a mascarar o crescimento alarmante do império Visionário. Quanto aos próprios Visionários, eles abominam a lógica e a filosofia, preferindo uma abordagem mais intuitiva dos problemas da dominação cósmica.", "en": "Once an ancient race of wandering fortune tellers, the Visionaries have recently stirred debate among philosophers throughout the Cosmos. Does the mystic sight of the Visionary merely foretell the future, or does it shape it? This intellectual debate between advocates of causationalism and free will has tended to mask the alarming growth of the Visionary empire. As for the Visionaries themselves, they loathe logic and philosophy, preferring a more intuitive approach to the problems of Cosmic domination." }, "flare": { "wild": { "pt": "Como jogador principal, durante qualquer fase, nomeie uma carta específica. Cada jogador então secretamente mostra a você aquela carta se ele ou ela a tiver ou qualquer outra carta se ele ou ela não a tiver.", "en": "As a main player, during any phase, name a specific card. Each player then secretly shows you that card if he or she has it or any other card if he or she doesn't have it." }, "super": { "pt": "Você pode usar seu poder mesmo se não for um jogador principal. Você deve especificar contra qual jogador principal você está usando seu poder.", "en": "You may use your power even if you are not a main player. You must specify which main player you are using your power against." } } },
-    { "id": "warhawk", "expansion": "Cosmic Conflict", "name": { "pt": "Warhawk", "en": "Warhawk" }, "aka": "Falcão de Guerra", "summary": { "pt": "Nunca Negocia", "en": "Never Negotiates" }, "power": { "pt": "<b>Você tem o poder de Atacar.</b> Como um jogador principal, se somente seu oponente revelar uma carta de negociação, <b>use</b> este poder para muda-la para um ataque 00.<br/><br/>Como um jogador principal, se somente você revelar uma carta de negociação, <b>use</b> este poder para mudá-la para uma carta  morph.<br/><br/>Como um jogador principal, se você e seu oponente revelarem cartas de negociação, <b>use</b> este poder para mudar ambas as negociações em cartas de ataque 00.", "en": "<b>You have the power to Attack.</b> As a main player, if only your opponent reveals a negotiate card, <b>use</b> this power to change it into an attack 00.<br/><br/>As a main player, if only you reveal a negotiate card, <b>use</b> this power to change it into a morph card.<br/><br/>As a main player, if both you and your opponent reveal negotiate cards, <b>use</b> this power to change both negotiates into attack 00 cards." }, "history": { "pt": "Os Falcões de Guerra correm para o combate sem pensamentos de rendição. Negociação não é um conceito que eles entendam, e toda a sociedade dos Falcões de Guerra é construída sobre a noção de lutar ou morrer.", "en": "The Warhawks rush into combat with no thoughts of surrender. Negotiation is not a concept they understand, and the entire Warhawk society is built upon the notion of fight or die." }, "flare": { "wild": { "pt": "No início de qualquer encontro, descarte uma carta de negociação da sua mão e compre duas cartas do baralho para substituí-la.", "en": "At the start of any encounter, discard a negotiate card from your hand and draw two cards from the deck to replace it." }, "super": { "pt": "Se você jogar uma carta de negociação e perder o encontro ou falhar em fazer um acordo, você coleta compensação.", "en": "If you play a negotiate card and lose the encounter or fail to make a deal, you collect compensation." } } },
-    { "id": "xenophile", "expansion": "Cosmic Conflict", "name": { "pt": "Xenophile", "en": "Xenophile" }, "aka": "Xenófilo", "summary": { "pt": "Ganha força dos \"Turistas\"", "en": "Gains Strength from \"Tourists\"" }, "power": { "pt": "<b>Você tem o poder de Acolher.</b> Como um jogador principal, depois que ambos os jogadores revelarem cartas de ataque, <b>use</b> este poder para adicionar ou subtrair 3 do seu total para cada colônia estrangeira em seu sistema natal.<br/><br/>Você não perde este poder por ter poucas colônias natais.", "en": "<b>You have the power of Welcoming.</b> As a main player, after both players reveal attack cards, <b>use</b> this power to add or subtract 3 from your total for each foreign colony in your home system.<br/><br/>You do not lose this power because of having too few home colonies." }, "history": { "pt": "Uma das raças mais gregárias e amigáveis do Universo, os Xenófilos tiveram seu mundo natal invadido mais de 20 vezes por alienígenas hostis - e nunca notado. As ordens dadas a eles pelos invasores foram executadas com alegria, até que os invasores finalmente ficaram exasperados com os implacavelmente alegres xenófilos e partiram por conta própria. Os Xenófilos, por sua vez, aguardam ansiosamente a próxima leva de \\ \"turistas \" para que possam fazer sentir-se em casa.", "en": "One of the most gregarious, friendly races in the Universe, the Xenophiles have had their homeworld invaded over 20 twenty times by hostile aliens – and never once noticed. Orders given to them by the invaders were cheerfully carried out, until the invaders eventually grew exasperated with the relentlessly cheerful Xenophiles and left of their own accord. The Xenophiles, for their part, are looking forward to the next batch of \"tourists\" whom they can make feel at home." }, "flare": { "wild": { "pt": "Como jogador principal, após ambos os jogadores revelarem cartas de ataque, adicione 1 ao total do seu lado para cada colônia estrangeira em seu sistema natal.", "en": "As a main player, after both players reveal attack cards, add 1 to your side's total for every foreign colony in your home system." }, "super": { "pt": "Após uma vitória compartilhada ocorrer, você também vence o jogo, independentemente de quantas colônias estrangeiras você tenha.", "en": "After a shared win occurs, you also win the game, regardless of how many foreign colonies you have." } } }
+{
+        "id": "cavalry",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Cavalry",
+            "en": "Cavalry"
+        },
+        "aka": "Cavalaria",
+        "summary": {
+            "pt": "Joga Carta de Encontro como Aliado",
+            "en": "Plays Encounter Card as Ally"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder do Reforço.</b> Como um aliado, depois das cartas de encontros serem escolhidas mas antes de serem reveladas, você <b>pode usar</b> este poder para jogar uma carta de ataque ou negociação da sua mão virada para baixo e deixa-la de lado. Esta segunda carta não é considerada uma carta de encontro do seu lado e não é afetada por efeitos de jogos que almejam a carta de encontro do seu lado, como o Oráculo ou o Feiticeiro. Se você revelar que sua carta é um ataque, adicione-a ao total do seu lado. Isso não tem efeito se a carta de encontro do seu lado for uma negociação. Se você revelar uma negociação do seu lado e perder o encontro, você recebe compensação depois que o jogador principal do seu lado receber compensação, se aplicável. Em qualquer caso, sua carta é descartada depois do uso.",
+            "en": "<b>You have the power to Reinforce.</b> As an ally, after encounters are selected but before they are revealed, you <b>may use</b> this power to play an attack or negotiate facedown from your hand off to one side. This second card is not considered your side's encounter card and isn't affected by game effects that target your side's encounter card, such as Oracle or Sorcerer. If you reveal your card to be an attack, add it to your side's total. This has no effect if your side's encounter card is a negotiate. If you reveal a negotiate and your side loses the encounter, you receive compensation after your side's main player has received compensation, if applicable. In any case, your card is discarded after use."
+        },
+        "history": {
+            "pt": "Essa raça de policiais interestelares ganhou uma grande reputação por manter a paz nas periferias do espaço. Muitos aliens diferentes convocaram a Cavalaria para ajudar a suprimir as revoluções dos postos avançados. Agora a Cavalaria espera governar o Cosmos tornando-se indispensável.",
+            "en": "This race of interstellar policemen has gained quite a reputation for keeping peace on the fringes of space. Many diverse aliens have called upon the Cavalry to help suppress outpost revolutions. Now the Cavalry hope to rule the Cosmos by becoming indispensable."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Como jogador principal, quando seu oponente precisar de uma nova mão, as cartas são compradas uma de cada vez até que ele ou ela tenha as cartas necessárias para o encontro (geralmente uma carta de encontro). Seu oponente compra o restante da nova mão no final do encontro.",
+                "en": "As a main player, when your opponent needs a new hand, cards are drawn one at a time until he or she has the cards needed for the encounter (usually one encounter card). Your opponent draws the balance of the new hand at the end of the encounter."
+            },
+            "super": {
+                "pt": "Como jogador principal, antes das cartas de encontro serem escolhidas, escolha um jogador aliado a você. Aquele jogador deve jogar uma carta de encontro para reforçar você, se possível, como se ele ou ela tivesse seu poder alienígena.",
+                "en": "As a main player, before encounter cards are selected, choose one player allied with you. That player must play an encounter card to reinforce you, if able, as though he or she had your alien power."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Aliado",
+                "en": "Ally Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "changeling",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Changeling",
+            "en": "Changeling"
+        },
+        "aka": "Metamorfo",
+        "summary": {
+            "pt": "Troca de Poderes com Oponente",
+            "en": "Swaps Powers with Opponent"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Mudar a Forma.</b> Como um jogador principal, depois da defesa ser determinada, <b>use</b> este poder. Compre uma carta do baralho e adicione-a para sua mão ou troque de poderes de alien com o seu oponente. Este poder só pode ser usado uma vez por encontro. Quando trocar de poder de alien, você ganha todas as facetas do poder - ex.: o tesourou do Avarento, os marcadores do Guerreiro, a garra do Garra, etc..",
+            "en": "<b>You have the power to Change Form.</b> As a main player, after the defense is determined, <b>use</b> this power. Either draw a card from the deck and add it to your hand or swap alien powers with your opponent. This power may be used only once per encounter. When swapping alien powers, you get all facets of that power – e.g., the Miser's hoard, the Warrior's tokens, The Claw's claw, etc."
+        },
+        "history": {
+            "pt": "Os Metamorfos infantis adoram brincar e antecipam alegremente novas experiências. Recentemente, eles desenvolveram a capacidade perturbadora de trocar sua psique pela de outras pessoas. Sua saudação padrão de \"Eu simplesmente não pareço ser eu mesmo hoje \" provoca pânico em muitos conhecidos passageiros enquanto os Metamorfos saltam sobre o Cosmos.",
+            "en": "The childlike Changelings love to play, and gleefully anticipate new experiences. Recently they have developed the unsettling ability to shed their psyches in exchange for those of others. Their standard greeting of \"I just don't seem to be myself today\" provokes panic in many a passing acquaintance as the Changelings leapfrog about the Cosmos."
+        },
+        "flare": {
+            "wild": {
+                "pt": "A qualquer momento, você pode comprar uma carta aleatória da mão do jogador à sua esquerda. Depois, devolva essa carta para aquele jogador. Este flare só pode ser usado uma vez por encontro.",
+                "en": "At any time, you may draw a card at random from the hand of the player to your left. Afterwards, give this card to that player. This flare may be used only once per encounter."
+            },
+            "super": {
+                "pt": "Quando você usar seu poder, você pode trocar de poderes com qualquer jogador no jogo.",
+                "en": "When you use your power, you may swap powers with any player in the game."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "empath",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Empath",
+            "en": "Empath"
+        },
+        "aka": "Empata",
+        "summary": {
+            "pt": "Pode Mudar Ataque Para Negociação",
+            "en": "May Change Attack to Negotiate"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder da Harmonia.</b> Como um jogador principal, depois que qualquer jogador principal revela uma carta de negociação e o outro jogador principal revela uma carta de ataque, você <b>pode usar</b> este poder para mudar a carta de ataque revelada em uma carta padrão de negociação. Você e o outro jogador principal tentam então fazer um acordo.",
+            "en": "<b>You have the power of Harmony.</b> As a main player, after either main player reveals any negotiate card and the other main player reveals an attack card, you <b>may use</b> this power to change the revealed attack card into a regular negotiate card. You and the other main player then attempt to make a deal."
+        },
+        "history": {
+            "pt": "Eras de superpopulação forçaram os Empatas altamente sociais a cooperar para sobreviver. Em seu planeta tropical exuberante, eles aprenderam o valor da defesa e da submissão. Agora, eles estão se esforçando para ensinar harmonia a todas as outras formas de vida cósmica.",
+            "en": "Eons of overpopulation forced the highly social Empaths to cooperate in order to survive. On their lush, tropical planet, they learned the value of defense and yielding. Now, they are striving to teach harmony to all other Cosmic life forms."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Jogue este flare quando você tentar fazer um acordo. Se você fizer um acordo com sucesso, você e o outro jogador no acordo recebem três recompensas de defensor cada.",
+                "en": "Play this flare when you attempt to make a deal. If you successfully make a deal, you and the other player in the deal each receive three defender rewards."
+            },
+            "super": {
+                "pt": "Como jogador principal ou aliado, se o jogador principal oponente ao seu lado revelar uma carta de negociação, você pode trocá-la por uma carta de ataque da sua mão. Conclua o encontro como se ele ou ela tivesse revelado aquela carta de ataque.",
+                "en": "As a main player or an ally, if the main player opposing your side reveals a negotiate card, you may exchange it for an attack card from your hand. Conclude the encounter as if he or she revealed that attack card."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": true,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "filth",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Filth",
+            "en": "Filth"
+        },
+        "aka": "Sujeira",
+        "summary": {
+            "pt": "Dispersa Naves de Outros",
+            "en": "Drives Away Others' Ships"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Feder.</b> A qualquer hora que suas naves coexistirem no mesmo planeta que quaisquer naves de outros jogadores, <b>use</b> este poder para forçar que as naves dos outros jogadores retornem para as outras colônias dele ou dela.<br/><br/>Quando você for o atacante ou um aliado defensivo, seus aliados em um encontro vencedor não pousam no planeta alvo com você. Entretanto, eles ainda podem ganhar uma colônia em qualquer outro planeta da escolha deles (cada jogador escolhe separadamente) no sistem defensivo.<br/><br/>Como um Defensor, quando você perde um encontro em um planeta onde você tenha naves, <b>use</b> este poder para forçar que todas as naves opositoras retornem para suas outras colônias ao invés de pousarem naquele planeta. Suas naves perdidas vão para o warp normalmente e o planeta é então \"detetizado.\" Quando você negocia uma colônia com ou de outro jogador em um acordo, cada jogador concedendo uma colônia deve desocupar um planeta para o outro jogador pousar.",
+            "en": "<b>You have the power to Reek.</b> Any time any of your ships are coexisting on the same planet as any other player's ships, <b>use</b> this power to force the other player's ships to return to his or her other colonies.<br/><br/>When you are the offense or an offensive ally, your allies in a winning  encounter do not land on the targeted planet with you. However, they each still gain a colony on any other planet of their choice (each player chooses separately) in the defending system.<br/><br/>As the defense, when you lose an encounter on a planet where you have ships, <b>use</b> this power to force all opposing ships to return to their other colonies instead of landing on that planet. Your losing ships go to the warp normally and the planet is then \"fumigated.\"When you trade a colony to or from another player in a deal, each player granting a colony must vacate a planet for the other player to land on."
+        },
+        "history": {
+            "pt": "A reverência do Sujeira pelo passado o deixa incapaz de remover qualquer vestígio de eventos anteriores - sejam as manchas glatorp de ontem ou o kinzosh doente do ano passado. Tendo expulsado todas as outras formas de vida de seus mundos natais, eles estão lentamente se estendendo para deixar sua marca - um anel ao redor do Cosmos.",
+            "en": "The Filth's reverence for the past leaves it unable to remove any trace of earlier events – whether yesterday's glatorp stains or last year's diseased kinzosh. Having driven all other life forms from their homeworlds, they are slowly extending out to leave their mark – a ring around the Cosmos."
+        },
+        "flare": {
+            "wild": {
+                "pt": "A qualquer momento, você pode declarar um planeta como \"sujo\". Todas as naves lá são retornadas para suas outras colônias (ou para o warp se elas não tiverem outras colônias). Quaisquer naves que deveriam pousar lá durante este encontro retornam para suas outras colônias. Dê este flare para o Sujeira após o uso (ou descarte-o, se o Sujeira não estiver jogando).",
+                "en": "At any time, you may declare one planet to be \"filthy\". All ships there are returned to their other colonies (or to the warp if they have no other colonies). Any ships that should land there during this encounter instead return to their other colonies. Give this flare to the Filth after use (or discard it, if Filth isn't playing)."
+            },
+            "super": {
+                "pt": "Como atacante, quando você mirar o portão hiperespacial em um planeta, todas as naves de outros jogadores naquele planeta (incluindo a defesa) devem imediatamente retornar para suas outras colônias (ou para o warp se elas não tiverem outras colônias).",
+                "en": "As the offense, when you aim the hyperspace gate at a planet, all other players' ships on that planet (including the defense) must immediately return to their other colonies (or to the warp if they have no other colonies)."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
+        }
+    },
+    {
+        "id": "glutton",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Glutton",
+            "en": "Glutton"
+        },
+        "aka": "Glutão",
+        "summary": {
+            "pt": "Recebe Naves e Cartas Extras",
+            "en": "Gets Extra Ships and Cards"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder da Garganta.</b> Sempre que você recuperar uma ou mais de suas naves do warp, <b>use</b> este poder para recuperar até duas de suas naves extras do warp.<br/><br/>Sempre que você comprar uma ou mais cartas do baralho (incluindo quando você está recebendo sua mão inicial) ou pegando uma ou mais cartas da mão de outro jogador, <b>use</b> este poder para comprar duas cartas extras da mesma fonte.",
+            "en": "<b>You have the power to Gorge.</b> Whenever you retrieve one or more of your ships from the warp, <b>use</b> this power to retrieve up to two extra ships of yours from the warp.<br/><br/>Whenever you draw one or more cards from the deck (including when you are dealt your starting hand) or take one or more cards from another player's hand, <b>use</b> this power to draw two extra cards from the same source."
+        },
+        "history": {
+            "pt": "Uma vez descritos como 50%% de boca, 50%% de estômago e 50%% de apetite, os Glutões insaciáveis devoraram seu caminho através do Cosmos desde que (literalmente) se comiam fora de casa. Aqueles que lidam com os Glutões são aconselhados a contar seus dígitos depois e a sempre manter um ou dois olhos em sua prole \"tenra e suculenta\".",
+            "en": "Once described as 50%% mouth, 50%% stomach, and 50%% appetite, the insatiable Gluttons have devoured their way across the Cosmos ever since they (quite literally) ate themselves out of house and home. Those dealing with the Gluttons are advised to count their digits afterwards and to always keep an eyestalk or two on their \"tender, succulent\" offspring."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Ao receber recompensas de defensor, você recebe duas vezes mais recompensas de defensor do que o normal.",
+                "en": "When receiving defender rewards, you receive twice as many defender rewards as normal."
+            },
+            "super": {
+                "pt": "Quando um terremoto cósmico ocorrer, você vence o jogo imediatamente.",
+                "en": "When a cosmic quake occurs, you immediately win the game."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
+        }
+    },
+    {
+        "id": "graviton",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Graviton",
+            "en": "Graviton"
+        },
+        "aka": "Gráviton",
+        "summary": {
+            "pt": "Comprimir Ataques a 1 Dígito",
+            "en": "Compresses Attacks to 1 Digit"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder da Gravidade.</b> Como um jogador principal, depois das cartas de encontro serem escolhidas mas antes de serem reveladas, você <b>pode usar</b> este poder e dizer \"dezenas\" ou \"unidades\". Se o fizer, quaisquer cartas de ataques reveladas no encontro somente usarão aquele dígito como valor. Por exemplo, se você disser \"dezenas\", um ataque 40 vira um ataque 04 e um ataque 09 vira um ataque 00. Se você disser \"unidades\", aquelas mesmas cartas se tornariam um ataque 00 e um ataque 09.",
+            "en": "<b>You have the power of Gravity.</b> As a main player, after encounter cards are selected but before they are revealed, you <b>may use</b> this power and say either \"tens\" or \"ones\". If you do so, any attack cards revealed in the encounter only use that digit as their value. For instance, if you said \"tens\", an attack 40 would become an attack 04 and an attack 09 would become an attack 00, but if you said \"ones\", those same cards would become an attack 00 and an attack 09."
+        },
+        "history": {
+            "pt": "Uma raça astuta e inteligente de uma estrela binária perto de um buraco negro, os Gravitons dominaram a habilidade de manipular a gravidade. Conduzindo e comprimindo seus inimigos em formações cada vez mais rígidas, os Gravitons dependem fortemente de seus aliados e reforços para terminar a luta.",
+            "en": "A cunning, intelligent race from a binary star near a black hole, the Gravitons have mastered the ability to manipulate gravity. Herding and squeezing their enemies into tighter and tighter formations, the Gravitons rely heavily on their allies and reinforcements to finish the fight."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Como jogador principal (se o Gráviton não for seu oponente), jogue este flare antes das cartas de encontro serem escolhidas. Quaisquer cartas de ataque reveladas neste encontro usam apenas o dígito das unidades como valor (por exemplo, um ataque 21 seria considerado um ataque 1).",
+                "en": "As a main player (if the Graviton is not your opponent), play this flare before encounter cards are selected. Any attack cards revealed in this encounter only use their ones digit as their value (e.g., an attack 21 would be considered an attack 1)."
+            },
+            "super": {
+                "pt": "Ao usar seu poder, você pode declarar que ele afeta apenas a sua carta ou a carta do seu oponente. A declaração ainda é feita antes das cartas serem reveladas, no entanto.",
+                "en": "When using your power, you may declare that it affects only your card or your opponent's card. The declaration is still made before cards are revealed, however."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "industrialist",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Industrialist",
+            "en": "Industrialist"
+        },
+        "aka": "Industrialista",
+        "summary": {
+            "pt": "Adiciona Cartas de Ataque Perdedoras",
+            "en": "Adds Losing Attack Cards"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Construir.</b> Como um jogador principal, depois de você perder um encontro no qual você revelou uma carta de ataque, seu oponente deve permitir que você vença o encontro ao invés de perder ou permitir que você coloque sua carta de ataque virada para cima nesta ficha, adicionando-a para sua \"pilha.\" Sua pilha não é parte da sua mão e não pode ser comprada por outros jogadores ou ser afetada por poderes dos outros.<br/><br/>Como um jogador principal, após você revelar uma carta de ataque, <b>use</b> este poder para adicionar ou subtrair o total de todas as cartas de ataque em sua pilha do seu total. Por exemplo, se você tem um ataque 08 e um ataque 12 nesta ficha, você poderia adicionar ou subtrair 20 do seu total.",
+            "en": "<b>You tem o poder de Build.</b> As a main player, after you lose an encounter in which you have revealed an attack card, your opponent must either allow you to win the encounter instead of losing, or else allow you to place your attack card faceup on this sheet, adding it to your \"stack.\" Your stack is not part of your hand and cannot be drawn from by other players or affected by other powers.<br/><br/>As a main player, after you reveal an attack card, <b>use</b> this power to either add or subtract the total of all the attack cards in your stack from your total. For instance, if you have an attack 08 and an attack 12 on this sheet, you would add or subtract 20 from your total."
+        },
+        "history": {
+            "pt": "Os Industrialistas mostraram-se mestres em aprender com seus próprios erros. Das cinzas de cada derrota surge um ataque mais poderoso da próxima vez. Mesmo que os Industrialistas não pareçam aprender tanto com seus sucessos, a força que eles ganharam com suas derrotas é suficiente para eles esculpirem um pedaço do Cosmos para eles.",
+            "en": "The Industrialists have shown themselves to be masters at learning from their own mistakes. From the ashes of each defeat arises a more powerful assault the next time. Even though the Industrialists don't seem to learn as much from their successes, the strength they've gained from their defeats is sufficient for them to carve out a piece of the Cosmos for themselves."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Como jogador principal, depois de revelar uma carta de ataque, compre uma carta aleatória da mão do seu oponente. Se for uma carta de ataque, adicione-a ao total do seu lado e descarte-a. Caso contrário, devolva-a para a mão do seu oponente.",
+                "en": "As a main player, after you reveal an attack card, draw a card at random from your opponent's hand. If it's an attack card, add it to your side's total, then discard it. Otherwise, return it to your opponent's hand."
+            },
+            "super": {
+                "pt": "Ao adicionar uma carta à sua pilha, você pode adicionar a carta de encontro revelada de qualquer jogador principal (desde que seja um ataque) à sua pilha.",
+                "en": "When adding a card to your stack, you may add either main player's revealed encounter card (as long as it's an attack) to your stack."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": true,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "invader",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Invader",
+            "en": "Invader"
+        },
+        "aka": "Invasor",
+        "summary": {
+            "pt": "Lança Ataques Sorrateiros",
+            "en": "Launches Sneak Attacks"
+        },
+        "power": {
+            "pt": "<b>Preparação de Jogo:</b> Embaralhe as três cartas de destino de \"Invasion!\" no baralho de destino. Estas cartas de destino fazem com que você tenha um encontro extra na compra durante o turno de outro jogador. Depois que você tem um encontro extra por causa de uma carta de destino de  \"Invasion!\", o jogador que a comprou durante o turno dele ou dela reinicia o encontro dele ou dela.<br/><br/><b>Você tem o poder de Invadir.</b> Como um jogador principal, depois que uma carta de destino de \"Invasion!\" ou uma carta de destino da sua cor de jogador for comprada, você <b>pode usar</b> este poder para descartar toda a sua mão e comprar uma nova mão de oito cartas. <b>Use</b> este poder somente uma vez por encontro.",
+            "en": "<b>Game Setup:</b> Shuffle the three \"Invasion!\" destiny cards into the destiny deck. These destiny cards cause you to have an extra encounter when drawn during another player's turn. After you have an extra encounter due to an \"Invasion!\" destiny card, the player who drew it during his or her turn restarts his or her encounter.<br/><br/><b>You have the power of Invasion.</b> As a main player, after an \"Invasion!\" destiny card or a destiny card of your player color is drawn, you <b>may use</b> this power to discard your entire hand and draw a new hand of eight cards. <b>Use</b> this power only once per encounter."
+        },
+        "history": {
+            "pt": "Originários de um lugar além do espaço e do tempo, os Invasores lentamente erodiram as barreiras entre Lá e Aqui, sempre planejando sua invasão do nosso Universo. Agora, finalmente seu tempo está próximo, e eles começaram a rasgar seu caminho através dos véus que permanecem, surgindo em um instante para causar estragos em tudo o que encontram neste lugar novo e não natural.",
+            "en": "Originating in a place beyond space and time, the Invaders have slowly eroded away the barriers between There and Here, planning their invasion of our Universe all the while. Now, at last, their time is at hand, and they have begun tearing their way through the veils that remain, popping up in an instant to wreak havoc on everything they find in this new, unnatural place."
+        },
+        "flare": {
+            "wild": {
+                "pt": "A qualquer momento, descarte sua mão e compre uma nova mão de oito cartas. Depois, dê esta carta para o Invasor, ou descarte-a se o Invasor não estiver jogando.",
+                "en": "At any time, discard your hand and draw a new hand of eight cards. Afterwards, give this card to the Invader, or discard it if the Invader isn't playing."
+            },
+            "super": {
+                "pt": "Durante um encontro de Invasão!, você pode enviar naves do warp para o encontro (o máximo normal se aplica). Se as naves sobreviverem ao encontro, elas não retornam para o warp.",
+                "en": "During an Invasion! encounter, you may send ships from the warp into the encounter (normal max applies). If the ships survive the encounter, they do not return to the warp."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "lunatic",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Lunatic",
+            "en": "Lunatic"
+        },
+        "aka": "Lunático",
+        "summary": {
+            "pt": "Alia Contra Você Mesmo",
+            "en": "Allies Against Self"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder da Insanidade.</b> Como um jogador principal, depois dos aliados serem convidados, você <b>pode usar</b> este poder para aliar contra você mesmo sem ser convidado. Suas naves no lado perdedor são enviadas para o warp normalmente enquanto suas naves do lado vencedor recebem o que elas normalmente receberiam por ganhar como recompensas ou uma colônia no planeta alvo.",
+            "en": "<b>You have the power of Insanity.</b> As a main player, after allies are invited, you <b>may use</b> this power to ally against yourself without being invited. Your ships on the losing side are sent to the warp as usual, while your ships on the winning side receive whatever they would normally receive for winning, such as rewards or a colony on the targeted planet."
+        },
+        "history": {
+            "pt": "Não conhecidos por seu comportamento racional, os Lunáticos têm existido até agora por estar do lado vencedor em todas as batalhas de uma forma ou de outra.",
+            "en": "Not known for their rational behavior, the Lunatics have existed thus far by being on the winning side of every battle in some form or another."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Para cada recompensa que você receber, você pode ambos comprar uma carta do baralho e recuperar uma nave do warp. Você não precisa escolher um ou outro.",
+                "en": "For each reward you recieve, you may both draw a card from the deck and retrieve a ship from the warp. You do not have to choose one or the other."
+            },
+            "super": {
+                "pt": "Quando não for um jogador principal, você pode se aliar a ambos os lados se for convidado por ambos os jogadores principais.",
+                "en": "When not a main player, you may ally with both sides if invited by both main players."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "mimic",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Mimic",
+            "en": "Mimic"
+        },
+        "aka": "Mímico",
+        "summary": {
+            "pt": "Copia o Tamanho da Mão do Oponente",
+            "en": "Copies Opponent's Hand Size"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Imitar.</b> Como um jogador principal, antes das cartas de encontro serem escolhidas, <b>use</b> este poder. Se o seu oponente tem mais cartas na mão que você, compre cartas do baralho até você ter o mesmo número de cartas que seu oponente. Se o seu oponente tem menos cartas na mão que você, descarte cartas de sua escolha até você ter o mesmo número de cartas que seu oponente.",
+            "en": "<b>You have the power to Imitate.</b> As a main player, before encounter cards are selected, <b>use</b> this power. If your opponent has more cards in hand than you, draw cards from the deck until you have just as many cards in your hand. If your opponent has fewer cards in hand than you, discard cards of your choice until you have just as few cards in your hand."
+        },
+        "history": {
+            "pt": "Evoluindo de uma pequena criatura insetoide que tinha um dom incrível para imitar a aparência dos outros seres em seu mundo natal, os Mímicos passaram a ser conhecidos como alguns dos maiores imitadores do Cosmos. Assistir a uma mudança de forma do Mímico é um processo de dar água nos olhos, um pouco como assistir a um escultor gigante e invisível trabalhando. Os Mímicos esperam que sua habilidade de se misturar em todo o Cosmos lhes permitam ascender ao domínio Cósmico, mas só o tempo dirá.",
+            "en": "Evolving from a small insectoid creature that had an incredible gift for imitating the appearance of the other beings on their homeworld, the Mimics have come to be known as some of the greatest copycats in the Cosmos. Watching a Mimic change form is an eye-watering process, a bit like watching a giant, invisible sculptor at work. The Mimics hope that their ability to blend in throughout the Cosmos will allow them to ascend to Cosmic dominance, but only time will tell."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Duplique os efeitos de um flare selvagem ou carta de artefato que outro jogador acabou de jogar. Os efeitos ocorrem como se você tivesse jogado a carta. Então, dê esta carta para o Mímico, ou descarte-a se o Mímico não estiver jogando.",
+                "en": "Duplicate the effects of a wild flare or artifact card that another player just played. The effects take place as though you had played the card yourself. Then, give this card to the Mimic, or discard it if the Mimic is not playing."
+            },
+            "super": {
+                "pt": "Ao usar seu poder, você pode comprar até ou descartar até oito cartas em vez do tamanho real da mão do seu oponente.",
+                "en": "When using your power, you may draw up to or discard down to eight cards instead of your opponent's actual hand size."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "prophet",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Prophet",
+            "en": "Prophet"
+        },
+        "aka": "Profeta",
+        "summary": {
+            "pt": "Prevê o Vencedor do Encontro",
+            "en": "Predicts Encounter Winner"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Prever.</b> Quando você não for um jogador principal ou aliado, você <b>pode usar</b> este poder antes das cartas de encontro serem escolhidas para predizer qual jogador principal (atacante ou defensor) vencerá. Um acordo conta como um vitória para este propósito. Se você estiver correto, você ganha uma colônia em qualquer planeta de sua escolha. Se você estiver errado, o vencedor escolhe quaisquer duas de suas naves e as envia para o warp. Se não houver vencedor, este poder não tem efeito.",
+            "en": "<b>You have the power to Predict.</b> When you are not a main player or ally, you <b>may use</b> this power before encounter cards are selected to predict aloud which main player (offense or defense) will win. A deal counts as a win for this purpose. If you are correct, you gain a colony on any one planet of your choice. If you are not correct, the winner selects any two of your ships and sends them to the warp. If there is no winner, this power has no effect."
+        },
+        "history": {
+            "pt": "Declarando-se oniscientes, os Profetas partiram para o prometido vácuo do espaço em busca de um novo lar no deserto interestelar. Esses profetas são falsos? Apenas as Eras julgarão.",
+            "en": "Declaring themselves to be omniscient, the Prophets set forth into the promised vacuum of space to seek a new home in the interstellar wilderness. Are these Prophets false? Only the Eons will judge."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Antes das cartas de encontro serem escolhidas em um encontro, jogue esta carta e secretamente preveja se uma ou duas cartas de negociação serão jogadas. Esconda essa quantidade de tokens cósmicos em sua mão para indicar sua previsão. Se sua previsão estiver correta, cada outro jogador no jogo deve perder uma nave de sua escolha para o warp. Se você estiver errado, passe esta carta para o jogador à sua esquerda.",
+                "en": "Before encounter cards are selected in an encounter, play this card and secretly predict whether one or two negotiate cards will be played. Conceal that many cosmic tokens in your hand to indicate your prediction. If your prediction is correct, each other player in the game must lose a ship of their choice to the warp. If you are wrong, pass this card to the player on your left."
+            },
+            "super": {
+                "pt": "Você pode prever depois que as cartas forem jogadas, mas antes de serem reveladas.",
+                "en": "You may predict after cards are played, but before they are revealed."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Não Jogador Principal ou Aliado",
+                "en": "Not Main Player or Ally"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "relic",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Relic",
+            "en": "Relic"
+        },
+        "aka": "Relíquia",
+        "summary": {
+            "pt": "Ganha Poder de Novas Mãos",
+            "en": "Gains Power from New Hands"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Despertar.</b> A qualquer hora que outro jogador comprar uma nova mão de cartas (depois da mão inicial dele ou dela), <b>use</b> este poder para imediatamente ganhar uma colônia estrangeira grátis no sistema natal dele ou dela no planeta de sua escolha.<br/><br/>A qualquer hora que você comprar uma nova mão de cartas (depois de sua mão inicial), <b>use</b> este poder para recuperar todas as suas naves do warp, retornando-as para suas colônias.",
+            "en": "<b>You have the power to Awaken.</b> Any time another player draws a new hand of cards (after his or her starting hand), <b>use</b> this power to immediately gain a free foreign colony in his or her home system on a planet of your choice.<br/><br/>Any time you draw a new hand of cards (after your starting hand), <b>use</b> this power to retrieve all of your ships from the warp, returning them to your colonies."
+        },
+        "history": {
+            "pt": "Eras atrás, uma raça guerreira de máquinas varreu o Cosmos, conquistando um planeta após o outro. No entanto, antes que pudessem completar seu terrível objetivo, eles começaram a fechar as portas, buscando refúgio em cavernas escondidas e sob mares turvos em mundos incontáveis. Agora, essas máquinas começaram a despertar mais uma vez, prontas para continuar seus antigos sonhos de dominação Cósmica.",
+            "en": "Eons ago, a warlike race of machines swept across the Cosmos, conquering one planet after another. However, before they could complete their terrible goal, they began to shut down, seeking refuge in hidden caves and beneath murky seas on countless worlds. Now, these machines have begun to awaken once more, ready to continue their ancient dreams of Cosmic domination."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Ao recuperar uma ou mais naves do warp, retorne-as para qualquer um dos seus planetas natais, mesmo se você atualmente não tiver naves naquele planeta.",
+                "en": "When retrieving one or more ships from the warp, return them to any one of your home planets, even if you currently have no ships on that planet."
+            },
+            "super": {
+                "pt": "No início do turno de qualquer jogador, escolha qualquer jogador além de você mesmo. Aquele jogador escolhe e descarta uma carta da mão dele ou dela.",
+                "en": "At the start of any player's turn, choose any player other than yourself. That player chooses and discards one card from his or her hand."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
+        }
+    },
+    {
+        "id": "saboteur",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Saboteur",
+            "en": "Saboteur"
+        },
+        "aka": "Sabotador",
+        "summary": {
+            "pt": "Armadilhas em Planetas",
+            "en": "Booby Traps Planets"
+        },
+        "power": {
+            "pt": "<b>Preparação de Jogo:</b> Pegue um marcador de armadilha e dois marcadores de iscas por jogador (incluindo você). Coloque estes marcadores virados para baixo próximos a quaisquer planetas de sua escolha. Não coloque mais do que um marcador próximo a um dado planeta.<br/><br/><b>Você tem o poder da Armadilha.</b> A qualquer hora que naves aterrizarem  no planeta com um ou mais marcadores próximos a ele, <b>use</b> este poder para revelar um marcador. Se o marcador revelado for uma isca, retorne o marcador para esta ficha. Se o marcador é uma armadilha, envie todas as naves naquele planeta (incluindo aquelas que acabaram de pousar) para o warp e então retorne o marcador para esta ficha.<br/><br/>No início de cada encontro, você pode trocar quaisquer dois de seus marcadores (seja próximo a um planeta ou nesta ficha) ou pegar um marcador nesta ficha e colocá-lo virado para baixo próximo a qualquer planeta que ainda não tem um de seus marcadores perto dele.",
+            "en": "<b>Game Setup:</b> Take one trap token and two decoy tokens per player (including yourself). Place these tokens facedown next to any planets of your choice. Place no more than one token next to a given planet.<br/><br/><b>You have the power to Booby Trap.</b> Any time ships land on a planet with one of your tokens next to it, <b>use</b> this power to reveal the token. If the revealed token is a decoy, return the token to this sheet. If the token is a trap, send all ships on the planet (including those that just landed) to the warp and then return the token to this sheet.<br/><br/>At the start of each encounter, you may either swap any two of your tokens (whether next to a planet or on this sheet) or take a token on this sheet and place it facedown next to any planet that doesn't already have one of your tokens next to it."
+        },
+        "history": {
+            "pt": "Há muito tempo enlouquecidos pelo desequilíbrio magnético de seu próprio planeta, os Sabotadores não conseguem ver outro caminho senão o seu próprio e estão determinados a alcançá-lo pela violência.",
+            "en": "Long demented by the magnetic unbalance of their own planet, the Saboteurs can see no way but their own and are determined to achieve it by violence."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Se você for um jogador principal e compartilhar uma colônia com seu oponente, declare as naves do seu oponente em uma dessas colônias como reféns antes das cartas de encontro serem escolhidas. Se você perder o encontro ou falhar em fazer um acordo, as naves reféns vão imediatamente para o warp. Naves reféns não podem ser removidas da colônia até que o encontro termine, exceto como parte de um acordo, independentemente de outros efeitos de jogo.",
+                "en": "If you are a main player and share a colony with your opponent, declare your opponent's ships on one such colony hostage before encounter cards are selected. If you lose the encounter or fail to deal, the hostage ships immediately go to the warp. Hostage ships may not be removed from the colony until the encounter is ended, other than as part of a deal, regardless of other game effects."
+            },
+            "super": {
+                "pt": "Após revelar um marcador de isca, descarte uma carta de negociação da sua mão para tratar a isca como se fosse um marcador de armadilha.",
+                "en": "After revealing a decoy token, discard a negotiate card from your hand to treat the decoy as though it were a trap token."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
+        }
+    },
+    {
+        "id": "sadist",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Sadist",
+            "en": "Sadist"
+        },
+        "aka": "Sádico",
+        "summary": {
+            "pt": "Vence Matando Naves de Outros",
+            "en": "Wins by Killing Others' Ships"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Infligir Dor.</b> No início de qualquer fase de reagrupar (antes do atacante recuperar uma nave do warp), <b>use</b> este poder para vencer o jogo se todos os outros jogadores tiverem perdido pelo menos oito naves cada. Naves perdidas incluem naves no warp, naves removidas de jogo e naves capturadas por outros jogadores.<br/><br/>Você pode vencer ainda pelo método tradicional.",
+            "en": "<b>You have o poder de Inflict Pain.</b> At the start of any regroup phase (before the offense retrieves a ship from the warp), <b>use</b> this power to win the game if all other players have lost at least eight ships each. Lost ships include ships in the warp, ships removed from the game, and ships captured by other players.<br/><br/>You may still win the game via the normal method."
+        },
+        "history": {
+            "pt": "Uma civilização que glorifica a dor e o prazer em rituais primitivos e brutais, os Sádicos mal conseguem manter sua própria raça viva. Desejando espalhar sua marca de adoração por todo o Universo, esses seres entram no Cosmos com olhos perscrutadores, sangue nas mãos e o desejo de matar o máximo possível de seres vivos.",
+            "en": "A civilization that glorifies pain and pleasure in primal, brutal rituals, the Sadists barely manage to keep their own race alive. Desiring to spread their brand of worship across the Universe, these being enter the Cosmos with peering eyes, blood on their hands, and the desire to kill as many living things as possible."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Sempre que você enviar naves de outro jogador para o warp, você pode comprar uma carta do baralho para cada jogador que perdeu naves para você.",
+                "en": "Whenever you send another player's ships to the warp, you may draw one card from the deck for each player who lost ships to you."
+            },
+            "super": {
+                "pt": "No início de qualquer encontro, escolha um jogador com pelo menos uma nave no warp (incluindo você mesmo) e qualquer outro jogador. O primeiro jogador recupera uma nave do warp, então o outro jogador envia uma de suas naves (escolha dele ou dela) para o warp.",
+                "en": "At the start of any encounter, choose a player with at least one ship in the warp (including yourself) and any other player. The first player retrieves a ship from the warp, then the other player sends one of his or her ships (his or her choice) to the warp."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": true
+            }
+        }
+    },
+    {
+        "id": "siren",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Siren",
+            "en": "Siren"
+        },
+        "aka": "Sereia",
+        "summary": {
+            "pt": "Seduz Competidores",
+            "en": "Entices Challengers"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Seduzir.</b> Sempre que um jogador naquele sistema natal que você tem uma colônia é escolhido como defensor, você <b>pode usar</b> este poder para mirar o portão Hiperespacial em um de seus planetas natais que você tenha uma colônia (sua escolha qual) e se tornar a defesa ao invés. O encontro então continua normalmente.<br/><br/>Sempre que você vencer um encontro como defesa, você imediatamente ganha uma colônia estrangeira grátis no sistema natal do atacante em um planeta de sua escolha.",
+            "en": "<b>You have the power to Lure.</b> Whenever a player in whose home system you have a colony is chosen as the defense, you <b>may use</b> this power to aim the hyperspace gate at one of your home planets on which you have a colony (your choice which) and become the defense instead. The encounter then continues normally.<br/><br/>Whenever you win an encounter as the defense, you immediately gain a free foreign colony in the offense's home system on a planet of your choice."
+        },
+        "history": {
+            "pt": "Nascida em um planeta de beleza e ilusão, a Sereia atrai viajantes desavisados para suas armadilhas. Seduzidos por seu chamado, os infelizes convidados desconhecem totalmente a destruição que os espera.",
+            "en": "Born on a planet of beauty and illusion, the Siren entices unsuspecting travelers into her traps. Seduced by her call, the luckless guests are totally unaware of the destruction awaiting them."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Pelo resto deste encontro, cada vez que cartas forem compradas do baralho, você pode nomear uma carta (por exemplo, ataque 30). Se aquela carta for comprada, ela deve ser dada a você.",
+                "en": "For the rest of this encounter, each time cards are drawn from the deck, you may name a card (e.g., attack 30). If that card is drawn, it must be given to you."
+            },
+            "super": {
+                "pt": "Como defesa, antes dos aliados serem convidados, você pode oferecer uma colônia no sistema do atacante para cada aliado defensivo caso você vença o encontro. Se você fizer tal oferta e vencer, então quando você ganhar uma colônia estrangeira grátis no sistema natal do atacante, cada aliado defensivo pode ou ganhar uma colônia grátis naquele planeta com você ou receber recompensas de defensor normalmente.",
+                "en": "As the defense, before allies are invited, you may offer a colony in the offense's system to each defensive ally should you win the encounter. If you make such an offer and win, then when you gain a free foreign colony in the offense's home system, each defensive ally may either gain a free colony on that planet with you or take defender rewards as normal"
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Não Jogador Principal ou Aliado",
+                "en": "Not Main Player or Ally"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": true,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "the_claw",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "The Claw",
+            "en": "The Claw"
+        },
+        "aka": "A Garra",
+        "summary": {
+            "pt": "Rouba Planetas",
+            "en": "Steals Planets"
+        },
+        "power": {
+            "pt": "<b>Preparação de Jogo:</b> Escolha uma carta da sua mão inicial para ser a sua \"garra\" e coloque-a virada para baixo nesta ficha; então compre uma carta do baralho.<br/><br/><b>Você tem o poder da Garra.</b> Sua garra não é parte de sua mão. Outros jogadores não podem olhá-la ou comprá-la. No início de qualquer fase de reagrupar, você pode trocar uma carta da sua mão com a sua garra.<br/><br/>Uma vez por encontro, quando outro jogador jogar ou revelar uma cópia da carta que você tem como sua garra, se ela não for uma carta de negociação, <b>use</b> este poder e mostre a sua garra. Após o final do encontro, escolha um planeta no sistema natal daquele jogador e mande todas as naves nele para o warp e mova-o para o seu sistema natal para que ele se torne um novo planeta natal para você (não estabeleça automaticamente uma colônia nele). Então, retorne sua carta de garra para sua mão e escolha qualquer carta da sua mão para ser tornar sua nova garra.<br/><br/>Cada planeta roubado no seu sistema natal conta como uma colônia estrangeira para você para vencer, mesmo se não habitada por outros jogadores. (Se você ganhar uma colônia aqui, a colônia é um colônia natal e o planeta por si só ainda conta como uma colônia estrangeira.)",
+            "en": "<b>Game Setup:</b> Choose one card from your starting hand to be your \"claw\" and place it facedown on this sheet; then draw a card from the deck.<br/><br/><b>You have the power of The Claw.</b> Your claw is not part of your hand. Other players may not look at or draw it. At the start of any regroup phase, you may swap a card from your hand with your claw.<br/><br/>Once per encounter, when another player plays or reveals a copy of the card you have as your claw, if it is not a negotiate card, <b>use</b> this power and show your claw. After the end of the encounter, choose a planet in that player's home system, send all ships on it to the warp, and move it to your home system to become a new home planet for yourself (do not automatically establish a colony on it). Then, return your claw card to your hand and choose any card from your hand to become your new claw.<br/><br/>Each stolen planet in your home system counts as a foreign colony toward your win, even if inhabited by other players. (If you gain a colony there, the colony is a home colony and the planet itself still counts as a foreign colony.)"
+        },
+        "history": {
+            "pt": "Recentemente, planetas inteiros desapareceram deixando para trás apenas luas órfãs e desoladas - uma das quais foi marcada por enormes marcas de garras.",
+            "en": "Recently, entire planets have gone missing, leaving behind only orphaned, desolate moons – one of which was marred by enormous claw marks."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Como jogador principal ou aliado, se ambas as cartas de encontro reveladas forem cartas de ataque de mesmo valor, seu lado vence automaticamente o encontro.",
+                "en": "As a main player or ally, if both revealed encounter cards are attack cards of the same value, your side automatically wins the encounter."
+            },
+            "super": {
+                "pt": "Você pode usar seu poder a qualquer momento que dois jogadores principais revelarem cartas de encontro idênticas. Quando isso acontecer, escolha de qual jogador principal roubar um planeta (seu oponente, se você for um jogador principal). Você ainda só pode ativar seu poder de alien uma vez por encontro.",
+                "en": "You may use your power any time two main players reveal identical encounter cards. When this happens, choose which main player to steal a plane from (your opponent, if you are a main player). You may still only activate your alien power once per encounter."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Como Qualquer Jogador",
+                "en": "As Any Player"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": true,
+                "regroup": true,
+                "destiny": true,
+                "launch": true,
+                "alliance": true,
+                "planning": true,
+                "reveal": true,
+                "resolution": true
+            }
+        }
+    },
+    {
+        "id": "trickster",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Trickster",
+            "en": "Trickster"
+        },
+        "aka": "Trapaceiro",
+        "summary": {
+            "pt": "Vence um Encontro 50%% das Vezes",
+            "en": "Wins Encounters 50%% of the Time"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder das Possibilidades.</b> Como um jogador principal, depois das alianças serem formadas, você <b>pode usar</b> este poder para manipular a probabilidade ao invés de ter um encontro normalmente. Se você o fizer, pegue um marcador e o esconda secretamente em uma de suas mãos. O outro jogador principal então escolhe um dos punhos fechados. Você então abre ambos os punhos, revelando em qual mão o marcador está. Se o seu oponente escolheu a mão contendo o marcador, você perdeu o encontro. Se ele ou ela escolher sua mão vazia, você venceu o encontro. Em qualquer caso, a fase de resolução prossegue normalmente.",
+            "en": "<b>You have the power of Possibilities.</b> As a main player, after alliances are formed, you <b>may use</b> this power to manipulate probability instead of having a normal encounter. If you do so, take a token and conceal it secretly in one of your hands. The other main player then chooses one of your closed fists. You then open both of your fists, revealing which hand held the token. If your opponent chose the hand containing the token, you lose the encounter. If he or she chose your empty hand, you win the encounter. In either case, the resolution phase is then carried out as usual."
+        },
+        "history": {
+            "pt": "Os Trapaceiros são uma raça de seres incrivelmente poderosos, capazes de manipular a própria estrutura do Cosmos com suas mentes sem nunca deixar seu mundo natal. Felizmente, eles têm poucos sonhos de conquista, preferindo selecionar membros de outras raças alienígenas para brincar. Ainda assim, devido ao seu poder, sempre há a chance de que eles possam assumir o controle do Cosmos por acidente.",
+            "en": "The Tricksters are a race of incredibly powerful beings, able to manipulate the very fabric of the Cosmos with their minds without ever leaving their homeworld. Fortunately, they have few dreams of conquest, instead preferring to select members of other alien races to toy with. Still, given their power, there's always the chance that they could take over the Cosmos by accident."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Como jogador principal ou aliado, após as cartas de encontro serem reveladas, jogue uma moeda. Se der cara, adicione 10 ao total do seu lado. Se der coroa, subtraia 10 do total do seu lado.",
+                "en": "As a main player or ally, after encounter cards are revealed, flip a coin. If it lands on heads, add 10 to your side's total. If the coin lands on tails, subtract 10 from your side's total."
+            },
+            "super": {
+                "pt": "Você pode usar seu poder após perder um encontro em vez de antes das cartas serem escolhidas. O resultado do seu poder substitui o resultado do encontro.",
+                "en": "You may use your power after losing an encounter instead of before cards are selected. The outcome of your power replaces the outcome of the encounter."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": true,
+                "planning": false,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "visionary",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Visionary",
+            "en": "Visionary"
+        },
+        "aka": "Visionário",
+        "summary": {
+            "pt": "Dita as Cartas de Encontro",
+            "en": "Dictates Encounter Card"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder da Percepção.</b> Como um jogador principal, antes das cartas de encontro serem escolhidas, você <b>pode usar</b> este poder para especificar uma carta de encontro que o seu oponente deve jogar (por exemplo: \"Você deve jogar um ataque 06\"). Se o seu oponente não tem a carta, ele ou ela pode jogar qualquer carta de encontro que ele ou ela desejar. Se o seu oponente tem a carta, ele ou ela deve jogá-la ao menos que seja impedido por outro jogador.",
+            "en": "<b>You have the power of Perception.</b> As a main player, before encounter cards are selected, you <b>may use</b> this power to specify an encounter card which your opponent must play (for instance: \"You will play an attack 06\"). If your opponent does not have such a card, he or she may play any encounter card he or she wishes. If your opponent does have the card, however, he or she must play it unless prevented by another player."
+        },
+        "history": {
+            "pt": "Outrora uma raça ancestral de videntes errantes, os Visionários recentemente geraram debates entre filósofos de todo o Cosmos. A visão mística do Visionário prediz o futuro ou o molda? Esse debate intelectual entre os defensores do causacionalismo e do livre arbítrio tendeu a mascarar o crescimento alarmante do império Visionário. Quanto aos próprios Visionários, eles abominam a lógica e a filosofia, preferindo uma abordagem mais intuitiva dos problemas da dominação cósmica.",
+            "en": "Once an ancient race of wandering fortune tellers, the Visionaries have recently stirred debate among philosophers throughout the Cosmos. Does the mystic sight of the Visionary merely foretell the future, or does it shape it? This intellectual debate between advocates of causationalism and free will has tended to mask the alarming growth of the Visionary empire. As for the Visionaries themselves, they loathe logic and philosophy, preferring a more intuitive approach to the problems of Cosmic domination."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Como jogador principal, durante qualquer fase, nomeie uma carta específica. Cada jogador então secretamente mostra a você aquela carta se ele ou ela a tiver ou qualquer outra carta se ele ou ela não a tiver.",
+                "en": "As a main player, during any phase, name a specific card. Each player then secretly shows you that card if he or she has it or any other card if he or she doesn't have it."
+            },
+            "super": {
+                "pt": "Você pode usar seu poder mesmo se não for um jogador principal. Você deve especificar contra qual jogador principal você está usando seu poder.",
+                "en": "You may use your power even if you are not a main player. You must specify which main player you are using your power against."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Opcional",
+                "en": "Optional"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": true,
+                "reveal": false,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "warhawk",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Warhawk",
+            "en": "Warhawk"
+        },
+        "aka": "Falcão de Guerra",
+        "summary": {
+            "pt": "Nunca Negocia",
+            "en": "Never Negotiates"
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Atacar.</b> Como um jogador principal, se somente seu oponente revelar uma carta de negociação, <b>use</b> este poder para muda-la para um ataque 00.<br/><br/>Como um jogador principal, se somente você revelar uma carta de negociação, <b>use</b> este poder para mudá-la para uma carta  morph.<br/><br/>Como um jogador principal, se você e seu oponente revelarem cartas de negociação, <b>use</b> este poder para mudar ambas as negociações em cartas de ataque 00.",
+            "en": "<b>You have the power to Attack.</b> As a main player, if only your opponent reveals a negotiate card, <b>use</b> this power to change it into an attack 00.<br/><br/>As a main player, if only you reveal a negotiate card, <b>use</b> this power to change it into a morph card.<br/><br/>As a main player, if both you and your opponent reveal negotiate cards, <b>use</b> this power to change both negotiates into attack 00 cards."
+        },
+        "history": {
+            "pt": "Os Falcões de Guerra correm para o combate sem pensamentos de rendição. Negociação não é um conceito que eles entendam, e toda a sociedade dos Falcões de Guerra é construída sobre a noção de lutar ou morrer.",
+            "en": "The Warhawks rush into combat with no thoughts of surrender. Negotiation is not a concept they understand, and the entire Warhawk society is built upon the notion of fight or die."
+        },
+        "flare": {
+            "wild": {
+                "pt": "No início de qualquer encontro, descarte uma carta de negociação da sua mão e compre duas cartas do baralho para substituí-la.",
+                "en": "At the start of any encounter, discard a negotiate card from your hand and draw two cards from the deck to replace it."
+            },
+            "super": {
+                "pt": "Se você jogar uma carta de negociação e perder o encontro ou falhar em fazer um acordo, você coleta compensação.",
+                "en": "If you play a negotiate card and lose the encounter or fail to make a deal, you collect compensation."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": true,
+                "resolution": false
+            }
+        }
+    },
+    {
+        "id": "xenophile",
+        "expansion": "Cosmic Conflict",
+        "name": {
+            "pt": "Xenophile",
+            "en": "Xenophile"
+        },
+        "aka": "Xenófilo",
+        "summary": {
+            "pt": "Ganha força dos \"Turistas\"",
+            "en": "Gains Strength from \"Tourists\""
+        },
+        "power": {
+            "pt": "<b>Você tem o poder de Acolher.</b> Como um jogador principal, depois que ambos os jogadores revelarem cartas de ataque, <b>use</b> este poder para adicionar ou subtrair 3 do seu total para cada colônia estrangeira em seu sistema natal.<br/><br/>Você não perde este poder por ter poucas colônias natais.",
+            "en": "<b>You have the power of Welcoming.</b> As a main player, after both players reveal attack cards, <b>use</b> this power to add or subtract 3 from your total for each foreign colony in your home system.<br/><br/>You do not lose this power because of having too few home colonies."
+        },
+        "history": {
+            "pt": "Uma das raças mais gregárias e amigáveis do Universo, os Xenófilos tiveram seu mundo natal invadido mais de 20 vezes por alienígenas hostis - e nunca notado. As ordens dadas a eles pelos invasores foram executadas com alegria, até que os invasores finalmente ficaram exasperados com os implacavelmente alegres xenófilos e partiram por conta própria. Os Xenófilos, por sua vez, aguardam ansiosamente a próxima leva de \\ \"turistas \" para que possam fazer sentir-se em casa.",
+            "en": "One of the most gregarious, friendly races in the Universe, the Xenophiles have had their homeworld invaded over 20 twenty times by hostile aliens – and never once noticed. Orders given to them by the invaders were cheerfully carried out, until the invaders eventually grew exasperated with the relentlessly cheerful Xenophiles and left of their own accord. The Xenophiles, for their part, are looking forward to the next batch of \"tourists\" whom they can make feel at home."
+        },
+        "flare": {
+            "wild": {
+                "pt": "Como jogador principal, após ambos os jogadores revelarem cartas de ataque, adicione 1 ao total do seu lado para cada colônia estrangeira em seu sistema natal.",
+                "en": "As a main player, after both players reveal attack cards, add 1 to your side's total for every foreign colony in your home system."
+            },
+            "super": {
+                "pt": "Após uma vitória compartilhada ocorrer, você também vence o jogo, independentemente de quantas colônias estrangeiras você tenha.",
+                "en": "After a shared win occurs, you also win the game, regardless of how many foreign colonies you have."
+            }
+        },
+        "timing": {
+            "player": {
+                "pt": "Apenas Jogador Principal",
+                "en": "Main Player Only"
+            },
+            "choice": {
+                "pt": "Obrigatório",
+                "en": "Mandatory"
+            },
+            "phases": {
+                "startTurn": false,
+                "regroup": false,
+                "destiny": false,
+                "launch": false,
+                "alliance": false,
+                "planning": false,
+                "reveal": true,
+                "resolution": false
+            }
+        }
+    }
 );
