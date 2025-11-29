@@ -57,6 +57,30 @@
             transform: translateY(-100%);
         }
 
+        .floating-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s;
+        }
+
+        .floating-btn.visible {
+            display: flex;
+        }
+
         h1 {
             margin: 0;
             color: var(--accent);
@@ -589,6 +613,8 @@
         <div id="alienGrid" class="alien-grid"></div>
     </div>
 
+    <button id="showFiltersBtn" class="floating-btn" onclick="showHeader()">🔍</button>
+
     <script>window.aliensData = [];</script>
 
     <script src="images.js" defer></script>
@@ -978,18 +1004,28 @@
 
             let lastScrollTop = 0;
             const header = document.querySelector('header');
+            const floatBtn = document.getElementById('showFiltersBtn');
 
             window.addEventListener('scroll', function () {
                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    // Scrolling down & passed threshold
-                    header.classList.add('header-hidden');
+                if (scrollTop > 100) {
+                    // Scrolling down past threshold - hide header, show button
+                    if (!header.classList.contains('header-hidden')) {
+                        header.classList.add('header-hidden');
+                        floatBtn.classList.add('visible');
+                    }
                 } else {
-                    // Scrolling up
+                    // At top - show header, hide button
                     header.classList.remove('header-hidden');
+                    floatBtn.classList.remove('visible');
                 }
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             });
+
+            window.showHeader = function () {
+                header.classList.remove('header-hidden');
+                floatBtn.classList.remove('visible');
+            };
         };
     </script>
