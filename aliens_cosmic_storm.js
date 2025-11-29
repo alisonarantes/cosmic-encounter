@@ -22,11 +22,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um jogador principal ou aliado, se o seu lado vencer um encontro por 10 ou mais, você pode forçar cada jogador do lado perdedor a enviar uma nave adicional de qualquer uma de suas colônias para o warp.",
-                "en": "As a main player or ally, if your side wins an encounter by 10 or more, you may force each player on the losing side to send one additional ship from any of his or her colonies to the warp."
+                "en": "As a main player or ally, if your side wins an encounter by 10 or more, you may force each player on the losing side to send one additional ship from any of his or her colonies to the warp.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal ou Aliado",
+                        "en": "Main Player or Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Ao usar seu poder, você pode escolher dominar uma nave pertencente a um aliado adversário em vez do jogador principal adversário.",
-                "en": "When using your power, you may choose to pwn a ship belonging to an opposing ally instead of the opposing main player."
+                "en": "When using your power, you may choose to pwn a ship belonging to an opposing ally instead of the opposing main player.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal ou Aliado",
+                        "en": "Main Player or Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -73,11 +113,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um jogador principal ou aliado, antes que a compensação ou as recompensas de defesa sejam coletadas, você pode limitar a compensação e as recompensas de todos os jogadores a uma.",
-                "en": "As a main player or ally, before compensation or defender rewards are collected, you may limit all players' compensation and rewards to one."
+                "en": "As a main player or ally, before compensation or defender rewards are collected, you may limit all players' compensation and rewards to one.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal ou Aliado",
+                        "en": "Main Player or Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Como atacante, após as alianças serem formadas, você pode forçar a defesa e cada um de seus aliados a enviar uma nave do encontro para o warp.",
-                "en": "As the offense, after alliances are formed, you may force the defense and each of his or her allies to send one ship from the encounter to the warp."
+                "en": "As the offense, after alliances are formed, you may force the defense and each of his or her allies to send one ship from the encounter to the warp.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": true,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -124,11 +204,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um jogador principal, quando você enviaria mais de uma nave para o warp, você pode reduzir o número de naves enviadas para uma. Naves não enviadas para o warp retornam para suas outras colônias.",
-                "en": "As a main player, when you would send more than one ship to the warp, you may reduce the number of ships sent to one. Ships not sent to the warp return to your other colonies."
+                "en": "As a main player, when you would send more than one ship to the warp, you may reduce the number of ships sent to one. Ships not sent to the warp return to your other colonies.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": true,
+                        "destiny": true,
+                        "launch": true,
+                        "alliance": true,
+                        "planning": true,
+                        "reveal": true,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Sempre que você descartaria uma carta aleatoriamente ou outro jogador coletaria compensação de você, você pode escolher quais cartas descartar ou dar a esse jogador como compensação.",
-                "en": "Whenever you would discard a card at random or another player would collect compensation from you, you may choose which cards to discard or give that player as compensation."
+                "en": "Whenever you would discard a card at random or another player would collect compensation from you, you may choose which cards to discard or give that player as compensation.",
+                "timing": {
+                    "player": {
+                        "pt": "Como Qualquer Jogador",
+                        "en": "As Any Player"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": true,
+                        "destiny": true,
+                        "launch": true,
+                        "alliance": true,
+                        "planning": true,
+                        "reveal": true,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -175,11 +295,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado, se você perderia uma ou mais naves para o warp devido à perda de um encontro, você pode forçar cada jogador do lado vencedor a descartar uma carta aleatoriamente de sua mão.",
-                "en": "As an ally, if you would lose one or more ships to the warp due to losing an encounter, you may force every player on the winning side to discard one card at random from his or her hand."
+                "en": "As an ally, if you would lose one or more ships to the warp due to losing an encounter, you may force every player on the winning side to discard one card at random from his or her hand.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Em qualquer fase, você pode descartar qualquer número de cartas da sua mão. Então, você pode recuperar naves do warp ou comprar cartas do baralho, em qualquer combinação que escolher, igual ao número de cartas descartadas.",
-                "en": "In any phase, you may discard any number of cards from your hand. Then, you may retrieve ships from the warp or draw cards from the deck, in any combination you choose, equal to the number of discarded cards."
+                "en": "In any phase, you may discard any number of cards from your hand. Then, you may retrieve ships from the warp or draw cards from the deck, in any combination you choose, equal to the number of discarded cards.",
+                "timing": {
+                    "player": {
+                        "pt": "Como Qualquer Jogador",
+                        "en": "As Any Player"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": true,
+                        "destiny": true,
+                        "launch": true,
+                        "alliance": true,
+                        "planning": true,
+                        "reveal": true,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -226,11 +386,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como atacante, após o destino ser comprado, você pode descartar sua carta de destino e comprar novamente.",
-                "en": "As the offense, after destiny is drawn, you may discard your destiny card and draw again."
+                "en": "As the offense, after destiny is drawn, you may discard your destiny card and draw again.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Ataque",
+                        "en": "Offense Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": true,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             },
             "super": {
                 "pt": "Após outro jogador comprar sua cor do baralho de destino, você pode escolher continuar o encontro com você como atacante e o jogador que comprou sua cor como defesa. O encontro então prossegue normalmente. Independentemente do resultado, o atacante original então termina seu turno e o jogo passa para o próximo jogador.",
-                "en": "After another player draws your color from the destiny deck, you may choose to continue the encounter with you as the offense and the player who drew your color as the defense. The encounter then proceeds as normal. Regardless of the outcome, the original offense then ends his or her turn and play passes to the next player."
+                "en": "After another player draws your color from the destiny deck, you may choose to continue the encounter with you as the offense and the player who drew your color as the defense. The encounter then proceeds as normal. Regardless of the outcome, the original offense then ends his or her turn and play passes to the next player.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Defesa",
+                        "en": "Defense Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": true,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -277,11 +477,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como defesa em seu sistema natal, após o portão do hiperespaço ser apontado, você pode trocar sua mão com a mão de qualquer outro jogador.",
-                "en": "As the defense in your home system, after the hyperspace gate is aimed, you may exchange your hand with the hand of any other player."
+                "en": "As the defense in your home system, after the hyperspace gate is aimed, you may exchange your hand with the hand of any other player.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Defesa",
+                        "en": "Defense Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": true,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             },
             "super": {
                 "pt": "Se você receber este flare como resultado do uso de seu poder, você pode jogá-lo para estabelecer imediatamente uma colônia no sistema do jogador que o passou para você. Depois, descarte este flare.",
-                "en": "If you are passed this flare as a result of using your power, you may play it to immediately establish a colony in the system of the player who passed it to you. Afterwards, discard this flare."
+                "en": "If you are passed this flare as a result of using your power, you may play it to immediately establish a colony in the system of the player who passed it to you. Afterwards, discard this flare.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": true,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -328,11 +568,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Após o portão do hiperespaço ser apontado, você pode escolher um jogador. Esse jogador deve enviar uma de suas naves do sistema alvo para o warp.",
-                "en": "After the hyperspace gate is aimed, you may choose one player. That player must send one of his ships from the targeted system to the warp."
+                "en": "After the hyperspace gate is aimed, you may choose one player. That player must send one of his ships from the targeted system to the warp.",
+                "timing": {
+                    "player": {
+                        "pt": "Como Qualquer Jogador",
+                        "en": "As Any Player"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": true,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             },
             "super": {
                 "pt": "Quando você usa seu poder, você pode forçar cada outro jogador que tem uma colônia no planeta que você desocupa a perder uma nave de cada colônia que ele ou ela tem naquele sistema inteiro, não apenas do planeta de onde suas naves foram removidas.",
-                "en": "When you use your power, you may force each other player who has a colony on the planet you vacate to lose one ship from each colony he or she has in that entire system, not just the planet your ships were removed from."
+                "en": "When you use your power, you may force each other player who has a colony on the planet you vacate to lose one ship from each colony he or she has in that entire system, not just the planet your ships were removed from.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -379,11 +659,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um jogador principal, após um artefato ou carta de reforço ser jogada pelo seu oponente e seus efeitos terem sido resolvidos, você pode pegar essa carta e adicioná-la à sua mão.",
-                "en": "As a main player, after an artifact or reinforcement card is played by your opponent and its effects have been resolved, you may take that card and add it to your hand."
+                "en": "As a main player, after an artifact or reinforcement card is played by your opponent and its effects have been resolved, you may take that card and add it to your hand.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": true,
+                        "destiny": true,
+                        "launch": true,
+                        "alliance": true,
+                        "planning": true,
+                        "reveal": true,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Como um jogador principal, após as cartas de encontro serem reveladas, você pode substituir a carta de encontro de qualquer jogador principal por uma carta de encontro em sua ficha ou uma carta que você removeu anteriormente do jogo. Descarte a carta substituída.",
-                "en": "As a main player, after encounter cards are revealed, you may replace either main player's encounter card with one encounter card on your sheet or one card you had previously removed from play. Discard the replaced card."
+                "en": "As a main player, after encounter cards are revealed, you may replace either main player's encounter card with one encounter card on your sheet or one card you had previously removed from play. Discard the replaced card.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -430,11 +750,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado defensivo vencedor, se você ganhar recompensas de defesa, você pode adicionar o número de naves que a defesa tinha envolvidas no encontro ao calcular quantas recompensas de defesa você tem direito.",
-                "en": "As a winning defensive ally, if you earn defender rewards, you may add the number of ships the defense had involved in the encounter when calculating how many defender rewards you are entitled to."
+                "en": "As a winning defensive ally, if you earn defender rewards, you may add the number of ships the defense had involved in the encounter when calculating how many defender rewards you are entitled to.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado Defensivo",
+                        "en": "Defensive Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Ao usar seu poder como um jogador principal, você também pode adicionar 1 ao seu total para cada nave que não está envolvida no encontro que cada um de seus aliados tem no sistema alvo.",
-                "en": "When using your power as a main player, you may also add 1 to your total for each ship that is not involved in the encounter that each of your allies have in the targeted system."
+                "en": "When using your power as a main player, you may also add 1 to your total for each ship that is not involved in the encounter that each of your allies have in the targeted system.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -481,11 +841,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado, se o seu lado perder o encontro, você pode pegar uma carta aleatoriamente da mão de qualquer jogador do lado vencedor do encontro.",
-                "en": "As an ally, if your side loses the encounter, you may take one card at random from the hand of any player on the winning side of the encounter."
+                "en": "As an ally, if your side loses the encounter, you may take one card at random from the hand of any player on the winning side of the encounter.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Como defesa ou um aliado defensivo, se o seu lado perder o encontro, você pode usar este flare. Aliados ofensivos vencedores devem retornar suas naves para qualquer uma de suas colônias em vez de pousar no planeta alvo.",
-                "en": "As the defense or a defensive ally, if your side loses the encounter, you may use this flare. Winning offensive allies must return their ships to any of their colonies instead of landing on the targeted planet."
+                "en": "As the defense or a defensive ally, if your side loses the encounter, you may use this flare. Winning offensive allies must return their ships to any of their colonies instead of landing on the targeted planet.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Defesa ou Aliado Defensivo",
+                        "en": "Defense or Defensive Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -532,11 +932,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado, após o seu lado vencer o encontro, você pode comprar uma carta do baralho ou recuperar uma nave do warp, além de quaisquer outros benefícios ou recompensas que você possa receber.",
-                "en": "As an ally, after your side wins the encounter, you may draw one card from the deck or retrieve one ship from the warp, in addition to any other benefits or rewards you may receive."
+                "en": "As an ally, after your side wins the encounter, you may draw one card from the deck or retrieve one ship from the warp, in addition to any other benefits or rewards you may receive.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Como um aliado, após as cartas de encontro serem reveladas, você pode selecionar um número de naves de aliados adversários igual ao número de naves que você tem envolvidas no encontro. As naves selecionadas são enviadas para o warp.",
-                "en": "As an ally, after encounter cards are revealed, you may select a number of opposing allies' ships equal to the number of ships you have involved in the encounter. The selected ships are sent to the warp."
+                "en": "As an ally, after encounter cards are revealed, you may select a number of opposing allies' ships equal to the number of ships you have involved in the encounter. The selected ships are sent to the warp.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -583,11 +1023,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um jogador principal, após as cartas de encontro serem reveladas, você pode revelar a carta do topo do baralho. Se for uma carta de encontro, descarte-a ou use-a para substituir (e descartar) sua carta de encontro atual. Se não for uma carta de encontro, adicione-a à sua mão.",
-                "en": "As a main player, after encounter cards are revealed, you may reveal the top card of the deck. If it is an encounter card, either discard it or use it to replace (and discard) your current encounter card. If it is not an encounter card, add it to your hand."
+                "en": "As a main player, after encounter cards are revealed, you may reveal the top card of the deck. If it is an encounter card, either discard it or use it to replace (and discard) your current encounter card. If it is not an encounter card, add it to your hand.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             },
             "super": {
                 "pt": "Ao usar seu poder, você pode continuar a comprar e descartar cartas do baralho até ter comprado duas cartas de encontro. Escolha uma das duas para substituir (e descartar) uma das cartas de encontro reveladas. Descarte a outra.",
-                "en": "When using your power, you may continue to draw and discard cards from the deck until you have drawn two encounter cards. Choose one of the two to replace (and discard) one of the revealed encounter cards. Discard the other."
+                "en": "When using your power, you may continue to draw and discard cards from the deck until you have drawn two encounter cards. Choose one of the two to replace (and discard) one of the revealed encounter cards. Discard the other.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -634,11 +1114,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um jogador principal, após ambos os jogadores revelarem cartas de ataque, você pode revelar qualquer número de cartas em sua mão. Então adicione um ao total do seu lado para cada carta revelada, incluindo este flare.",
-                "en": "As a main player, after both players reveal attack cards, you may reveal any number of cards in your hand. Then add one to your side's total for each card revealed, including this flare."
+                "en": "As a main player, after both players reveal attack cards, you may reveal any number of cards in your hand. Then add one to your side's total for each card revealed, including this flare.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             },
             "super": {
                 "pt": "Ao usar seu poder, cada carta que você descarta adiciona três ao total do seu lado em vez de um.",
-                "en": "When using your power, each card you discard adds three to your side's total instead of one."
+                "en": "When using your power, each card you discard adds three to your side's total instead of one.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal ou Aliado",
+                        "en": "Main Player or Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -685,11 +1205,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Após ganhar uma colônia como um aliado vencedor, você pode adicionar até quatro de suas naves do warp para a colônia recém-estabelecida.",
-                "en": "After gaining a colony as a winning ally, you may add up to four of your ships from the warp to the newly established colony."
+                "en": "After gaining a colony as a winning ally, you may add up to four of your ships from the warp to the newly established colony.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Após estabelecer uma colônia como atacante ou aliado, você pode remover até quatro naves de sua ficha e adicioná-las a qualquer uma de suas colônias em qualquer sistema.",
-                "en": "After establishing a colony as the offense or an ally, you may remove up to four ships from your sheet and add them to any of your colonies in any system."
+                "en": "After establishing a colony as the offense or an ally, you may remove up to four ships from your sheet and add them to any of your colonies in any system.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Ataque ou Aliado",
+                        "en": "Offense or Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -736,11 +1296,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Quando você perde uma colônia, você pode comprar três cartas do baralho. Adicione uma das cartas à sua mão. Descarte as outras duas.",
-                "en": "When you lose a colony, you may draw three cards from the deck. Add one of the cards to your hand. Discard the other two."
+                "en": "When you lose a colony, you may draw three cards from the deck. Add one of the cards to your hand. Discard the other two.",
+                "timing": {
+                    "player": {
+                        "pt": "Como Qualquer Jogador",
+                        "en": "As Any Player"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": true,
+                        "destiny": true,
+                        "launch": true,
+                        "alliance": true,
+                        "planning": true,
+                        "reveal": true,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Após usar seu poder, você pode olhar a mão de um jogador e pegar uma carta de sua escolha.",
-                "en": "After using your power, you may look at one player's hand and take one card of your choice."
+                "en": "After using your power, you may look at one player's hand and take one card of your choice.",
+                "timing": {
+                    "player": {
+                        "pt": "Como Qualquer Jogador",
+                        "en": "As Any Player"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": true,
+                        "destiny": true,
+                        "launch": true,
+                        "alliance": true,
+                        "planning": true,
+                        "reveal": true,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -787,11 +1387,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado, após as cartas de encontro serem reveladas, você pode adicionar naves ao encontro de qualquer uma de suas colônias, desde que não exceda nenhum limite do portão do hiperespaço.",
-                "en": "As an ally, after encounter cards are revealed, you may add ships to the encounter from any of your colonies, as long as you do not exceed any hyperspace gate limits."
+                "en": "As an ally, after encounter cards are revealed, you may add ships to the encounter from any of your colonies, as long as you do not exceed any hyperspace gate limits.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             },
             "super": {
                 "pt": "Como um jogador principal, após as cartas de encontro serem selecionadas mas antes de serem reveladas, você pode permitir que cada jogador aliado a você adicione até mais quatro naves de qualquer uma de suas colônias ao encontro.",
-                "en": "As a main player, after encounter cards are selected but before they are revealed, you may allow each player allied with you to add up to four more ships from any of their colonies to the encounter."
+                "en": "As a main player, after encounter cards are selected but before they are revealed, you may allow each player allied with you to add up to four more ships from any of their colonies to the encounter.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": true,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -838,11 +1478,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como defesa, após perder um encontro, você pode olhar a mão do seu oponente antes ou depois de qualquer compensação ser coletada. Pegue uma dessas cartas e adicione-a à sua mão.",
-                "en": "As the defense, after losing an encounter, you may look at your opponent's hand before or after any compensation is collected. Take one of those cards and add it to your hand."
+                "en": "As the defense, after losing an encounter, you may look at your opponent's hand before or after any compensation is collected. Take one of those cards and add it to your hand.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Defesa",
+                        "en": "Defense Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Ao usar seu poder, você pode estabelecer duas colônias no sistema natal do atacante, desde que tenha naves suficientes para criar duas colônias. Depois, dê este flare para qualquer jogador.",
-                "en": "When using your power, you may establish two colonies in the offense's home system as long as you have enough ships to create two colonies. Afterwards, give this flare to any player."
+                "en": "When using your power, you may establish two colonies in the offense's home system as long as you have enough ships to create two colonies. Afterwards, give this flare to any player.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Defesa",
+                        "en": "Defense Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -889,11 +1569,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Após você perder um encontro como defesa, você pode escolher um outro jogador envolvido no encontro em qualquer lado. Esse jogador deve enviar naves para o warp de qualquer uma de suas colônias igual ao número de naves que você perdeu durante o encontro.",
-                "en": "After you lose an encounter as the defense, you may choose one other player involved in the encounter on either side. That player must send ships to the warp from any of his or her colonies equal to the number of ships you lost during the encounter."
+                "en": "After you lose an encounter as the defense, you may choose one other player involved in the encounter on either side. That player must send ships to the warp from any of his or her colonies equal to the number of ships you lost during the encounter.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Defesa",
+                        "en": "Defense Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Como um aliado defensivo, durante a fase de planejamento, você pode forçar o atacante e cada aliado ofensivo a remover uma de suas naves do portão do hiperespaço. Naves removidas retornam para qualquer uma das colônias daquele jogador.",
-                "en": "As a defensive ally, during the planning phase, you may force the offense and each offensive ally to remove one of his or her ships from the hyperspace gate. Removed ships return to any of that player's colonies."
+                "en": "As a defensive ally, during the planning phase, you may force the offense and each offensive ally to remove one of his or her ships from the hyperspace gate. Removed ships return to any of that player's colonies.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado Defensivo",
+                        "en": "Defensive Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": true,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -940,11 +1660,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado, após o seu lado vencer, você pode pegar uma carta aleatoriamente da mão de um aliado do lado perdedor.",
-                "en": "As an ally, after your side wins, you may take one card at random from the hand of one ally on the losing side."
+                "en": "As an ally, after your side wins, you may take one card at random from the hand of one ally on the losing side.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Como um aliado, após ambos os jogadores principais revelarem cartas de negociação, você pode se tornar o jogador principal do seu lado. Todas as naves no portão do hiperespaço retornam para as colônias e você tenta fazer um acordo com o oponente (sofrendo quaisquer penalidades conforme apropriado). Se você fizer um acordo, conta como um sucesso para o jogador que você substituiu.",
-                "en": "As an ally, after both main players reveal negotiate cards, you may become the main player for your side. All ships in the hyperspace gate return to colonies and you attempt to make a deal with the opponent (suffering any penalties as appropriate). If you make a deal, it counts as a success for the player you replaced."
+                "en": "As an ally, after both main players reveal negotiate cards, you may become the main player for your side. All ships in the hyperspace gate return to colonies and you attempt to make a deal with the opponent (suffering any penalties as appropriate). If you make a deal, it counts as a success for the player you replaced.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -991,11 +1751,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Após um jogador vencer um encontro no qual você não era um jogador principal ou aliado, você pode dar a esse jogador um caloroso parabéns e recuperar uma de suas naves do warp para cada jogador que tem naves no lado vencedor.",
-                "en": "After a player wins an encounter in which you were not a main player or ally, you may give that player a hearty congratulations and retrieve one of your ships from the warp for each player who has ships on the winning side."
+                "en": "After a player wins an encounter in which you were not a main player or ally, you may give that player a hearty congratulations and retrieve one of your ships from the warp for each player who has ships on the winning side.",
+                "timing": {
+                    "player": {
+                        "pt": "Não Jogador Principal ou Aliado",
+                        "en": "Not Main Player or Ally"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Se houver cinco ou menos fichas em sua ficha de alien, você pode remover uma delas. Se houver mais de cinco fichas em sua ficha, você pode remover fichas até ter cinco restantes. Depois, dê este flare para qualquer jogador.",
-                "en": "If there are five or fewer tokens on your alien sheet, you may remove one of them. If there are more than five tokens on your sheet, you may remove tokens until you have five remaining. Afterwards, give this flare to any player."
+                "en": "If there are five or fewer tokens on your alien sheet, you may remove one of them. If there are more than five tokens on your sheet, you may remove tokens until you have five remaining. Afterwards, give this flare to any player.",
+                "timing": {
+                    "player": {
+                        "pt": "Como Qualquer Jogador",
+                        "en": "As Any Player"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": true,
+                        "destiny": true,
+                        "launch": true,
+                        "alliance": true,
+                        "planning": true,
+                        "reveal": true,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -1042,11 +1842,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado, se você receber recompensas, você pode receber quatro recompensas independentemente de quantas naves você teve no encontro.",
-                "en": "As an ally, if you receive rewards, you may receive four rewards regardless of how many ships you had in the encounter."
+                "en": "As an ally, if you receive rewards, you may receive four rewards regardless of how many ships you had in the encounter.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Você pode colocar um marcador em sua ficha.",
-                "en": "You may place one token on your sheet."
+                "en": "You may place one token on your sheet.",
+                "timing": {
+                    "player": {
+                        "pt": "Como Qualquer Jogador",
+                        "en": "As Any Player"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": true,
+                        "destiny": true,
+                        "launch": true,
+                        "alliance": true,
+                        "planning": true,
+                        "reveal": true,
+                        "resolution": true
+                    }
+                }
             }
         },
         "timing": {
@@ -1093,11 +1933,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado, no final do encontro, você pode pegar uma carta aleatoriamente da mão de cada outro jogador que enviou uma ou mais naves para o warp durante a fase de resolução.",
-                "en": "As an ally, at the end of the encounter, you may take one card at random from the hand of each other player who sent one or more ships to the warp during the resolution phase."
+                "en": "As an ally, at the end of the encounter, you may take one card at random from the hand of each other player who sent one or more ships to the warp during the resolution phase.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Durante sua fase de reagrupar, você pode subjugar uma nave do warp pertencente a cada jogador com naves no warp e colocar essas naves em sua ficha.",
-                "en": "During your regroup phase, you may subjugate one ship from the warp belonging to each player with ships in the warp and place those ships on your sheet."
+                "en": "During your regroup phase, you may subjugate one ship from the warp belonging to each player with ships in the warp and place those ships on your sheet.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Ataque",
+                        "en": "Offense Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": true,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -1144,11 +2024,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado, você pode adicionar 11 ao total do seu lado em vez do número de naves que você tem no encontro.",
-                "en": "As an ally, you may add 11 to your side's total instead of the number of ships you have in the encounter."
+                "en": "As an ally, you may add 11 to your side's total instead of the number of ships you have in the encounter.",
+                "timing": {
+                    "player": {
+                        "pt": "Como Qualquer Jogador",
+                        "en": "As Any Player"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": true,
+                        "destiny": true,
+                        "launch": true,
+                        "alliance": true,
+                        "planning": true,
+                        "reveal": true,
+                        "resolution": true
+                    }
+                }
             },
             "super": {
                 "pt": "Ao comprar uma nova mão, você pode comprar até 11 cartas.",
-                "en": "When drawing a new hand, you may draw up to 11 cards."
+                "en": "When drawing a new hand, you may draw up to 11 cards.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal ou Aliado",
+                        "en": "Main Player or Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -1195,11 +2115,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "No início do seu turno, você pode mover naves de qualquer uma de suas colônias para um planeta em seu sistema natal que não tenha uma colônia.",
-                "en": "At the start of your turn, you may move ships from any of your colonies to one planet in your home system that does not have a colony."
+                "en": "At the start of your turn, you may move ships from any of your colonies to one planet in your home system that does not have a colony.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Ataque",
+                        "en": "Offense Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": true,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             },
             "super": {
                 "pt": "Você pode usar seu poder como um aliado.",
-                "en": "You may use your power as an ally."
+                "en": "You may use your power as an ally.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": false,
+                        "planning": false,
+                        "reveal": true,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {
@@ -1246,11 +2206,51 @@ window.aliensData.push(
         "flare": {
             "wild": {
                 "pt": "Como um aliado, após você comprometer uma ou mais naves para um encontro, você pode recuperar até o mesmo número de suas naves do warp e adicioná-las ao encontro. Isso pode resultar em você ter mais de quatro naves no encontro.",
-                "en": "As an ally, after you commit one or more ships to an encounter, you may retrieve up to the same number of your ships from the warp and add them to the encounter. This may result in you having more than four ships in the encounter."
+                "en": "As an ally, after you commit one or more ships to an encounter, you may retrieve up to the same number of your ships from the warp and add them to the encounter. This may result in you having more than four ships in the encounter.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Aliado",
+                        "en": "Ally Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": true,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             },
             "super": {
                 "pt": "Como um jogador principal, após as alianças serem formadas, você pode liberar até quatro naves do warp pertencentes a qualquer jogador que tenha naves no encontro (mesmo você). Adicione essas naves a quaisquer naves que aquele jogador já tenha envolvidas no encontro.",
-                "en": "As a main player, after alliances are formed, you may release up to four ships from the warp belonging to any one player who has ships in the encounter (even yourself). Add these ships to any ships that player already has involved in the encounter."
+                "en": "As a main player, after alliances are formed, you may release up to four ships from the warp belonging to any one player who has ships in the encounter (even yourself). Add these ships to any ships that player already has involved in the encounter.",
+                "timing": {
+                    "player": {
+                        "pt": "Apenas Jogador Principal",
+                        "en": "Main Player Only"
+                    },
+                    "choice": {
+                        "pt": "Opcional",
+                        "en": "Optional"
+                    },
+                    "phases": {
+                        "startTurn": false,
+                        "regroup": false,
+                        "destiny": false,
+                        "launch": false,
+                        "alliance": true,
+                        "planning": false,
+                        "reveal": false,
+                        "resolution": false
+                    }
+                }
             }
         },
         "timing": {

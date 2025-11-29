@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmic Encounter Database</title>
+    <title>Cosmic Encounter Alien Manager</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
     <style>
         :root {
             --bg-color: #0b0d17;
@@ -572,7 +575,7 @@
     <script src="aliens_cosmic_dominion.js"></script>
     <script src="aliens_cosmic_eons.js"></script>
     <script src="aliens_cosmic_odyssey.js"></script>
-    <script src="aliens_expansion.js"></script>
+
 
     <script>
         let currentLang = 'pt';
@@ -723,6 +726,50 @@
             filterAliens();
         }
 
+        function createTimingHtml(timingObj) {
+            if (!timingObj) return '';
+
+            const player = timingObj.player[currentLang];
+            const choice = timingObj.choice[currentLang];
+            const phases = timingObj.phases;
+
+            const phaseNames = {
+                startTurn: currentLang === 'pt' ? 'Início' : 'Start',
+                regroup: currentLang === 'pt' ? 'Reagrupar' : 'Regroup',
+                destiny: currentLang === 'pt' ? 'Destino' : 'Destiny',
+                launch: currentLang === 'pt' ? 'Lançar' : 'Launch',
+                alliance: currentLang === 'pt' ? 'Aliança' : 'Alliance',
+                planning: currentLang === 'pt' ? 'Planejar' : 'Planning',
+                reveal: currentLang === 'pt' ? 'Revelar' : 'Reveal',
+                resolution: currentLang === 'pt' ? 'Resolução' : 'Resolution'
+            };
+
+            let phasesHtml = '';
+            for (const [key, label] of Object.entries(phaseNames)) {
+                const isActive = phases[key] ? ' active' : '';
+                phasesHtml += `<div class="phase-tag${isActive}">${label}</div>`;
+            }
+
+            const usageLabel = currentLang === 'pt' ? 'Uso:' : 'Usage:';
+            const choiceLabel = currentLang === 'pt' ? 'Tipo:' : 'Type:';
+
+            return `
+                <div class="timing-block">
+                    <div class="timing-row">
+                        <span class="timing-header">${usageLabel}</span>
+                        <span class="timing-value">${player}</span>
+                    </div>
+                    <div class="timing-row">
+                        <span class="timing-header">${choiceLabel}</span>
+                        <span class="timing-value">${choice}</span>
+                    </div>
+                    <div class="phases-grid">
+                        ${phasesHtml}
+                    </div>
+                </div>
+            `;
+        }
+
         function filterAliens() {
             const textTerm = document.getElementById('searchInput').value.toLowerCase();
 
@@ -836,60 +883,24 @@
                     const superText = alien.flare.super[currentLang];
                     const btnText = currentLang === 'pt' ? 'Ver Flare' : 'View Flare';
 
+                    const wildTimingHtml = alien.flare.wild.timing ? createTimingHtml(alien.flare.wild.timing) : '';
+                    const superTimingHtml = alien.flare.super.timing ? createTimingHtml(alien.flare.super.timing) : '';
+
                     flareHtml = `
                     <button class="action-btn flare-btn" onclick="toggleFlare(this)">${btnText}</button>
                     <div class="expandable-text flare-text">
                         <span class="flare-title">Wild</span>
                         <p>${wildText}</p>
+                        ${wildTimingHtml}
                         <div style="margin-top:10px;"></div>
                         <span class="flare-title">Super</span>
                         <p>${superText}</p>
+                        ${superTimingHtml}
                     </div>
                 `;
                 }
 
-                let timingHtml = '';
-                if (alien.timing) {
-                    const player = alien.timing.player[currentLang];
-                    const choice = alien.timing.choice[currentLang];
-                    const phases = alien.timing.phases;
-
-                    const phaseNames = {
-                        startTurn: currentLang === 'pt' ? 'Início' : 'Start',
-                        regroup: currentLang === 'pt' ? 'Reagrupar' : 'Regroup',
-                        destiny: currentLang === 'pt' ? 'Destino' : 'Destiny',
-                        launch: currentLang === 'pt' ? 'Lançar' : 'Launch',
-                        alliance: currentLang === 'pt' ? 'Aliança' : 'Alliance',
-                        planning: currentLang === 'pt' ? 'Planejar' : 'Planning',
-                        reveal: currentLang === 'pt' ? 'Revelar' : 'Reveal',
-                        resolution: currentLang === 'pt' ? 'Resolução' : 'Resolution'
-                    };
-
-                    let phasesHtml = '';
-                    for (const [key, label] of Object.entries(phaseNames)) {
-                        const isActive = phases[key] ? ' active' : '';
-                        phasesHtml += `<div class="phase-tag${isActive}">${label}</div>`;
-                    }
-
-                    const usageLabel = currentLang === 'pt' ? 'Uso:' : 'Usage:';
-                    const choiceLabel = currentLang === 'pt' ? 'Tipo:' : 'Type:';
-
-                    timingHtml = `
-                        <div class="timing-block">
-                            <div class="timing-row">
-                                <span class="timing-header">${usageLabel}</span>
-                                <span class="timing-value">${player}</span>
-                            </div>
-                            <div class="timing-row">
-                                <span class="timing-header">${choiceLabel}</span>
-                                <span class="timing-value">${choice}</span>
-                            </div>
-                            <div class="phases-grid">
-                                ${phasesHtml}
-                            </div>
-                        </div>
-                    `;
-                }
+                const timingHtml = createTimingHtml(alien.timing);
 
                 // Adiciona fallback de imagem vazio.jpg no onError
                 card.innerHTML = `
