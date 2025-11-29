@@ -568,15 +568,15 @@
 
     <script>window.aliensData = [];</script>
 
-    <script src="images.js"></script>
-    <script src="aliens_base_game.js"></script>
-    <script src="aliens_cosmic_incursion.js"></script>
-    <script src="aliens_cosmic_conflict.js"></script>
-    <script src="aliens_cosmic_alliance.js"></script>
-    <script src="aliens_cosmic_storm.js"></script>
-    <script src="aliens_cosmic_dominion.js"></script>
-    <script src="aliens_cosmic_eons.js"></script>
-    <script src="aliens_cosmic_odyssey.js"></script>
+    <script src="images.js" defer></script>
+    <script src="aliens_base_game.js" defer></script>
+    <script src="aliens_cosmic_incursion.js" defer></script>
+    <script src="aliens_cosmic_conflict.js" defer></script>
+    <script src="aliens_cosmic_alliance.js" defer></script>
+    <script src="aliens_cosmic_storm.js" defer></script>
+    <script src="aliens_cosmic_dominion.js" defer></script>
+    <script src="aliens_cosmic_eons.js" defer></script>
+    <script src="aliens_cosmic_odyssey.js" defer></script>
 
 
     <script>
@@ -921,7 +921,7 @@
                 // Adiciona fallback de imagem vazio.jpg no onError
                 card.innerHTML = `
                 <div class="card-image-container${borderClass}">
-                    <img src="${imageUrl}" alt="${name}" class="card-image" onerror="this.onerror=null;this.src='img/vazio.jpg';">
+                    <img src="${imageUrl}" alt="${name}" class="card-image" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='img/vazio.jpg';">
                     <div class="card-image-title">${name}</div>
                     <div class="expansion-tag">${alien.expansion}</div>
                     <div class="badges-container">${badgesHtml}</div>
