@@ -557,13 +557,88 @@
             border-color: #22c55e;
             font-weight: bold;
         }
+
+        /* Side Menu Styles */
+        .menu-btn {
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px 10px;
+            margin-right: 10px;
+            z-index: 1001;
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: var(--card-bg);
+            border-right: 1px solid var(--border);
+            transition: left 0.3s ease;
+            z-index: 2000;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-menu.open {
+            left: 0;
+        }
+
+        .menu-item {
+            padding: 15px 20px;
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .menu-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .menu-item.active {
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--c-green);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
+            display: none;
+        }
+
+        .overlay.show {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
 
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+    <nav id="sideMenu" class="side-menu">
+        <div class="menu-item active" onclick="selectVariant('aliens')">Aliens</div>
+        <div class="menu-item" onclick="selectVariant('hazards')">Hazards</div>
+        <div class="menu-item" onclick="selectVariant('techs')">Technology</div>
+    </nav>
+
     <header>
-        <h1>Cosmic Encounter</h1>
+        <div style="display: flex; align-items: center; width: 100%; justify-content: center; position: relative;">
+            <button class="menu-btn" onclick="toggleMenu()" style="position: absolute; left: 0;">☰</button>
+            <h1 style="margin: 0;">Cosmic Encounter</h1>
+        </div>
 
         <div class="controls-row">
             <div class="search-wrapper">
@@ -580,13 +655,11 @@
                 <option value="Cosmic Dominion">Cosmic Dominion</option>
                 <option value="Cosmic Eons">Cosmic Eons</option>
                 <option value="Cosmic Odyssey">Cosmic Odyssey</option>
-                <option value="Cosmic Odyssey">Cosmic Odyssey</option>
-
             </select>
             <button onclick="toggleLanguage()" id="langBtn">🇺🇸 English</button>
         </div>
 
-        <div class="filters-row">
+        <div class="filters-row" id="alienFilters">
             <div class="filter-group">
                 <span class="filter-label" id="labelAlert">Nível:</span>
                 <label class="checkbox-label"><input type="checkbox" class="cb-green" value="green" checked
@@ -611,6 +684,8 @@
     <div class="container">
         <div id="resultCount" class="result-count"></div>
         <div id="alienGrid" class="alien-grid"></div>
+        <div id="hazardGrid" class="alien-grid" style="display: none;"></div>
+        <div id="techGrid" class="alien-grid" style="display: none;"></div>
     </div>
 
     <button id="showFiltersBtn" class="floating-btn" onclick="showHeader()">🔍</button>
@@ -626,6 +701,8 @@
     <script src="aliens_cosmic_dominion.js" defer></script>
     <script src="aliens_cosmic_eons.js" defer></script>
     <script src="aliens_cosmic_odyssey.js" defer></script>
+    <script src="hazards.js" defer></script>
+    <script src="techs.js" defer></script>
 
 
     <script>
@@ -698,6 +775,18 @@
             });
         }
 
+        let currentVariant = 'aliens';
+
+        function toggleMenu() {
+            document.getElementById('sideMenu').classList.toggle('open');
+            document.getElementById('overlay').classList.toggle('show');
+        }
+
+        function closeMenu() {
+            document.getElementById('sideMenu').classList.remove('open');
+            document.getElementById('overlay').classList.remove('show');
+        }
+
         function toggleLanguage() {
             currentLang = currentLang === 'pt' ? 'en' : 'pt';
             const btn = document.getElementById('langBtn');
@@ -723,7 +812,135 @@
                 if (document.getElementById('labelEssence')) document.getElementById('labelEssence').innerText = "Essence";
             }
             updateExpansionCounts();
-            filterAliens();
+            updateExpansionCounts();
+            updateView();
+        }
+
+        function selectVariant(variant) {
+            currentVariant = variant;
+            closeMenu();
+
+            // Update active state in menu
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.classList.remove('active');
+                // Simple check for active class
+                if (item.innerText.toLowerCase().includes(variant === 'techs' ? 'technology' : variant)) {
+                    item.classList.add('active');
+                }
+            });
+
+            updateView();
+        }
+
+        function updateView() {
+            const alienGrid = document.getElementById('alienGrid');
+            const hazardGrid = document.getElementById('hazardGrid');
+            const techGrid = document.getElementById('techGrid');
+            const alienFilters = document.getElementById('alienFilters');
+            const expansionFilter = document.getElementById('expansionFilter');
+            const searchInput = document.getElementById('searchInput');
+            const resultCount = document.getElementById('resultCount');
+
+            // Hide all first
+            alienGrid.style.display = 'none';
+            hazardGrid.style.display = 'none';
+            techGrid.style.display = 'none';
+            alienFilters.style.display = 'none';
+            expansionFilter.style.display = 'none';
+            document.querySelector('.search-wrapper').style.display = 'none';
+            resultCount.innerText = '';
+
+            if (currentVariant === 'aliens') {
+                alienGrid.style.display = 'grid';
+                alienFilters.style.display = 'flex';
+                expansionFilter.style.display = 'block';
+                searchInput.style.display = 'block';
+                document.querySelector('.search-wrapper').style.display = 'flex';
+                filterAliens();
+            } else if (currentVariant === 'hazards') {
+                hazardGrid.style.display = 'grid';
+                renderHazards();
+            } else if (currentVariant === 'techs') {
+                techGrid.style.display = 'grid';
+                renderTechs();
+            }
+        }
+
+        function renderHazards() {
+            const grid = document.getElementById('hazardGrid');
+            grid.innerHTML = '';
+
+            if (!window.hazardsData) return;
+
+            window.hazardsData.forEach(hazard => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const title = hazard.title[currentLang];
+                const text = hazard.text[currentLang];
+                const type = hazard.type; // Permanent, Hazard, etc.
+                const expansion = hazard.expansion;
+
+                // Determine border color based on type (optional)
+                let borderColor = 'var(--border)';
+                if (type === 'Permanent') borderColor = 'var(--c-purple)';
+                else if (type === 'Hazard') borderColor = 'var(--c-yellow)';
+                else if (type === 'SemiPermanent') borderColor = 'var(--c-red)';
+
+                card.style.borderColor = borderColor;
+
+                card.innerHTML = `
+                    <div class="card-content">
+                        <div class="power-summary" style="color: ${borderColor}">${title}</div>
+                        <div class="aka-info">${type}</div>
+                        <div class="power-block">
+                            ${text.replace(/\n/g, '<br>')}
+                        </div>
+                        <div class="expansion-tag" style="position: relative; bottom: auto; left: auto; margin-top: 10px; display: inline-block;">${expansion}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            const countText = currentLang === 'pt' ? 'Hazards encontrados' : 'Hazards found';
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.hazardsData.length}</span>`;
+        }
+
+        function renderTechs() {
+            const grid = document.getElementById('techGrid');
+            grid.innerHTML = '';
+
+            if (!window.techsData) return;
+
+            window.techsData.forEach(tech => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const title = tech.title[currentLang];
+                const text = tech.text[currentLang];
+                const type = tech.type;
+                const expansion = tech.expansion;
+
+                // Techs usually have a specific color, maybe blue or grey. Using default border for now or specific if needed.
+                let borderColor = 'var(--c-blue)';
+                if (type === 'Haz-Tech') borderColor = 'var(--c-yellow)';
+                else if (type === 'Mili-Tech') borderColor = 'var(--c-red)';
+
+                card.style.borderColor = borderColor;
+
+                card.innerHTML = `
+                    <div class="card-content">
+                        <div class="power-summary" style="color: ${borderColor}">${title}</div>
+                        <div class="aka-info">${type}</div>
+                        <div class="power-block">
+                            ${text.replace(/\n/g, '<br>')}
+                        </div>
+                        <div class="expansion-tag" style="position: relative; bottom: auto; left: auto; margin-top: 10px; display: inline-block;">${expansion}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            const countText = currentLang === 'pt' ? 'Techs encontradas' : 'Techs found';
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.techsData.length}</span>`;
         }
 
         function toggleFlare(btn) {
