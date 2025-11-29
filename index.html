@@ -566,8 +566,26 @@
             font-size: 1.5rem;
             cursor: pointer;
             padding: 5px 10px;
-            margin-right: 10px;
             z-index: 1001;
+            position: absolute;
+            left: 0;
+        }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.4rem;
+                padding: 0 40px;
+                /* Prevent overlap with menu button */
+                text-align: center;
+            }
         }
 
         .side-menu {
@@ -639,9 +657,9 @@
     </nav>
 
     <header>
-        <div style="display: flex; align-items: center; width: 100%; justify-content: center; position: relative;">
-            <button class="menu-btn" onclick="toggleMenu()" style="position: absolute; left: 0;">☰</button>
-            <h1 style="margin: 0;">Cosmic Encounter</h1>
+        <div class="header-row">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <h1>Cosmic Encounter</h1>
         </div>
 
         <div class="controls-row">
