@@ -632,6 +632,10 @@
         <div class="menu-item active" onclick="selectVariant('aliens')">Aliens</div>
         <div class="menu-item" onclick="selectVariant('hazards')">Hazards</div>
         <div class="menu-item" onclick="selectVariant('techs')">Technology</div>
+        <div class="menu-item" onclick="selectVariant('stations')">Stations</div>
+        <div class="menu-item" onclick="selectVariant('moons')">Moons</div>
+        <div class="menu-item" onclick="selectVariant('evolutions')">Evolutions</div>
+        <div class="menu-item" onclick="selectVariant('lux')">Lux</div>
     </nav>
 
     <header>
@@ -686,6 +690,10 @@
         <div id="alienGrid" class="alien-grid"></div>
         <div id="hazardGrid" class="alien-grid" style="display: none;"></div>
         <div id="techGrid" class="alien-grid" style="display: none;"></div>
+        <div id="stationGrid" class="alien-grid" style="display: none;"></div>
+        <div id="moonGrid" class="alien-grid" style="display: none;"></div>
+        <div id="evolutionGrid" class="alien-grid" style="display: none;"></div>
+        <div id="luxGrid" class="alien-grid" style="display: none;"></div>
     </div>
 
     <button id="showFiltersBtn" class="floating-btn" onclick="showHeader()">🔍</button>
@@ -703,6 +711,10 @@
     <script src="aliens_cosmic_odyssey.js" defer></script>
     <script src="hazards.js" defer></script>
     <script src="techs.js" defer></script>
+    <script src="stations.js" defer></script>
+    <script src="moons.js" defer></script>
+    <script src="evolutions.js" defer></script>
+    <script src="lux.js" defer></script>
 
 
     <script>
@@ -826,6 +838,8 @@
                 // Simple check for active class
                 if (item.innerText.toLowerCase().includes(variant === 'techs' ? 'technology' : variant)) {
                     item.classList.add('active');
+                } else if (variant === 'stations' && item.innerText.toLowerCase().includes('stations')) {
+                    item.classList.add('active');
                 }
             });
 
@@ -836,6 +850,10 @@
             const alienGrid = document.getElementById('alienGrid');
             const hazardGrid = document.getElementById('hazardGrid');
             const techGrid = document.getElementById('techGrid');
+            const stationGrid = document.getElementById('stationGrid');
+            const moonGrid = document.getElementById('moonGrid');
+            const evolutionGrid = document.getElementById('evolutionGrid');
+            const luxGrid = document.getElementById('luxGrid');
             const alienFilters = document.getElementById('alienFilters');
             const expansionFilter = document.getElementById('expansionFilter');
             const searchInput = document.getElementById('searchInput');
@@ -845,6 +863,10 @@
             alienGrid.style.display = 'none';
             hazardGrid.style.display = 'none';
             techGrid.style.display = 'none';
+            if (stationGrid) stationGrid.style.display = 'none';
+            if (moonGrid) moonGrid.style.display = 'none';
+            if (evolutionGrid) evolutionGrid.style.display = 'none';
+            if (luxGrid) luxGrid.style.display = 'none';
             alienFilters.style.display = 'none';
             expansionFilter.style.display = 'none';
             document.querySelector('.search-wrapper').style.display = 'none';
@@ -863,6 +885,18 @@
             } else if (currentVariant === 'techs') {
                 techGrid.style.display = 'grid';
                 renderTechs();
+            } else if (currentVariant === 'stations') {
+                document.getElementById('stationGrid').style.display = 'grid';
+                renderStations();
+            } else if (currentVariant === 'moons') {
+                document.getElementById('moonGrid').style.display = 'grid';
+                renderMoons();
+            } else if (currentVariant === 'evolutions') {
+                document.getElementById('evolutionGrid').style.display = 'grid';
+                renderEvolutions();
+            } else if (currentVariant === 'lux') {
+                document.getElementById('luxGrid').style.display = 'grid';
+                renderLux();
             }
         }
 
@@ -941,6 +975,147 @@
             });
             const countText = currentLang === 'pt' ? 'Techs encontradas' : 'Techs found';
             document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.techsData.length}</span>`;
+        }
+
+        function renderStations() {
+            const grid = document.getElementById('stationGrid');
+            grid.innerHTML = '';
+
+            if (!window.stationsData) return;
+
+            window.stationsData.forEach(station => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const title = station.title[currentLang];
+                const text = station.text[currentLang];
+                const type = station.type;
+                const expansion = station.expansion;
+
+                // Stations color
+                let borderColor = '#0ea5e9'; // Sky blueish
+
+                card.style.borderColor = borderColor;
+
+                card.innerHTML = `
+                    <div class="card-content">
+                        <div class="power-summary" style="color: ${borderColor}">${title}</div>
+                        <div class="aka-info">${type}</div>
+                        <div class="power-block">
+                            ${text.replace(/\n/g, '<br>')}
+                        </div>
+                        <div class="expansion-tag" style="position: relative; bottom: auto; left: auto; margin-top: 10px; display: inline-block;">${expansion}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            const countText = currentLang === 'pt' ? 'Estações encontradas' : 'Stations found';
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.stationsData.length}</span>`;
+        }
+
+        function renderMoons() {
+            const grid = document.getElementById('moonGrid');
+            grid.innerHTML = '';
+
+            if (!window.moonsData) return;
+
+            window.moonsData.forEach(moon => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const title = moon.title[currentLang];
+                const text = moon.text[currentLang];
+                const type = moon.type;
+                const expansion = moon.expansion;
+
+                let borderColor = '#a855f7'; // Purpleish
+
+                card.style.borderColor = borderColor;
+
+                card.innerHTML = `
+                    <div class="card-content">
+                        <div class="power-summary" style="color: ${borderColor}">${title}</div>
+                        <div class="aka-info">${type}</div>
+                        <div class="power-block">
+                            ${text.replace(/\n/g, '<br>')}
+                        </div>
+                        <div class="expansion-tag" style="position: relative; bottom: auto; left: auto; margin-top: 10px; display: inline-block;">${expansion}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            const countText = currentLang === 'pt' ? 'Luas encontradas' : 'Moons found';
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.moonsData.length}</span>`;
+        }
+
+        function renderEvolutions() {
+            const grid = document.getElementById('evolutionGrid');
+            grid.innerHTML = '';
+
+            if (!window.evolutionsData) return;
+
+            window.evolutionsData.forEach(evo => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const title = evo.title[currentLang];
+                const text = evo.text[currentLang];
+                const type = evo.type;
+                const expansion = evo.expansion;
+
+                let borderColor = '#22c55e'; // Greenish
+
+                card.style.borderColor = borderColor;
+
+                card.innerHTML = `
+                    <div class="card-content">
+                        <div class="power-summary" style="color: ${borderColor}">${title}</div>
+                        <div class="aka-info">${type}</div>
+                        <div class="power-block">
+                            ${text.replace(/\n/g, '<br>')}
+                        </div>
+                        <div class="expansion-tag" style="position: relative; bottom: auto; left: auto; margin-top: 10px; display: inline-block;">${expansion}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            const countText = currentLang === 'pt' ? 'Evoluções encontradas' : 'Evolutions found';
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.evolutionsData.length}</span>`;
+        }
+
+        function renderLux() {
+            const grid = document.getElementById('luxGrid');
+            grid.innerHTML = '';
+
+            if (!window.luxData) return;
+
+            window.luxData.forEach(lux => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const title = lux.title[currentLang];
+                const text = lux.text[currentLang];
+                const type = lux.type;
+                const expansion = lux.expansion;
+
+                let borderColor = '#f59e0b'; // Amber/Gold
+
+                card.style.borderColor = borderColor;
+
+                card.innerHTML = `
+                    <div class="card-content">
+                        <div class="power-summary" style="color: ${borderColor}">${title}</div>
+                        <div class="aka-info">${type}</div>
+                        <div class="power-block">
+                            ${text.replace(/\n/g, '<br>')}
+                        </div>
+                        <div class="expansion-tag" style="position: relative; bottom: auto; left: auto; margin-top: 10px; display: inline-block;">${expansion}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            const countText = currentLang === 'pt' ? 'Lux encontrados' : 'Lux found';
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.luxData.length}</span>`;
         }
 
         function toggleFlare(btn) {
