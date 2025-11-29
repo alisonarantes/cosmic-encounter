@@ -217,8 +217,26 @@
             }
 
             .filters-row {
-                gap: 15px;
+                gap: 10px;
                 justify-content: center;
+            }
+
+            .filter-group {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .filter-group.extras {
+                border-left: none !important;
+                padding-left: 0 !important;
+                margin-top: 5px;
+                border-top: 1px solid var(--border);
+                padding-top: 10px;
+                width: 100%;
+            }
+
+            .filter-label.extras-label {
+                display: none;
             }
         }
 
@@ -549,8 +567,8 @@
                 <label class="checkbox-label"><input type="checkbox" class="cb-red" value="red" checked
                         onchange="filterAliens()"> 🔴</label>
             </div>
-            <div class="filter-group" style="border-left: 1px solid var(--border); padding-left: 15px;">
-                <span class="filter-label">Extras:</span>
+            <div class="filter-group extras" style="border-left: 1px solid var(--border); padding-left: 15px;">
+                <span class="filter-label extras-label">Extras:</span>
                 <label class="checkbox-label" title="Com Preparação"><input type="checkbox" id="checkSetup"
                         onchange="filterAliens()"> ⚙️ <span id="labelSetup">Preparação</span></label>
                 <label class="checkbox-label" title="Com Componentes"><input type="checkbox" id="checkComponents"
