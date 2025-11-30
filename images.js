@@ -230,16 +230,16 @@ window.alienImages = {
     ZILCH: "img/zilch.jpg",
 
     // --- ALTERNATE TIMELINE (Variantes) ---
-    BRUTE_ALTERNATE: "img/brute.jpg",
-    DAREDEVIL_ALTERNATE: "img/daredevil.jpg",
-    DEMON_ALTERNATE: "img/demon.jpg",
-    GRUMPUS_ALTERNATE: "img/grumpus.jpg",
-    LOCUST_ALTERNATE: "img/locust.jpg",
-    MASOCHIST_ALTERNATE: "img/masochist.jpg",
-    MICRON_ALTERNATE: "img/micron.jpg",
-    PERFECTIONIST_ALTERNATE: "img/perfectionist.jpg",
-    SADIST_ALTERNATE: "img/sadist.jpg",
-    SCHIZOID_ALTERNATE: "img/schizoid.jpg",
-    VOID_ALTERNATE: "img/void.jpg",
-    ZOMBIE_ALTERNATE: "img/zombie.jpg"
+    BRUTE_ALTERNATE: "img/bruteAT.jpg",
+    DAREDEVIL_ALTERNATE: "img/daredevilAT.jpg",
+    DEMON_ALTERNATE: "img/demonAT.jpg",
+    GRUMPUS_ALTERNATE: "img/grumpusAT.jpg",
+    LOCUST_ALTERNATE: "img/locustAT.jpg",
+    MASOCHIST_ALTERNATE: "img/masochistAT.jpg",
+    MICRON_ALTERNATE: "img/micronAT.jpg",
+    PERFECTIONIST_ALTERNATE: "img/perfectionistAT.jpg",
+    SADIST_ALTERNATE: "img/sadistAT.jpg",
+    SCHIZOID_ALTERNATE: "img/schizoidAT.jpg",
+    VOID_ALTERNATE: "img/voidAT.jpg",
+    ZOMBIE_ALTERNATE: "img/zombieAT.jpg"
 };

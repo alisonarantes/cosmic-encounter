@@ -312,12 +312,21 @@
             object-position: top center;
         }
 
-        .card-image-title {
+	.card-image-title {
             position: absolute;
             top: 0;
-            padding-top: 4px;
-            left: 0;
-            width: 100%;
+            /* Definimos o espaço lateral para não cobrir as luminárias */
+            left: 48px; 
+            right: 50px;
+            width: auto; /* A largura agora é automática baseada no left/right */
+            
+            /* Fundo branco chapado */
+            background: #fff;
+            
+            /* Ajuste de padding interno do texto */
+            padding: 2px 5px; 
+            
+            /* Estilo da fonte */
             text-align: center;
             font-family: 'Impact', 'Arial Black', sans-serif;
             font-size: 1.6rem;
@@ -325,11 +334,15 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             z-index: 10;
-            padding-left: 35px;
-            padding-right: 35px;
-            box-sizing: border-box;
-            text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
-                1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+            
+            /* Removemos a sombra branca pois agora o fundo já é branco */
+            text-shadow: none;
+            
+            /* Arredondamento apenas nos cantos inferiores para estética (opcional) */
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra suave para destacar a plaquinha */
+
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -337,10 +350,10 @@
 
         @media (max-width: 600px) {
             .card-image-title {
-                font-size: 1.4rem;
-                padding-top: 6px;
-                padding-left: 25px;
-                padding-right: 25px;
+                font-size: 1.3rem;
+                /* Ajuste para telas menores, mantendo as luminárias visíveis */
+                left: 40px;
+                right: 40px;
             }
 
             .alien-grid {
