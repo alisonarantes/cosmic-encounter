@@ -312,20 +312,21 @@
             object-position: top center;
         }
 
-	.card-image-title {
+        .card-image-title {
             position: absolute;
             top: 0;
             /* Definimos o espaço lateral para não cobrir as luminárias */
-            left: 48px; 
+            left: 48px;
             right: 50px;
-            width: auto; /* A largura agora é automática baseada no left/right */
-            
+            width: auto;
+            /* A largura agora é automática baseada no left/right */
+
             /* Fundo branco chapado */
             background: #fff;
-            
+
             /* Ajuste de padding interno do texto */
-            padding: 2px 5px; 
-            
+            padding: 2px 5px;
+
             /* Estilo da fonte */
             text-align: center;
             font-family: 'Impact', 'Arial Black', sans-serif;
@@ -334,24 +335,27 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             z-index: 10;
-            
+
             /* Removemos a sombra branca pois agora o fundo já é branco */
             text-shadow: none;
-            
+
             /* Arredondamento apenas nos cantos inferiores para estética (opcional) */
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra suave para destacar a plaquinha */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            /* Sombra suave para destacar a plaquinha */
 
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
-	/* Regra específica para o título quando o container tem a classe 'alt-border' */
+        /* Regra específica para o título quando o container tem a classe 'alt-border' */
         .card-image-container.alt-border .card-image-title {
-            background: #000; /* Fundo preto chapado */
-            color: #fff;      /* Texto branco para contraste */
+            background: #000;
+            /* Fundo preto chapado */
+            color: #fff;
+            /* Texto branco para contraste */
         }
 
         @media (max-width: 600px) {
@@ -688,10 +692,10 @@
 
         <div class="controls-row">
             <div class="search-wrapper">
-                <input type="text" id="searchInput" placeholder="Buscar alien..." onkeyup="filterAliens()">
+                <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterCurrentView()">
                 <span id="clearSearch" class="clear-icon" onclick="clearSearch()">×</span>
             </div>
-            <select id="expansionFilter" onchange="filterAliens()">
+            <select id="expansionFilter" onchange="filterCurrentView()">
                 <option value="all">Todas as Expansões</option>
                 <option value="Base Game">Base Game</option>
                 <option value="Cosmic Incursion">Cosmic Incursion</option>
@@ -709,20 +713,20 @@
             <div class="filter-group">
                 <span class="filter-label" id="labelAlert">Nível:</span>
                 <label class="checkbox-label"><input type="checkbox" class="cb-green" value="green" checked
-                        onchange="filterAliens()"> 🟢</label>
+                        onchange="filterCurrentView()"> 🟢</label>
                 <label class="checkbox-label"><input type="checkbox" class="cb-yellow" value="yellow" checked
-                        onchange="filterAliens()"> 🟡</label>
+                        onchange="filterCurrentView()"> 🟡</label>
                 <label class="checkbox-label"><input type="checkbox" class="cb-red" value="red" checked
-                        onchange="filterAliens()"> 🔴</label>
+                        onchange="filterCurrentView()"> 🔴</label>
             </div>
             <div class="filter-group extras" style="border-left: 1px solid var(--border); padding-left: 15px;">
                 <span class="filter-label extras-label">Extras:</span>
                 <label class="checkbox-label" title="Com Preparação"><input type="checkbox" id="checkSetup"
-                        onchange="filterAliens()"> ⚙️ <span id="labelSetup">Preparação</span></label>
+                        onchange="filterCurrentView()"> ⚙️ <span id="labelSetup">Preparação</span></label>
                 <label class="checkbox-label" title="Com Componentes"><input type="checkbox" id="checkComponents"
-                        onchange="filterAliens()"> 📦 <span id="labelTokens">Fichas</span></label>
+                        onchange="filterCurrentView()"> 📦 <span id="labelTokens">Fichas</span></label>
                 <label class="checkbox-label" title="Com Cartas de Essência"><input type="checkbox" id="checkEssence"
-                        onchange="filterAliens()"> ✨ <span id="labelEssence">Essência</span></label>
+                        onchange="filterCurrentView()"> ✨ <span id="labelEssence">Essência</span></label>
             </div>
         </div>
     </header>
@@ -852,14 +856,14 @@
 
             if (currentLang === 'pt') {
                 btn.innerText = "🇺🇸 English";
-                input.placeholder = "Buscar alien...";
+                input.placeholder = "Buscar...";
                 labelAlert.innerText = "Nível:";
                 labelSetup.innerText = "Preparação";
                 labelTokens.innerText = "Fichas";
                 if (document.getElementById('labelEssence')) document.getElementById('labelEssence').innerText = "Essência";
             } else {
                 btn.innerText = "🇧🇷 Português";
-                input.placeholder = "Search alien...";
+                input.placeholder = "Search...";
                 labelAlert.innerText = "Level:";
                 labelSetup.innerText = "Setup";
                 labelTokens.innerText = "Tokens";
@@ -910,16 +914,17 @@
             if (evolutionGrid) evolutionGrid.style.display = 'none';
             if (luxGrid) luxGrid.style.display = 'none';
             alienFilters.style.display = 'none';
+
+            // Show search for all, hide expansion by default
             expansionFilter.style.display = 'none';
-            document.querySelector('.search-wrapper').style.display = 'none';
+            searchInput.style.display = 'block';
+            document.querySelector('.search-wrapper').style.display = 'flex';
             resultCount.innerText = '';
 
             if (currentVariant === 'aliens') {
                 alienGrid.style.display = 'grid';
                 alienFilters.style.display = 'flex';
                 expansionFilter.style.display = 'block';
-                searchInput.style.display = 'block';
-                document.querySelector('.search-wrapper').style.display = 'flex';
                 filterAliens();
             } else if (currentVariant === 'hazards') {
                 hazardGrid.style.display = 'grid';
@@ -942,17 +947,38 @@
             }
         }
 
+        function filterCurrentView() {
+            if (currentVariant === 'aliens') {
+                filterAliens();
+            } else {
+                updateView();
+            }
+        }
+
         function renderHazards() {
             const grid = document.getElementById('hazardGrid');
             grid.innerHTML = '';
 
             if (!window.hazardsData) return;
 
-            window.hazardsData.forEach(hazard => {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            const filtered = window.hazardsData.filter(item => {
+                const titlePT = (item.title.pt || "").toLowerCase();
+                const titleEN = (item.title.en || "").toLowerCase();
+                const matchesText = titlePT.includes(searchTerm) || titleEN.includes(searchTerm);
+                return matchesText;
+            });
+
+            filtered.forEach(hazard => {
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const title = hazard.title[currentLang];
+                let title = hazard.title[currentLang];
+                if (currentLang === 'pt' && hazard.title.en) {
+                    title = `${hazard.title.pt} <span style="color: #666; font-size: 0.8em;">/ ${hazard.title.en}</span>`;
+                }
+
                 const text = hazard.text[currentLang];
                 const type = hazard.type; // Permanent, Hazard, etc.
                 const expansion = hazard.expansion;
@@ -978,7 +1004,7 @@
                 grid.appendChild(card);
             });
             const countText = currentLang === 'pt' ? 'Hazards encontrados' : 'Hazards found';
-            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.hazardsData.length}</span>`;
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${filtered.length}</span>`;
         }
 
         function renderTechs() {
@@ -987,11 +1013,23 @@
 
             if (!window.techsData) return;
 
-            window.techsData.forEach(tech => {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            const filtered = window.techsData.filter(item => {
+                const titlePT = (item.title.pt || "").toLowerCase();
+                const titleEN = (item.title.en || "").toLowerCase();
+                const matchesText = titlePT.includes(searchTerm) || titleEN.includes(searchTerm);
+                return matchesText;
+            });
+
+            filtered.forEach(tech => {
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const title = tech.title[currentLang];
+                let title = tech.title[currentLang];
+                if (currentLang === 'pt' && tech.title.en) {
+                    title = `${tech.title.pt} <span style="color: #666; font-size: 0.8em;">/ ${tech.title.en}</span>`;
+                }
                 const text = tech.text[currentLang];
                 const type = tech.type;
                 const expansion = tech.expansion;
@@ -1016,7 +1054,7 @@
                 grid.appendChild(card);
             });
             const countText = currentLang === 'pt' ? 'Techs encontradas' : 'Techs found';
-            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.techsData.length}</span>`;
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${filtered.length}</span>`;
         }
 
         function renderStations() {
@@ -1025,11 +1063,23 @@
 
             if (!window.stationsData) return;
 
-            window.stationsData.forEach(station => {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            const filtered = window.stationsData.filter(item => {
+                const titlePT = (item.title.pt || "").toLowerCase();
+                const titleEN = (item.title.en || "").toLowerCase();
+                const matchesText = titlePT.includes(searchTerm) || titleEN.includes(searchTerm);
+                return matchesText;
+            });
+
+            filtered.forEach(station => {
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const title = station.title[currentLang];
+                let title = station.title[currentLang];
+                if (currentLang === 'pt' && station.title.en) {
+                    title = `${station.title.pt} <span style="color: #666; font-size: 0.8em;">/ ${station.title.en}</span>`;
+                }
                 const text = station.text[currentLang];
                 const type = station.type;
                 const expansion = station.expansion;
@@ -1052,7 +1102,7 @@
                 grid.appendChild(card);
             });
             const countText = currentLang === 'pt' ? 'Estações encontradas' : 'Stations found';
-            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.stationsData.length}</span>`;
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${filtered.length}</span>`;
         }
 
         function renderMoons() {
@@ -1061,11 +1111,23 @@
 
             if (!window.moonsData) return;
 
-            window.moonsData.forEach(moon => {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            const filtered = window.moonsData.filter(item => {
+                const titlePT = (item.title.pt || "").toLowerCase();
+                const titleEN = (item.title.en || "").toLowerCase();
+                const matchesText = titlePT.includes(searchTerm) || titleEN.includes(searchTerm);
+                return matchesText;
+            });
+
+            filtered.forEach(moon => {
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const title = moon.title[currentLang];
+                let title = moon.title[currentLang];
+                if (currentLang === 'pt' && moon.title.en) {
+                    title = `${moon.title.pt} <span style="color: #666; font-size: 0.8em;">/ ${moon.title.en}</span>`;
+                }
                 const text = moon.text[currentLang];
                 const type = moon.type;
                 const expansion = moon.expansion;
@@ -1087,7 +1149,7 @@
                 grid.appendChild(card);
             });
             const countText = currentLang === 'pt' ? 'Luas encontradas' : 'Moons found';
-            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.moonsData.length}</span>`;
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${filtered.length}</span>`;
         }
 
         function renderEvolutions() {
@@ -1096,11 +1158,23 @@
 
             if (!window.evolutionsData) return;
 
-            window.evolutionsData.forEach(evo => {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            const filtered = window.evolutionsData.filter(item => {
+                const titlePT = (item.title.pt || "").toLowerCase();
+                const titleEN = (item.title.en || "").toLowerCase();
+                const matchesText = titlePT.includes(searchTerm) || titleEN.includes(searchTerm);
+                return matchesText;
+            });
+
+            filtered.forEach(evo => {
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const title = evo.title[currentLang];
+                let title = evo.title[currentLang];
+                if (currentLang === 'pt' && evo.title.en) {
+                    title = `${evo.title.pt} <span style="color: #666; font-size: 0.8em;">/ ${evo.title.en}</span>`;
+                }
                 const text = evo.text[currentLang];
                 const type = evo.type;
                 const expansion = evo.expansion;
@@ -1122,7 +1196,7 @@
                 grid.appendChild(card);
             });
             const countText = currentLang === 'pt' ? 'Evoluções encontradas' : 'Evolutions found';
-            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.evolutionsData.length}</span>`;
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${filtered.length}</span>`;
         }
 
         function renderLux() {
@@ -1131,11 +1205,23 @@
 
             if (!window.luxData) return;
 
-            window.luxData.forEach(lux => {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            const filtered = window.luxData.filter(item => {
+                const titlePT = (item.title.pt || "").toLowerCase();
+                const titleEN = (item.title.en || "").toLowerCase();
+                const matchesText = titlePT.includes(searchTerm) || titleEN.includes(searchTerm);
+                return matchesText;
+            });
+
+            filtered.forEach(lux => {
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const title = lux.title[currentLang];
+                let title = lux.title[currentLang];
+                if (currentLang === 'pt' && lux.title.en) {
+                    title = `${lux.title.pt} <span style="color: #666; font-size: 0.8em;">/ ${lux.title.en}</span>`;
+                }
                 const text = lux.text[currentLang];
                 const type = lux.type;
                 const expansion = lux.expansion;
@@ -1157,7 +1243,7 @@
                 grid.appendChild(card);
             });
             const countText = currentLang === 'pt' ? 'Lux encontrados' : 'Lux found';
-            document.getElementById('resultCount').innerHTML = `${countText}: <span>${window.luxData.length}</span>`;
+            document.getElementById('resultCount').innerHTML = `${countText}: <span>${filtered.length}</span>`;
         }
 
         function toggleFlare(btn) {
@@ -1219,7 +1305,7 @@
             const input = document.getElementById('searchInput');
             input.value = '';
             input.focus();
-            filterAliens();
+            filterCurrentView();
         }
 
         function createTimingHtml(timingObj) {
@@ -1343,7 +1429,7 @@
                 const card = document.createElement('div');
                 card.className = 'card';
 
-		// --- MODIFICAÇÃO AQUI ---
+                // --- MODIFICAÇÃO AQUI ---
                 const alienIdLower = alien.id.toLowerCase();
                 // Verifica se é um alternativo (_alternate) OU se é o alien "throwback"
                 const isSpecial = alienIdLower.includes('_alternate') || alienIdLower === 'throwback';
