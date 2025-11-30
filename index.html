@@ -348,6 +348,12 @@
             text-overflow: ellipsis;
         }
 
+	/* Regra específica para o título quando o container tem a classe 'alt-border' */
+        .card-image-container.alt-border .card-image-title {
+            background: #000; /* Fundo preto chapado */
+            color: #fff;      /* Texto branco para contraste */
+        }
+
         @media (max-width: 600px) {
             .card-image-title {
                 font-size: 1.3rem;
@@ -1337,8 +1343,13 @@
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const isAlternate = alien.id.toLowerCase().includes('_alternate');
-                const borderClass = isAlternate ? ' alt-border' : '';
+		// --- MODIFICAÇÃO AQUI ---
+                const alienIdLower = alien.id.toLowerCase();
+                // Verifica se é um alternativo (_alternate) OU se é o alien "throwback"
+                const isSpecial = alienIdLower.includes('_alternate') || alienIdLower === 'throwback';
+                // Aplica a classe alt-border se for qualquer um dos casos
+                const borderClass = isSpecial ? ' alt-border' : '';
+                // ------------------------    
 
                 const imageUrl = getAlienImage(alien.id);
                 // Sempre exibe título em inglês conforme solicitado
