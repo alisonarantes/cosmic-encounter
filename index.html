@@ -1310,6 +1310,10 @@
                 let matchesEssence = true;
                 if (requireEssence && !alien.hasEssence) matchesEssence = false;
 
+                if (id.includes('zombie')) {
+                    console.log(`Checking ${id}: Text=${matchesText} (${textTerm}), Exp=${matchesExpansion} (${alien.expansion}), Color=${matchesColor} (${alien.alert}), Setup=${matchesSetup}, Comp=${matchesComp}, Essence=${matchesEssence}`);
+                }
+
                 return matchesText && matchesExpansion && matchesColor && matchesSetup && matchesComp && matchesEssence;
             });
 
