@@ -562,41 +562,41 @@ window.aliensData.push(
             "en": "<b>You have the power of Rules.</b> If you are not the offense, after the offense wins the encounter, you <b>may use</b> this power. Look through your essence card set, choose one rule, and play it faceup next to this sheet. Instead of playing a rule, you may choose to discard a rule already in play.<br/><br/>The abilities on rules are available to all players. After another player uses one of your rules, you gain one reward."
         },
         essence: {
-                "name": "Rule",
-                "list": {
-                        "1": {
-                                "name": "Start Turn",
-                                "body": "At the start of your turn, you may draw a card from the deck or discard a card from your hand (before determining if you must draw a new hand)."
-                        },
-                        "2": {
-                                "name": "Regroup",
-                                "body": "During your regroup phase, you may redistribute any number of your ships on your colonies among your colonies"
-                        },
-                        "3": {
-                                "name": "Destiny",
-                                "body": "When you draw your own color for destiny, you may treat it as a wild destiny."
-                        },
-                        "4": {
-                                "name": "Launch",
-                                "body": "After the hyperspace gate is aimed at one of your home planets, you may re-aim the gate at any other planet in your system where the offense does not have a foreign colony."
-                        },
-                        "5": {
-                                "name": "Alliance",
-                                "body": "After alliances are formed, if you are not a main player or ally, you may ally with either main player by sending more ships into the encounter (without exceeding your ship limit) than the player has in the encounter."
-                        },
-                        "6": {
-                                "name": "Planning",
-                                "body": "During the planning phase, after cards are selected, you may forced any selected negotiate cards to be flipped faceup. If your opponent did not select a negotiate, you may swap your selected card with another card from your hand."
-                        },
-                        "7": {
-                                "name": "Reveal",
-                                "body": "As a main player, after cards are revealed, if you revealed a negotiate, you may send one of your ships in the encounter to the warp to discard that negotiate and replace it with an attack card from your hand."
-                        },
-                        "8": {
-                                "name": "Resolution",
-                                "body": "As a main player, after you win the encounter, you may gain one reward. This occurs after compensation is collected, if any."
-                        }
+            "name": "Rule",
+            "list": {
+                "1": {
+                    "name": "Start Turn",
+                    "body": "At the start of your turn, you may draw a card from the deck or discard a card from your hand (before determining if you must draw a new hand)."
+                },
+                "2": {
+                    "name": "Regroup",
+                    "body": "During your regroup phase, you may redistribute any number of your ships on your colonies among your colonies"
+                },
+                "3": {
+                    "name": "Destiny",
+                    "body": "When you draw your own color for destiny, you may treat it as a wild destiny."
+                },
+                "4": {
+                    "name": "Launch",
+                    "body": "After the hyperspace gate is aimed at one of your home planets, you may re-aim the gate at any other planet in your system where the offense does not have a foreign colony."
+                },
+                "5": {
+                    "name": "Alliance",
+                    "body": "After alliances are formed, if you are not a main player or ally, you may ally with either main player by sending more ships into the encounter (without exceeding your ship limit) than the player has in the encounter."
+                },
+                "6": {
+                    "name": "Planning",
+                    "body": "During the planning phase, after cards are selected, you may forced any selected negotiate cards to be flipped faceup. If your opponent did not select a negotiate, you may swap your selected card with another card from your hand."
+                },
+                "7": {
+                    "name": "Reveal",
+                    "body": "As a main player, after cards are revealed, if you revealed a negotiate, you may send one of your ships in the encounter to the warp to discard that negotiate and replace it with an attack card from your hand."
+                },
+                "8": {
+                    "name": "Resolution",
+                    "body": "As a main player, after you win the encounter, you may gain one reward. This occurs after compensation is collected, if any."
                 }
+            }
         },
         "history": {
             "pt": "A vastidão do Cosmos os força a operar no limite da realidade, mal percebendo a vida ao seu redor enquanto modificam a estrutura do universo para atender às suas necessidades. O caos e a anarquia cada vez maiores que eles criam exigem que eles continuem a revisar e rever o que semearam.",
@@ -2510,41 +2510,41 @@ window.aliensData.push(
             "en": "<b>You have the power to Negate.</b> Once per encounter, you <b>may use</b> this power to play a negation from your essence card cache on another player as per the timing on the negation."
         },
         essence: {
-                "name": "Negation",
-                "list": {
-                        "8": {
-                                "name": "Ally Action",
-                                "body": "After an ally uses an optional power or uses an ability that requires them to be an ally, cancel that power or ability."
-                        },
-                        "4": {
-                                "name": "Choosing Ships",
-                                "body": "After ships on a specific location (planet, tech card, etc.) are chosen for any reason, the player must choose ships from another valid location and the number of ships must be different, if possible."
-                        },
-                        "6": {
-                                "name": "Destiny",
-                                "body": "After the offense draws a wild destiny and chooses a player, they must chose another player. Or, after the offense draws a destiny of their color, they must choose option A unless there is no player to encounter in their home system."
-                        },
-                        "2": {
-                                "name": "Encounter Card",
-                                "body": "After an encounter card is selected but before it is revealed, return it to its owner's hand. That player must select another card, if able."
-                        },
-                        "5": {
-                                "name": "Enter Alliance",
-                                "body": "When a player would accept an invitation to become an ally, they cannot ally with that side. (They may still become an ally with the other side if they were invited.)"
-                        },
-                        "3": {
-                                "name": "Hyperspace Gate",
-                                "body": "After a player aims the hyperspace gate or uses an effect that targets a specific planet, that player must choose another valid planet, if able."
-                        },
-                        "7": {
-                                "name": "Main Player Action",
-                                "body": "After a main player uses an optional power or uses an ability that requires them to be a main player, cancel that power or ability."
-                        },
-                        "1": {
-                                "name": "Non-Encounter Card",
-                                "body": "After an artifact, flare, or reinforcement card is played, return it to its owner's hand. That specific card cannot be played again during this encounter."
-                        }
+            "name": "Negation",
+            "list": {
+                "8": {
+                    "name": "Ally Action",
+                    "body": "After an ally uses an optional power or uses an ability that requires them to be an ally, cancel that power or ability."
+                },
+                "4": {
+                    "name": "Choosing Ships",
+                    "body": "After ships on a specific location (planet, tech card, etc.) are chosen for any reason, the player must choose ships from another valid location and the number of ships must be different, if possible."
+                },
+                "6": {
+                    "name": "Destiny",
+                    "body": "After the offense draws a wild destiny and chooses a player, they must chose another player. Or, after the offense draws a destiny of their color, they must choose option A unless there is no player to encounter in their home system."
+                },
+                "2": {
+                    "name": "Encounter Card",
+                    "body": "After an encounter card is selected but before it is revealed, return it to its owner's hand. That player must select another card, if able."
+                },
+                "5": {
+                    "name": "Enter Alliance",
+                    "body": "When a player would accept an invitation to become an ally, they cannot ally with that side. (They may still become an ally with the other side if they were invited.)"
+                },
+                "3": {
+                    "name": "Hyperspace Gate",
+                    "body": "After a player aims the hyperspace gate or uses an effect that targets a specific planet, that player must choose another valid planet, if able."
+                },
+                "7": {
+                    "name": "Main Player Action",
+                    "body": "After a main player uses an optional power or uses an ability that requires them to be a main player, cancel that power or ability."
+                },
+                "1": {
+                    "name": "Non-Encounter Card",
+                    "body": "After an artifact, flare, or reinforcement card is played, return it to its owner's hand. That specific card cannot be played again during this encounter."
                 }
+            }
         },
         "history": {
             "pt": "O Nulo e o Vazio eram adorados como os deuses gêmeos dos Negadores. Sempre que outro ser tenta uma ação positiva, os Negadores são obrigados a neutralizá-la e negar sua existência. Ao se relacionar com tudo o que é negativo e desprezar tudo o que não é negativo, a apatia e a atitude geralmente indefinida dos Nulos se tornaram sua ruína quando os Negadores e o Ódio uniram forças para subtrair seus antigos ídolos do Cosmos.",
@@ -2909,6 +2909,94 @@ window.aliensData.push(
         "power": {
             "pt": "<b>Configuração do jogo.</b> Escolha uma carta de condição do seu conjunto de cartas de essência e coloque-a virada para baixo nesta ficha. Embaralhe as sete cartas de condição restantes como um baralho e coloque-as viradas para baixo perto desta ficha. Ignore as regras normais das cartas de essência.<br/><br/><b>Você tem o poder de Mudar a Realidade.</b> Como jogador principal, depois de perder um encontro ou não conseguir fazer um acordo, o jogador principal oponente compra uma carta aleatoriamente do seu baralho de condições e a coloca virada para cima nesta ficha. <br/><br/>Quando qualquer jogador vencer pelas condições de vitória normais (não alternativas), <b>use</b>esse poder para impedir essa vitória. Quando qualquer jogador vencer por uma de suas condições (virado para cima ou para baixo), use este poder para declará-lo vencedor.",
             "en": "<b>Game Setup.</b> Choose one condition card from your essence card set and place it facedown on this sheet. Shuffle the remaining seven condition cards as a deck and place them facedown near this sheet. Ignore normal essence card rules.<br/><br/><b>You have the power to Shift Reality.</b> As a main player, after you lose an encounter or fail to make a deal, the opposing main player draws a card at random from your condition deck and places it faceup on this sheet.<br/><br/>When any player(s) would win by the normal (not alternate) victory conditions, <b>use</b> this power to prevent that win. When any player(s) would win by one of your conditions (faceup or facedown), <b>use</b> this power to declare them the winner(s)."
+        },
+        essence: {
+            "name": {
+                "pt": "Condição",
+                "en": "Condition"
+            },
+            "list": {
+                "1": {
+                    "name": {
+                        "pt": "Blefador",
+                        "en": "Bluffer"
+                    },
+                    "body": {
+                        "pt": "Após você falhar em fazer um acordo, se você tiver pelo menos quatro colônias estrangeiras, você vence o jogo!",
+                        "en": "After you fail to make a deal, if you have at least four foreign colonies, you win the game!"
+                    }
+                },
+                "2": {
+                    "name": {
+                        "pt": "Colonizador",
+                        "en": "Colonizer"
+                    },
+                    "body": {
+                        "pt": "Após você comprar uma nova mão, se você tiver pelo menos três colônias estrangeiras, você vence o jogo!",
+                        "en": "After you draw a new hand, if you have at least three foreign colonies, you win the game!"
+                    }
+                },
+                "3": {
+                    "name": {
+                        "pt": "Conciliador",
+                        "en": "Conciliator"
+                    },
+                    "body": {
+                        "pt": "Após você fazer um acordo, se você tiver pelo menos três colônias estrangeiras, você vence o jogo!",
+                        "en": "After you make a deal, if you have at least three foreign colonies, you win the game!"
+                    }
+                },
+                "4": {
+                    "name": {
+                        "pt": "Intruso",
+                        "en": "Intruder"
+                    },
+                    "body": {
+                        "pt": "Se três de suas colônias estrangeiras tiverem cada uma pelo menos quatro naves, você vence o jogo!",
+                        "en": "If three of your foreign colonies each have at least four ships, you win the game!"
+                    }
+                },
+                "5": {
+                    "name": {
+                        "pt": "Realocador",
+                        "en": "Relocator"
+                    },
+                    "body": {
+                        "pt": "Se você tiver pelo menos três colônias estrangeiras no mesmo sistema, você vence o jogo!",
+                        "en": "If you have at least three foreign colonies in the same system, you win the game!"
+                    }
+                },
+                "6": {
+                    "name": {
+                        "pt": "Tradicionalista",
+                        "en": "Traditionalist"
+                    },
+                    "body": {
+                        "pt": "Se você tiver pelo menos cinco colônias estrangeiras e pelo menos três colônias natais, você vence o jogo!",
+                        "en": "If you have at least five foreign colonies and at least three home colonies, you win the game!"
+                    }
+                },
+                "7": {
+                    "name": {
+                        "pt": "Viajante",
+                        "en": "Wanderer"
+                    },
+                    "body": {
+                        "pt": "Se você tiver colônias estrangeiras em pelo menos três sistemas diferentes e tiver três ou menos colônias natais, você vence o jogo! Esta condição não pode ser escolhida em um jogo de três jogadores.",
+                        "en": "If you have foreign colonies in at least three different systems and have three or fewer home colonies, you win the game! This condition cannot be chosen in a three player game."
+                    }
+                },
+                "8": {
+                    "name": {
+                        "pt": "Xenófobo",
+                        "en": "Xenophobe"
+                    },
+                    "body": {
+                        "pt": "Após você restabelecer uma colônia natal, se você tiver pelo menos duas colônias estrangeiras, você vence o jogo!",
+                        "en": "After you re-establish a home colony, if you have at least two foreign colonies, you win the game!"
+                    }
+                }
+            }
         },
         "history": {
             "pt": "À medida que os Esquizoides deslizam entre espaços-tempos alternativos em cascata, eles se tornam meros seres ao redor deles.",
@@ -3548,44 +3636,44 @@ window.aliensData.push(
             "en": "<b>You have the power to Curse.</b> As a main player or ally, after you lose an encounter, <b>use</b> this power to \"curse\" one or more opposing players. For each player, choose a curse from your essence card cache and place it faceup in front of them. You cannot curse a player who is already cursed.<br/><br/>During each regroup phase, each cursed player may place one of their ships from their colonies onto their curse card. After a curse card has a number of ships on it equal to the number on the card, all of those ships are sent to the warp and the curse is placed in your unavailable pile."
         },
         essence: {
-                "name": "Curse",
-                "list": {
-                        "1": {
-                                "name": "Alliance",
-                                "body": "You cannot become an ally or invite allies.",
-                                "value": 3
-                        },
-                        "2": {
-                                "name": "Artifact",
-                                "body": "Discard all artifacts in your hand. If you gain an artifact, you must discard it immediately.",
-                                "value": 3
-                        },
-                        "4": {
-                                "name": "Attack Card",
-                                "body": "As a main player, before encounter cards are selected, you must reveal the attack card in your hand that has the highest value to all players.",
-                                "value": 4
-                        },
-                        "3": {
-                                "name": "Flare",
-                                "body": "Discard all flares in your hand. If you gain a flare, you must discard it immediately.",
-                                "value": 3
-                        },
-                        "7": {
-                                "name": "Non-Encounter",
-                                "body": "You annot play any non-encounter cards from your hand.",
-                                "value": 3
-                        },
-                        "6": {
-                                "name": "Totals",
-                                "body": "As a main player, ships on your side subtract from your encounter total (instead of adding).",
-                                "value": 4
-                        },
-                        "5": {
-                                "name": "Win",
-                                "body": "You cannot win the game.",
-                                "value": 3
-                        }
+            "name": "Curse",
+            "list": {
+                "1": {
+                    "name": "Alliance",
+                    "body": "You cannot become an ally or invite allies.",
+                    "value": 3
+                },
+                "2": {
+                    "name": "Artifact",
+                    "body": "Discard all artifacts in your hand. If you gain an artifact, you must discard it immediately.",
+                    "value": 3
+                },
+                "4": {
+                    "name": "Attack Card",
+                    "body": "As a main player, before encounter cards are selected, you must reveal the attack card in your hand that has the highest value to all players.",
+                    "value": 4
+                },
+                "3": {
+                    "name": "Flare",
+                    "body": "Discard all flares in your hand. If you gain a flare, you must discard it immediately.",
+                    "value": 3
+                },
+                "7": {
+                    "name": "Non-Encounter",
+                    "body": "You annot play any non-encounter cards from your hand.",
+                    "value": 3
+                },
+                "6": {
+                    "name": "Totals",
+                    "body": "As a main player, ships on your side subtract from your encounter total (instead of adding).",
+                    "value": 4
+                },
+                "5": {
+                    "name": "Win",
+                    "body": "You cannot win the game.",
+                    "value": 3
                 }
+            }
         },
         "history": {
             "pt": "As Bruxas concentraram tanto sua raiva sobre as injustiças da vida que sua fúria interior se tornou uma força que elas podiam projetar contra os outros. Agora elas nunca parecem tão felizes como quando uma virada do destino libera esse poder e elas podem amaldiçoar seus inimigos.",
@@ -3770,37 +3858,37 @@ window.aliensData.push(
             "en": "<b>Game Setup.</b> Secretly choose a destiny card that matches a player color and does not have a hazard warning. Place it facedown on this sheet. That player is \"ordained.\"<br/><br/><b>You have the power of Zilch.</b> Once per encounter, you <b>may use</b> this power to play a fate from your essence card cache.<br/><br/>If the ordained player wins the game alone, you win the game with them. If the ordained player would be part of a shared win that does not include you, you win by yourself instead.<br/><br/>You may still win the game via the normal method."
         },
         essence: {
-                "name": "Fate",
-                "list": {
-                        "5": {
-                                "name": "Donate!",
-                                "body": "Give a non-encounter card from your hand to another player."
-                        },
-                        "3": {
-                                "name": "Peek!",
-                                "body": "Look at one of the following: a player's hand, any facedown cards on an alien sheet, the top five cards of a deck, a token, an essence cache, or a selected encounter card. Then, you may speak privately (or publically) with one or more players."
-                        },
-                        "4": {
-                                "name": "Psych!",
-                                "body": "As an ally, after encounter cards are selected but before they are revealed, return your ships from the encounter to your colonies. You may force another ally on either side to do the same."
-                        },
-                        "6": {
-                                "name": "Reward!",
-                                "body": "You you would gain rewards, you may choose anohter player to gain some or all of them instead."
-                        },
-                        "2": {
-                                "name": "Shield!",
-                                "body": "Before another player uses their alien power, prevent it from being canceled by any effect for the rest of the encounter."
-                        },
-                        "7": {
-                                "name": "Steal!",
-                                "body": "Take a card at random from another player's hand. After looking at it, give it to a player other than yourself."
-                        },
-                        "1": {
-                                "name": "Zap!",
-                                "body": "Cancel one use of another alien's power. That power may not be used again during this encounter."
-                        }
+            "name": "Fate",
+            "list": {
+                "5": {
+                    "name": "Donate!",
+                    "body": "Give a non-encounter card from your hand to another player."
+                },
+                "3": {
+                    "name": "Peek!",
+                    "body": "Look at one of the following: a player's hand, any facedown cards on an alien sheet, the top five cards of a deck, a token, an essence cache, or a selected encounter card. Then, you may speak privately (or publically) with one or more players."
+                },
+                "4": {
+                    "name": "Psych!",
+                    "body": "As an ally, after encounter cards are selected but before they are revealed, return your ships from the encounter to your colonies. You may force another ally on either side to do the same."
+                },
+                "6": {
+                    "name": "Reward!",
+                    "body": "You you would gain rewards, you may choose anohter player to gain some or all of them instead."
+                },
+                "2": {
+                    "name": "Shield!",
+                    "body": "Before another player uses their alien power, prevent it from being canceled by any effect for the rest of the encounter."
+                },
+                "7": {
+                    "name": "Steal!",
+                    "body": "Take a card at random from another player's hand. After looking at it, give it to a player other than yourself."
+                },
+                "1": {
+                    "name": "Zap!",
+                    "body": "Cancel one use of another alien's power. That power may not be used again during this encounter."
                 }
+            }
         },
         "history": {
             "pt": "Os Nada não têm história, pois existem fora de nossos conceitos de tempo. Para eles, passado, presente e futuro são a mesma coisa.",
