@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <style>
         :root {
             --bg-color: #0b0d17;
@@ -682,6 +684,8 @@
         <div class="menu-item" onclick="selectVariant('moons')">Moons</div>
         <div class="menu-item" onclick="selectVariant('evolutions')">Evolutions</div>
         <div class="menu-item" onclick="selectVariant('lux')">Lux</div>
+        <div class="menu-item" onclick="window.location.href='https://cosmic-odyssey-kappa.vercel.app/'"
+            id="menuCampaign">Campanha</div>
     </nav>
 
     <header>
@@ -705,6 +709,7 @@
                 <option value="Cosmic Dominion">Cosmic Dominion</option>
                 <option value="Cosmic Eons">Cosmic Eons</option>
                 <option value="Cosmic Odyssey">Cosmic Odyssey</option>
+                <option value="42nd Anniversary Edition">42nd Anniversary Edition</option>
             </select>
             <button onclick="toggleLanguage()" id="langBtn">🇺🇸 English</button>
         </div>
@@ -769,7 +774,7 @@
         // --- METADADOS OFICIAIS FFG ---
         const alienMetadata = {
             // --- BASE GAME (50) ---
-            amoeba: { color: 'yellow', comp: false, exp: 'Base Game' }, anti_matter: { color: 'yellow', comp: false, exp: 'Base Game' }, barbarian: { color: 'green', comp: false, exp: 'Base Game' }, calculator: { color: 'yellow', comp: false, exp: 'Base Game' }, chosen: { color: 'green', comp: false, exp: 'Base Game' }, citadel: { color: 'red', comp: true, exp: 'Base Game' }, clone: { color: 'green', comp: false, exp: 'Base Game' }, cudgel: { color: 'green', comp: false, exp: 'Base Game' }, demon: { color: 'yellow', comp: false, exp: 'Base Game' }, dictator: { color: 'red', comp: false, exp: 'Base Game' }, fido: { color: 'yellow', comp: false, exp: 'Base Game' }, filch: { color: 'green', comp: false, exp: 'Base Game' }, fodder: { color: 'yellow', comp: false, exp: 'Base Game' }, gambler: { color: 'red', comp: false, exp: 'Base Game' }, grudge: { color: 'red', comp: true, exp: 'Base Game' }, hacker: { color: 'green', comp: false, exp: 'Base Game' }, hate: { color: 'yellow', comp: false, exp: 'Base Game' }, healer: { color: 'yellow', comp: false, exp: 'Base Game' }, human: { color: 'yellow', comp: false, exp: 'Base Game' }, kamikaze: { color: 'yellow', comp: false, exp: 'Base Game' }, loser: { color: 'green', comp: false, exp: 'Base Game' }, machine: { color: 'red', comp: false, exp: 'Base Game' }, macron: { color: 'green', comp: false, exp: 'Base Game' }, masochist: { color: 'red', comp: false, exp: 'Base Game' }, mind: { color: 'yellow', comp: false, exp: 'Base Game' }, mirror: { color: 'yellow', comp: false, exp: 'Base Game' }, miser: { color: 'green', comp: true, exp: 'Base Game' }, mite: { color: 'yellow', comp: false, exp: 'Base Game' }, mutant: { color: 'green', comp: false, exp: 'Base Game' }, observer: { color: 'green', comp: false, exp: 'Base Game' }, oracle: { color: 'green', comp: false, exp: 'Base Game' }, pacifist: { color: 'green', comp: false, exp: 'Base Game' }, parasite: { color: 'green', comp: false, exp: 'Base Game' }, philanthropist: { color: 'yellow', comp: false, exp: 'Base Game' }, reincarnator: { color: 'yellow', comp: false, exp: 'Base Game' }, remora: { color: 'yellow', comp: false, exp: 'Base Game' }, reserve: { color: 'green', comp: false, exp: 'Base Game' }, shadow: { color: 'yellow', comp: false, exp: 'Base Game' }, sorcerer: { color: 'green', comp: false, exp: 'Base Game' }, spiff: { color: 'green', comp: false, exp: 'Base Game' }, tick_tock: { color: 'yellow', comp: true, exp: 'Base Game' }, trader: { color: 'green', comp: false, exp: 'Base Game' }, tripler: { color: 'red', comp: false, exp: 'Base Game' }, vacuum: { color: 'green', comp: false, exp: 'Base Game' }, virus: { color: 'red', comp: false, exp: 'Base Game' }, void: { color: 'red', comp: false, exp: 'Base Game' }, vulch: { color: 'green', comp: false, exp: 'Base Game' }, warpish: { color: 'red', comp: false, exp: 'Base Game' }, warrior: { color: 'green', comp: true, exp: 'Base Game' }, will: { color: 'green', comp: false, exp: 'Base Game' }, zombie: { color: 'green', comp: false, exp: 'Base Game' },
+            amoeba: { color: 'yellow', comp: false, exp: 'Base Game' }, anti_matter: { color: 'yellow', comp: false, exp: 'Base Game' }, barbarian: { color: 'green', comp: false, exp: 'Base Game' }, calculator: { color: 'yellow', comp: false, exp: 'Base Game' }, chosen: { color: 'green', comp: false, exp: 'Base Game' }, citadel: { color: 'red', comp: true, exp: 'Base Game' }, clone: { color: 'green', comp: false, exp: 'Base Game' }, cudgel: { color: 'green', comp: false, exp: 'Base Game' }, demon: { color: 'yellow', comp: false, exp: '42nd Anniversary Edition' }, dictator: { color: 'red', comp: false, exp: 'Base Game' }, fido: { color: 'yellow', comp: false, exp: 'Base Game' }, filch: { color: 'green', comp: false, exp: 'Base Game' }, fodder: { color: 'yellow', comp: false, exp: 'Base Game' }, gambler: { color: 'red', comp: false, exp: 'Base Game' }, grudge: { color: 'red', comp: true, exp: 'Base Game' }, hacker: { color: 'green', comp: false, exp: 'Base Game' }, hate: { color: 'yellow', comp: false, exp: 'Base Game' }, healer: { color: 'yellow', comp: false, exp: 'Base Game' }, human: { color: 'yellow', comp: false, exp: 'Base Game' }, kamikaze: { color: 'yellow', comp: false, exp: 'Base Game' }, loser: { color: 'green', comp: false, exp: 'Base Game' }, machine: { color: 'red', comp: false, exp: 'Base Game' }, macron: { color: 'green', comp: false, exp: 'Base Game' }, masochist: { color: 'red', comp: false, exp: 'Base Game' }, mind: { color: 'yellow', comp: false, exp: 'Base Game' }, mirror: { color: 'yellow', comp: false, exp: 'Base Game' }, miser: { color: 'green', comp: true, exp: 'Base Game' }, mite: { color: 'yellow', comp: false, exp: 'Base Game' }, mutant: { color: 'green', comp: false, exp: 'Base Game' }, observer: { color: 'green', comp: false, exp: 'Base Game' }, oracle: { color: 'green', comp: false, exp: 'Base Game' }, pacifist: { color: 'green', comp: false, exp: 'Base Game' }, parasite: { color: 'green', comp: false, exp: 'Base Game' }, philanthropist: { color: 'yellow', comp: false, exp: 'Base Game' }, reincarnator: { color: 'yellow', comp: false, exp: 'Base Game' }, remora: { color: 'yellow', comp: false, exp: 'Base Game' }, reserve: { color: 'green', comp: false, exp: 'Base Game' }, shadow: { color: 'yellow', comp: false, exp: 'Base Game' }, sorcerer: { color: 'green', comp: false, exp: 'Base Game' }, spiff: { color: 'green', comp: false, exp: 'Base Game' }, tick_tock: { color: 'yellow', comp: true, exp: 'Base Game' }, trader: { color: 'green', comp: false, exp: 'Base Game' }, tripler: { color: 'red', comp: false, exp: 'Base Game' }, vacuum: { color: 'green', comp: false, exp: 'Base Game' }, virus: { color: 'red', comp: false, exp: 'Base Game' }, void: { color: 'red', comp: false, exp: 'Base Game' }, vulch: { color: 'green', comp: false, exp: 'Base Game' }, warpish: { color: 'red', comp: false, exp: 'Base Game' }, warrior: { color: 'green', comp: true, exp: 'Base Game' }, will: { color: 'green', comp: false, exp: 'Base Game' }, zombie: { color: 'green', comp: false, exp: 'Base Game' },
             // --- COSMIC INCURSION (20) ---
             bully: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, chronos: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, cryo: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, deuce: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, disease: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, ethic: { color: 'green', comp: false, exp: 'Cosmic Incursion' }, fungus: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, fury: { color: 'green', comp: true, exp: 'Cosmic Incursion' }, genius: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, ghoul: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, guerrilla: { color: 'green', comp: false, exp: 'Cosmic Incursion' }, leviathan: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, locust: { color: 'yellow', comp: true, exp: 'Cosmic Incursion' }, magician: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, mercenary: { color: 'green', comp: false, exp: 'Cosmic Incursion' }, merchant: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, plant: { color: 'red', comp: false, exp: 'Cosmic Incursion' }, seeker: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, sniveler: { color: 'yellow', comp: false, exp: 'Cosmic Incursion' }, symbiote: { color: 'green', comp: true, exp: 'Cosmic Incursion' },
             // --- COSMIC CONFLICT (20) ---
@@ -861,6 +866,7 @@
                 labelSetup.innerText = "Preparação";
                 labelTokens.innerText = "Fichas";
                 if (document.getElementById('labelEssence')) document.getElementById('labelEssence').innerText = "Essência";
+                if (document.getElementById('menuCampaign')) document.getElementById('menuCampaign').innerText = "Campanha";
             } else {
                 btn.innerText = "🇧🇷 Português";
                 input.placeholder = "Search...";
@@ -868,6 +874,7 @@
                 labelSetup.innerText = "Setup";
                 labelTokens.innerText = "Tokens";
                 if (document.getElementById('labelEssence')) document.getElementById('labelEssence').innerText = "Essence";
+                if (document.getElementById('menuCampaign')) document.getElementById('menuCampaign').innerText = "Campaign";
             }
             updateExpansionCounts();
             updateExpansionCounts();

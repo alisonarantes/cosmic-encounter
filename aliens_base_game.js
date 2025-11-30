@@ -1,5 +1,5 @@
 window.aliensData.push(
-{
+    {
         "id": "amoeba",
         "expansion": "Base Game",
         "name": {
@@ -729,7 +729,7 @@ window.aliensData.push(
     },
     {
         "id": "demon",
-        "expansion": "Base Game",
+        "expansion": "42nd Anniversary Edition",
         "name": {
             "pt": "Demon",
             "en": "Demon"
