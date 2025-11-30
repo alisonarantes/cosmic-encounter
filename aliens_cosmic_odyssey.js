@@ -561,6 +561,43 @@ window.aliensData.push(
             "pt": "<b>Você tem o poder de Regras.</b> Se você não for o atacante, depois que o atacante vencer o confronto, você <b>poderá usar</b> esse poder. Procure em seu conjunto de cartas de essência, escolha uma regra e jogue-a virada para cima ao lado desta ficha. Em vez de jogar uma regra, você pode optar por descartar uma regra já em jogo.<br/><br/>As habilidades das regras estão disponíveis para todos os jogadores. Quando outro jogador usar uma de suas regras, você ganhará uma recompensa.",
             "en": "<b>You have the power of Rules.</b> If you are not the offense, after the offense wins the encounter, you <b>may use</b> this power. Look through your essence card set, choose one rule, and play it faceup next to this sheet. Instead of playing a rule, you may choose to discard a rule already in play.<br/><br/>The abilities on rules are available to all players. After another player uses one of your rules, you gain one reward."
         },
+        essence: {
+                "name": "Rule",
+                "list": {
+                        "1": {
+                                "name": "Start Turn",
+                                "body": "At the start of your turn, you may draw a card from the deck or discard a card from your hand (before determining if you must draw a new hand)."
+                        },
+                        "2": {
+                                "name": "Regroup",
+                                "body": "During your regroup phase, you may redistribute any number of your ships on your colonies among your colonies"
+                        },
+                        "3": {
+                                "name": "Destiny",
+                                "body": "When you draw your own color for destiny, you may treat it as a wild destiny."
+                        },
+                        "4": {
+                                "name": "Launch",
+                                "body": "After the hyperspace gate is aimed at one of your home planets, you may re-aim the gate at any other planet in your system where the offense does not have a foreign colony."
+                        },
+                        "5": {
+                                "name": "Alliance",
+                                "body": "After alliances are formed, if you are not a main player or ally, you may ally with either main player by sending more ships into the encounter (without exceeding your ship limit) than the player has in the encounter."
+                        },
+                        "6": {
+                                "name": "Planning",
+                                "body": "During the planning phase, after cards are selected, you may forced any selected negotiate cards to be flipped faceup. If your opponent did not select a negotiate, you may swap your selected card with another card from your hand."
+                        },
+                        "7": {
+                                "name": "Reveal",
+                                "body": "As a main player, after cards are revealed, if you revealed a negotiate, you may send one of your ships in the encounter to the warp to discard that negotiate and replace it with an attack card from your hand."
+                        },
+                        "8": {
+                                "name": "Resolution",
+                                "body": "As a main player, after you win the encounter, you may gain one reward. This occurs after compensation is collected, if any."
+                        }
+                }
+        },
         "history": {
             "pt": "A vastidão do Cosmos os força a operar no limite da realidade, mal percebendo a vida ao seu redor enquanto modificam a estrutura do universo para atender às suas necessidades. O caos e a anarquia cada vez maiores que eles criam exigem que eles continuem a revisar e rever o que semearam.",
             "en": "The vastness of the Cosmos forces them to operate at the very edge of reality, barely perceiving the life around them as they modify the fabric of the universe to suit their needs. The ever-increasing chaos and anarchy they create requires that they continue to revise and revisit what they have sown."
@@ -2472,6 +2509,43 @@ window.aliensData.push(
             "pt": "<b>Você tem o poder de Negar.</b> Uma vez por encontro, você <b>pode usar</b> esse poder para jogar uma negação do seu baralho de cartas de essência em outro jogador, de acordo com o tempo da negação.",
             "en": "<b>You have the power to Negate.</b> Once per encounter, you <b>may use</b> this power to play a negation from your essence card cache on another player as per the timing on the negation."
         },
+        essence: {
+                "name": "Negation",
+                "list": {
+                        "8": {
+                                "name": "Ally Action",
+                                "body": "After an ally uses an optional power or uses an ability that requires them to be an ally, cancel that power or ability."
+                        },
+                        "4": {
+                                "name": "Choosing Ships",
+                                "body": "After ships on a specific location (planet, tech card, etc.) are chosen for any reason, the player must choose ships from another valid location and the number of ships must be different, if possible."
+                        },
+                        "6": {
+                                "name": "Destiny",
+                                "body": "After the offense draws a wild destiny and chooses a player, they must chose another player. Or, after the offense draws a destiny of their color, they must choose option A unless there is no player to encounter in their home system."
+                        },
+                        "2": {
+                                "name": "Encounter Card",
+                                "body": "After an encounter card is selected but before it is revealed, return it to its owner's hand. That player must select another card, if able."
+                        },
+                        "5": {
+                                "name": "Enter Alliance",
+                                "body": "When a player would accept an invitation to become an ally, they cannot ally with that side. (They may still become an ally with the other side if they were invited.)"
+                        },
+                        "3": {
+                                "name": "Hyperspace Gate",
+                                "body": "After a player aims the hyperspace gate or uses an effect that targets a specific planet, that player must choose another valid planet, if able."
+                        },
+                        "7": {
+                                "name": "Main Player Action",
+                                "body": "After a main player uses an optional power or uses an ability that requires them to be a main player, cancel that power or ability."
+                        },
+                        "1": {
+                                "name": "Non-Encounter Card",
+                                "body": "After an artifact, flare, or reinforcement card is played, return it to its owner's hand. That specific card cannot be played again during this encounter."
+                        }
+                }
+        },
         "history": {
             "pt": "O Nulo e o Vazio eram adorados como os deuses gêmeos dos Negadores. Sempre que outro ser tenta uma ação positiva, os Negadores são obrigados a neutralizá-la e negar sua existência. Ao se relacionar com tudo o que é negativo e desprezar tudo o que não é negativo, a apatia e a atitude geralmente indefinida dos Nulos se tornaram sua ruína quando os Negadores e o Ódio uniram forças para subtrair seus antigos ídolos do Cosmos.",
             "en": "The Null and the Void were worshiped as the twin gods of the Negators. Whenever another being attempts a positive action, Negators are compelled to counteract it and deny its existence. Experiencing kinship with all that is negative and disdain for all that is not negative, the apathy and generally undefined attitude of the Null became their undoing when the Negators and the Hate joined forces to subtract their former idols from the Cosmos."
@@ -3473,6 +3547,46 @@ window.aliensData.push(
             "pt": "<b>Você tem o poder de Amaldiçoar.</b> Como jogador principal ou aliado, depois de perder um confronto, <b>use</b> esse poder para \"amaldiçoar\" um ou mais jogadores adversários. Para cada jogador, escolha uma maldição de seu baralho de cartas de essência e coloque-a virada para cima na frente dele. Você não pode amaldiçoar um jogador que já esteja amaldiçoado.<br/><br/>Durante cada fase de reagrupamento, cada jogador amaldiçoado pode colocar um das naves de suas colônias na carta de maldição. Depois que uma carta de maldição tiver um número de naves igual ao número da carta, todos esses naves serão enviados para a dobra e a maldição será colocada em sua pilha de indisponíveis.",
             "en": "<b>You have the power to Curse.</b> As a main player or ally, after you lose an encounter, <b>use</b> this power to \"curse\" one or more opposing players. For each player, choose a curse from your essence card cache and place it faceup in front of them. You cannot curse a player who is already cursed.<br/><br/>During each regroup phase, each cursed player may place one of their ships from their colonies onto their curse card. After a curse card has a number of ships on it equal to the number on the card, all of those ships are sent to the warp and the curse is placed in your unavailable pile."
         },
+        essence: {
+                "name": "Curse",
+                "list": {
+                        "1": {
+                                "name": "Alliance",
+                                "body": "You cannot become an ally or invite allies.",
+                                "value": 3
+                        },
+                        "2": {
+                                "name": "Artifact",
+                                "body": "Discard all artifacts in your hand. If you gain an artifact, you must discard it immediately.",
+                                "value": 3
+                        },
+                        "4": {
+                                "name": "Attack Card",
+                                "body": "As a main player, before encounter cards are selected, you must reveal the attack card in your hand that has the highest value to all players.",
+                                "value": 4
+                        },
+                        "3": {
+                                "name": "Flare",
+                                "body": "Discard all flares in your hand. If you gain a flare, you must discard it immediately.",
+                                "value": 3
+                        },
+                        "7": {
+                                "name": "Non-Encounter",
+                                "body": "You annot play any non-encounter cards from your hand.",
+                                "value": 3
+                        },
+                        "6": {
+                                "name": "Totals",
+                                "body": "As a main player, ships on your side subtract from your encounter total (instead of adding).",
+                                "value": 4
+                        },
+                        "5": {
+                                "name": "Win",
+                                "body": "You cannot win the game.",
+                                "value": 3
+                        }
+                }
+        },
         "history": {
             "pt": "As Bruxas concentraram tanto sua raiva sobre as injustiças da vida que sua fúria interior se tornou uma força que elas podiam projetar contra os outros. Agora elas nunca parecem tão felizes como quando uma virada do destino libera esse poder e elas podem amaldiçoar seus inimigos.",
             "en": "The Witches so concentrated their anger about life's injustices that their inner rage became a force they could project against others. Now they never seem quite as happy as when an ill turn of fate releases this power and they can curse their enemies."
@@ -3654,6 +3768,39 @@ window.aliensData.push(
         "power": {
             "pt": "<b>Configuração do jogo.</b> Escolha secretamente uma carta de destino que corresponda à cor de um jogador e não tenha um aviso de perigo. Coloque-a virada para baixo nesta ficha. Esse jogador é \"ordenado\". <br/><br/><b>Você tem o poder de Zilch.</b> Uma vez por encontro, você <b>pode usar</b> esse poder para jogar um destino do seu baralho de cartas de essência.<br/><br/>Se o jogador ordenado vencer o jogo sozinho, você vence o jogo com ele. Se o jogador ordenado fizer parte de uma vitória compartilhada que não inclua você, você vencerá sozinho.<br/><br/>Você ainda pode vencer o jogo pelo método normal.",
             "en": "<b>Game Setup.</b> Secretly choose a destiny card that matches a player color and does not have a hazard warning. Place it facedown on this sheet. That player is \"ordained.\"<br/><br/><b>You have the power of Zilch.</b> Once per encounter, you <b>may use</b> this power to play a fate from your essence card cache.<br/><br/>If the ordained player wins the game alone, you win the game with them. If the ordained player would be part of a shared win that does not include you, you win by yourself instead.<br/><br/>You may still win the game via the normal method."
+        },
+        essence: {
+                "name": "Fate",
+                "list": {
+                        "5": {
+                                "name": "Donate!",
+                                "body": "Give a non-encounter card from your hand to another player."
+                        },
+                        "3": {
+                                "name": "Peek!",
+                                "body": "Look at one of the following: a player's hand, any facedown cards on an alien sheet, the top five cards of a deck, a token, an essence cache, or a selected encounter card. Then, you may speak privately (or publically) with one or more players."
+                        },
+                        "4": {
+                                "name": "Psych!",
+                                "body": "As an ally, after encounter cards are selected but before they are revealed, return your ships from the encounter to your colonies. You may force another ally on either side to do the same."
+                        },
+                        "6": {
+                                "name": "Reward!",
+                                "body": "You you would gain rewards, you may choose anohter player to gain some or all of them instead."
+                        },
+                        "2": {
+                                "name": "Shield!",
+                                "body": "Before another player uses their alien power, prevent it from being canceled by any effect for the rest of the encounter."
+                        },
+                        "7": {
+                                "name": "Steal!",
+                                "body": "Take a card at random from another player's hand. After looking at it, give it to a player other than yourself."
+                        },
+                        "1": {
+                                "name": "Zap!",
+                                "body": "Cancel one use of another alien's power. That power may not be used again during this encounter."
+                        }
+                }
         },
         "history": {
             "pt": "Os Nada não têm história, pois existem fora de nossos conceitos de tempo. Para eles, passado, presente e futuro são a mesma coisa.",

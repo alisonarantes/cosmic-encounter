@@ -1,5 +1,5 @@
 window.aliensData.push(
-{
+    {
         "id": "ai",
         "expansion": "Cosmic Eons",
         "name": {
@@ -106,6 +106,104 @@ window.aliensData.push(
             "pt": "<b>Você tem o poder de Traumatizar.</b> No início do turno de outro jogador, você <b>pode usar</b> este poder para capturar uma das naves de um jogador de qualquer colônia onde ele ou ela tenha pelo menos duas naves. Escolha um trauma de sua reserva de cartas de essence e coloque-o virado para baixo próximo a esta ficha com a nave capturada por cima. Você não pode manter refém mais do que uma nave de cada jogador por vez.<br/><br/>Quando você não for o atacante, antes das cartas de encontro serem escolhidas, você <b>pode usar</b> este poder para liberar uma ou ambas as naves dos jogadores principais que você capturou em turnos anteriores. Naves liberadas se juntam ao encontro indo para o Portão do Hiperespaço ou para o planeta alvo (isso pode exceder quaisquer limites no Portão do Hiperespaço) e a carta de trauma embaixo de cada uma é colocada virada para baixo sem ser vista, perto do jogador principal correspondente.<br/><br/>Quando um jogador com uma carta de trauma revela uma carta de encontro, ele ou ela deve também relevar a carta de trauma e aplicar o seu efeito. Cartas de traumas relevadas retornam para você.",
             "en": "<b>You have the power to Traumatize.</b> At the start of another player's turn, you <b>may use</b> this power to capture one of that player's ships from any colony where he or she has at least two ships. Choose one trauma from your essence card cache and place it facedown next to this sheet with the captured ship on top. You may not hold more than one of each player's ships captive at a time.<br/><br/>When you are not the offense, before encounter cards are selected, you <b>may use</b> this power to release one or both of the main players' ships you have captured on previous turns. Released ships join the encounter, going to the hyperspace gate or the targeted planet as appropriate (this may exceed any gate limits), and the trauma card under each one is placed facedown, unseen, near the corresponding main player.<br/><br/>When a player with a trauma card reveals an encounter card, he or she must also reveal that trauma card and carry out its effect. Revealed trauma cards are returned to you."
         },
+        essence: {
+            "name": {
+                "pt": "Trauma",
+                "en": "Trauma"
+            },
+            "list": {
+                "1": {
+                    "name": {
+                        "pt": "Complexo de Vítima",
+                        "en": "Victim Complex"
+                    },
+                    "body": {
+                        "pt": "Se ambos os lados revelarem cartas de ataque e você tiver o total menor, adicione 2 ao seu total. Caso contrário, adicione 2 a qualquer compensação que lhe seja devida, subtraia 2 de qualquer compensação que você deva ou não perca naves se não conseguir negociar.",
+                        "en": "If both sides reveal attack cards and you have the lower total, add 2 to your total. Otherwise, add 2 to any compensation you are due, subtract 2 from any compensation you owe, or lose no ships if you fail to deal."
+                    }
+                },
+                "2": {
+                    "name": {
+                        "pt": "Colapso Nervoso",
+                        "en": "Nervous Breakdown"
+                    },
+                    "body": {
+                        "pt": "Você perde imediatamente o encontro e não recebe compensação. Prossiga para a fase de resolução e descarte as cartas jogadas normalmente.",
+                        "en": "You immediately lose the encounter and collect no compensation. Proceed to the resolution phase and discard the played cards normally."
+                    }
+                },
+                "3": {
+                    "name": {
+                        "pt": "Abandono",
+                        "en": "Abandonment"
+                    },
+                    "body": {
+                        "pt": "Qualquer ou todos os seus aliados podem devolver suas naves envolvidas para suas colônias ou trocá-las para o outro lado do encontro.",
+                        "en": "Any or all of your allies may return their involved ships to their colonies, or switch them to the other side of the encounter."
+                    }
+                },
+                "4": {
+                    "name": {
+                        "pt": "Ouvindo Vozes",
+                        "en": "Hearing Voices"
+                    },
+                    "body": {
+                        "pt": "Se todos os outros jogadores concordarem unanimemente, eles podem atualizar sua realidade de uma das seguintes maneiras: enviando 1 de suas colônias para o warp, descartando metade das cartas de sua mão aleatoriamente ou dando a você 1 ou 2 cartas da pilha de descarte.",
+                        "en": "If all other players can unanimously agree, they may update your reality in one of the following ways: sending 1 of your colonies to the warp, discarding half of the cards in your hand at random, or giving you any 1 or 2 cards from the discard pile."
+                    }
+                },
+                "5": {
+                    "name": {
+                        "pt": "Ouvindo Vozes",
+                        "en": "Hearing Voices"
+                    },
+                    "body": {
+                        "pt": "Se todos os outros jogadores concordarem unanimemente, eles podem atualizar sua realidade de uma das seguintes maneiras: enviando 1 de suas colônias para o warp, descartando metade das cartas de sua mão aleatoriamente ou dando a você 1 ou 2 cartas da pilha de descarte.",
+                        "en": "If all other players can unanimously agree, they may update your reality in one of the following ways: sending 1 of your colonies to the warp, discarding half of the cards in your hand at random, or giving you any 1 or 2 cards from the discard pile."
+                    }
+                },
+                "6": {
+                    "name": {
+                        "pt": "Alucinações",
+                        "en": "Hallucinations"
+                    },
+                    "body": {
+                        "pt": "Seu oponente pode trocar sua carta de encontro revelada por qualquer outra carta de encontro de sua mão.",
+                        "en": "Your opponent may exchange his or her revealed encounter card with any other encounter card from his or her hand."
+                    }
+                },
+                "7": {
+                    "name": {
+                        "pt": "Alucinações",
+                        "en": "Hallucinations"
+                    },
+                    "body": {
+                        "pt": "Seu oponente pode trocar sua carta de encontro revelada por qualquer outra carta de encontro de sua mão.",
+                        "en": "Your opponent may exchange his or her revealed encounter card with any other encounter card from his or her hand."
+                    }
+                },
+                "8": {
+                    "name": {
+                        "pt": "Agressão",
+                        "en": "Aggression"
+                    },
+                    "body": {
+                        "pt": "Você pode jogar quaisquer cartas de ataque da sua mão como reforços.",
+                        "en": "You may play any attack cards in your hand as reinforcements."
+                    }
+                },
+                "9": {
+                    "name": {
+                        "pt": "Depressão",
+                        "en": "Depression"
+                    },
+                    "body": {
+                        "pt": "Se você revelar uma carta de ataque, seu valor é 00.",
+                        "en": "If you reveal an attack card, its value is 00."
+                    }
+                }
+            }
+        },
         "history": {
             "pt": "Os Aliens são na verdade bastante infantis em sua curiosidade infinita e não sabem que seus simplórios jogos de abdução não são apreciados.",
             "en": "The Aliens are actually quite child-like in their boundless curiosity, and are unaware that their simple abduction games are not appreciated."
@@ -196,6 +294,94 @@ window.aliensData.push(
         "power": {
             "pt": "<b>Você tem o poder do Caos.</b> Como um jogador principal, sempre que você perde um encontro ou falha em fechar um acordo, <b>use</b> este poder para quebrar uma regra do jogo revelando uma disruptura de regra da sua reserva de cartas de essence. Inicialmente você mantém a carta aberta nesta ficha e somente você <b>pode usar</b> a regra nova.<br/><br/>Uma vez por encontro, você pode permitir que outro jogador mova uma de suas cartas abertas de disruptura desta ficha para a ficha de alien dele ou dela. Agora vocês podem ter vantagem naquela regra nova. Depois disso, você imediatamente revela outra carta de disruptura de sua reserva de cartas de essence.<br/><br/>Depois que qualquer outro jogador usou uma regra nova, ele ou ela pode imediatamente colocar a disruptura no meio da área de jogo e então qualquer um pode usar aquela regra nova. Disrupturas são cumulativas. Quando você tiver revelado todas as 8 disrupturas, você vence o jogo. Você pode vencer ainda pelo método tradicional.",
             "en": "<b>You have the power of Chaos.</b> As a main player, whenever you lose an encounter or fail to make a deal, <b>use</b> this power to disrupt a game rule by revealing one disruption from your essence card cache. At first you keep the card faceup on this sheet and only you <b>may use</b> the disrupted rule.<br/><br/>Once per encounter, you may allow another player to move one of your faceup disruptions from this sheet next to his or her alien sheet. Now both of you may take advantage of that disrupted rule. Afterwards, you immediately reveal another disruption from your essence card cache.<br/><br/>After any other player has used a disrupted rule, he or she immediately places that disruption in the center of the playing area and then everyone may use that disrupted rule. Disruptions are cumulative. When you have revealed all 8 disruptions, you win the game. You may still win the game via the normal method."
+        },
+        essence: {
+            "name": {
+                "pt": "Ruptura",
+                "en": "Disruption"
+            },
+            "list": {
+                "1": {
+                    "name": {
+                        "pt": "Warp",
+                        "en": "Warp"
+                    },
+                    "body": {
+                        "pt": "Quando você deve recuperar uma ou mais de suas naves do warp, você pode recuperar todas elas.",
+                        "en": "When you should retrieve one or more of your ships from the warp, you may retrieve all of them."
+                    }
+                },
+                "2": {
+                    "name": {
+                        "pt": "Sucesso",
+                        "en": "Success"
+                    },
+                    "body": {
+                        "pt": "Você não precisa ser bem-sucedido em seu primeiro encontro para ter um segundo encontro.",
+                        "en": "You do not need to be successful on your first encounter to have a second encounter."
+                    }
+                },
+                "3": {
+                    "name": {
+                        "pt": "Recompensas",
+                        "en": "Rewards"
+                    },
+                    "body": {
+                        "pt": "Você tem o direito de ver todas as cartas compradas do(s) baralho(s) para recompensas.",
+                        "en": "You have a right to see all cards drawn from deck(s) for rewards."
+                    }
+                },
+                "4": {
+                    "name": {
+                        "pt": "Mão",
+                        "en": "Hand"
+                    },
+                    "body": {
+                        "pt": "Quando você não tem cartas de ataque, você pode descartar sua mão e comprar uma nova a qualquer momento (potencialmente continuando seu turno se você for o ataque).",
+                        "en": "When you have no attack cards, you may discard your hand and draw a new one at any time (potentially continuing your turn if you are the offense)."
+                    }
+                },
+                "5": {
+                    "name": {
+                        "pt": "Portal",
+                        "en": "Gate"
+                    },
+                    "body": {
+                        "pt": "Todos os limites no número total de naves que você pode enviar para o portal do hiperespaço são ignorados, incluindo limites específicos (como os do Macron).",
+                        "en": "All limits on the total number of ships that you can send to the hyperspace gate are ignored, including specific limits (such as those of the Macron)."
+                    }
+                },
+                "6": {
+                    "name": {
+                        "pt": "Destino",
+                        "en": "Destiny"
+                    },
+                    "body": {
+                        "pt": "Sempre que você deve comprar do baralho de destino, você pode, em vez disso, olhar através desse baralho e escolher qual carta comprar. Depois, embaralhe o baralho de destino, a menos que esta ruptura tenha se tornado utilizável por todos os jogadores.",
+                        "en": "Whenever you should draw from the destiny deck, you may instead look through that deck and choose which card to draw. Afterwards, shuffle the destiny deck unless this disruption has become usable by all players."
+                    }
+                },
+                "7": {
+                    "name": {
+                        "pt": "Compensação",
+                        "en": "Compensation"
+                    },
+                    "body": {
+                        "pt": "Toda ou parte da sua compensação pode ser convertida em recompensas.\n\nQuando você deve receber uma recompensa, você pode pegar uma carta de qualquer jogador em compensação.",
+                        "en": "All or part of your compensation may be converted to rewards.\n\nWhen you should receive a reward, you may take a card from any player in compensation instead."
+                    }
+                },
+                "8": {
+                    "name": {
+                        "pt": "Aliança",
+                        "en": "Alliance"
+                    },
+                    "body": {
+                        "pt": "Você pode se aliar sem ser convidado, mas se o fizer e perder naves para o warp, você perde o dobro.",
+                        "en": "You may ally without being invited, but if you do and you lose ships to the warp, you lose twice as many."
+                    }
+                }
+            }
         },
         "history": {
             "pt": "Os Anarquistas se ofendem com as formalidades de interação usadas ao longo das eras, sufocando seus oponentes sendo não ortodoxos.",
@@ -378,6 +564,74 @@ window.aliensData.push(
         "power": {
             "pt": "<b>Você tem o poder de Ser Útil.</b> Como um jogador principal ou aliado, depois das alianças serem formadas mas antes das cartas de encontro serem escolhidas, <b>use</b> este poder se há quaisquer outro(s) jogador(es) no seu lado do encontro. Dê uma carta de ajuda da sua reserva de cartas de essence para um desses jogadores e então ganhe uma recompensa. O jogador que recebeu a carta pode mante-la virada para cima ou para baixo e olha-la.<br/><br/>Outros jogadores podem devolver as cartas de ajuda deles ou delas para você pelo tempo da carta de ajuda. Quando eles ou elas o fizerem, <b>use</b> este poder para prover a ajuda conforme instruído; então ou ganhe uma recompensa ou se você puder usar imediatamente esta carta para você, você pode fazer isso antes de colocar a carta virada para cima na pilha de indisponíveis.",
             "en": "<b>You have the power to Be Helpful. As a main player or ally, after alliances are formed but before encounter cards are selected, <b>use</b> this power if there are any other player(s) on your side of the encounter. Give one help card from your essence card cache to one of those players and then gain one reward. A player who has been given a help card can keep it faceup or facedown and look at it.<br/><br/>Other players may give their help cards back to you per the timing on the help card. When they do, <b>use</b> this power to provide the help as instructed; then either gain one reward or, if you can immediately use the help card for yourself, you may do so before placing the card faceup in the unavailable pile."
+        },
+        essence: {
+            "name": {
+                "pt": "Ajuda",
+                "en": "Help"
+            },
+            "list": {
+                "1": {
+                    "name": {
+                        "pt": "Território Perdido",
+                        "en": "Lost Territory"
+                    },
+                    "body": {
+                        "pt": "A qualquer momento, se você perdeu uma colônia natal, o Assistente recolonizará um de seus planetas natais usando até 3 de suas naves de suas outras colônias e/ou do warp, conforme suas instruções.",
+                        "en": "At any time, if you have lost a home colony, the Assistant will recolonize one of your home planets using up to 3 of your ships from your other colonies and/or the warp per your instructions."
+                    }
+                },
+                "2": {
+                    "name": {
+                        "pt": "Escassez de Naves",
+                        "en": "Ship Scarcity"
+                    },
+                    "body": {
+                        "pt": "A qualquer momento, o Assistente recuperará qualquer ou todas as suas naves do warp, conforme suas instruções.",
+                        "en": "At any time, the Assistant will retrieve any or all of your ships from the warp per your instructions."
+                    }
+                },
+                "3": {
+                    "name": {
+                        "pt": "Mão Bagunçada",
+                        "en": "Messy Hand"
+                    },
+                    "body": {
+                        "pt": "Quando você compra uma nova mão, o Assistente fará uma pré-seleção para você, descartando algumas das cartas conforme suas instruções, devolvendo a você uma mão mais eficiente e útil.",
+                        "en": "When you draw a new hand, the Assistant will pre-screen it for you, discarding some of the cards per your instructions, returning to you a more efficient and useful hand."
+                    }
+                },
+                "4": {
+                    "name": {
+                        "pt": "Colônias Bagunçadas",
+                        "en": "Messy Colonies"
+                    },
+                    "body": {
+                        "pt": "A qualquer momento, o Assistente redistribuirá suas naves entre suas colônias, conforme suas instruções.",
+                        "en": "At any time, the Assistant will redistribute your ships among your colonies per your instructions."
+                    }
+                },
+                "5": {
+                    "name": {
+                        "pt": "Carta Necessária",
+                        "en": "Needed Card"
+                    },
+                    "body": {
+                        "pt": "Todos os limites no número total de naves que você pode enviar para o portal do hiperespaço são ignorados, incluindo limites específicos (como os do Macron).",
+                        "en": "All limits on the total number of ships that you can send to the hyperspace gate are ignored, including specific limits (such as those of the Macron)."
+                    }
+                },
+                "6": {
+                    "name": {
+                        "pt": "Aliado Relutante",
+                        "en": "Unwilling Ally"
+                    },
+                    "body": {
+                        "pt": "Depois que um jogador que não seja o Assistente escolher se aliar ou não e/ou quantas naves trazer, o Assistente anulará a decisão desse jogador, conforme suas instruções.",
+                        "en": "After a player other than the Assistant has chosen whether or not to ally and/or how many ships to bring, the Assistant will override that player's decision per your instructions."
+                    }
+                }
+            }
         },
         "history": {
             "pt": "Dominando a arte da obscuridade, os Assistentes parecem ser onipresentes e implacáveis. O seu status inferior é um véu com o qual eles adquirem silenciosamente uma vasta gama de recursos.",
@@ -1653,6 +1907,94 @@ window.aliensData.push(
             "pt": "<b>Você tem o poder da Consequência.</b> Quando você não for um jogador principal, depois das alianças serem formadas mas antes das cartas de encontro serem escolhidas, você <b>pode usar</b> este poder para \"motivar\" um ou ambos os jogadores principais. Para motivar um jogador, dê a ele ou ela uma carta de negociação da sua mão para adicioná-la na mão dele ou dela e dê a ele ou ela uma consequência das suas cartas da reserva de essence para colocar virada para cima perto da ficha de alien dele ou dela. Se um jogador motivado revela uma carta de negociação, execute o incentivo: a carta de consequência volta para você e você recebe uma recompensa. Se um jogador motivado não revela uma carta de negociação, execute a punição e deixe a carta de consequência no lugar para marcar o tempo limite.<br/><br/>Um jogador no tempo limite não participa do jogo de nenhuma maneira e nem se comunica com outros jogadores e nenhum outro jogador se comunica com o jogador no tempo limite. Se o jogador é o atacante, o turno dele ou dela termina. Se o jogador vira o defensor, o atacante compra uma carta de destino novamente. No final do tempo limite, o jogador retorna a carta de consequência para você. Em qualquer caso que o jogo não pode prosseguir por causa de tempos limites, todos as outras cartas de consequência dos jogadores voltam para você.<br/><br/>Sempre que um ou mais jogadores descartam uma carta de negociação, você <b>pode usar</b> este poder para recuperar uma dessas cartas de negociação e adicioná-la para a sua mão. Você joga e descarta cartas de negociação normalmente.",
             "en": "<b>You have the power of Consequences.</b> When you are not a main player, after alliances are formed but before encounter cards are selected, you <b>may use</b> this power to \"motivate\" one or both main players. To motivate a player, give him or her one negotiate card from your hand to add to his or her hand, and give him or her a consequence from your essence card cache to place faceup next to his or her alien sheet. If a motivated player reveals a negotiate card, carry out the incentive; the consequence card is returned to you and you receive one reward. If a motivated player does not reveal a negotiate card, carry out the punishment and leave the consequence card in place to mark the timeout.<br/><br/>A player in a timeout may not participate in the game in any way or communicate with other players, nor may other players communicate with the player in the timeout. If that player is the offense, his or her turn ends. If that player becomes the defense, the offense draws destiny again. At the end of the timeout, the player returns the consequence card to you. In any case where play cannot progress because of timeouts, all other players' consequence cards are returned to you.<br/><br/>Whenever one or more other players discard negotiate cards, you <b>may use</b> this power to retrieve one of those negotiate cards and add it to your hand. You play and discard negotiates normally."
         },
+        essence: {
+            "name": {
+                "pt": "Consequência",
+                "en": "Consequence"
+            },
+            "list": {
+                "1": {
+                    "name": {
+                        "pt": "Warp",
+                        "en": "Warp"
+                    },
+                    "body": {
+                        "pt": "Incentivo: Libere todas as naves de um outro jogador do warp e receba uma recompensa por cada nave liberada. Punição: Perca duas naves de sua escolha para o warp de colônias estrangeiras (se possível). Você está em tempo limite durante o turno do próximo jogador.",
+                        "en": "Incentive: Release all of one other player's ships from the warp and receive one reward for each ship released. Punishment: Lose two ships of your choice to the warp from foreign colonies (if possible). You are on timeout during of the next player's turn."
+                    }
+                },
+                "2": {
+                    "name": {
+                        "pt": "Nave",
+                        "en": "Ship"
+                    },
+                    "body": {
+                        "pt": "Incentivo: Libere 1 de suas naves do warp. Punição: Perca 1 nave para o warp. Você está em tempo limite durante o turno do próximo jogador.",
+                        "en": "Incentive: Release 1 of your ships from the warp. Punishment: Lose 1 ship to the warp. You are on timeout during the next player's turn."
+                    }
+                },
+                "3": {
+                    "name": {
+                        "pt": "Recompensa",
+                        "en": "Reward"
+                    },
+                    "body": {
+                        "pt": "Incentivo: Receba 1 recompensa por cada nave que você tiver no encontro. Punição: A Babá olha sua mão e descarta quaisquer ou todas as cartas de artefato e cartas do baralho de recompensas. Você está em tempo limite durante o turno do próximo jogador.",
+                        "en": "Incentive: Recieve 1 reward for every ship you have in the encounter. Punishment: The Nanny looks at your hand and discards any or all artifact cards and cards from the reward deck. You are on timeout during the next player's turn."
+                    }
+                },
+                "4": {
+                    "name": {
+                        "pt": "Mão",
+                        "en": "Hand"
+                    },
+                    "body": {
+                        "pt": "Incentivo: Descarte quantas cartas desejar da sua mão. Punição: A Babá olha sua mão e descarta sua carta de ataque mais alta. Você está em tempo limite durante o primeiro encontro do próximo jogador.",
+                        "en": "Incentive: Discard as many cards as you wish from your hand. Punishment: The Nanny looks at your hand and discards your highest attack card. You are on timeout during the next player's first encounter."
+                    }
+                },
+                "5": {
+                    "name": {
+                        "pt": "Baralho",
+                        "en": "Deck"
+                    },
+                    "body": {
+                        "pt": "Incentivo: Compre até cinco cartas do baralho. Fique com uma e descarte o resto. Punição: A Babá descarta metade das cartas (arredondado para cima) da sua mão aleatoriamente. Você está em tempo limite durante o primeiro encontro do próximo jogador.",
+                        "en": "Incentive: Draw up to five cards from the deck. Keep one and discard the rest. Punishment: The Nanny discards half of the cards (rounded up) from your hand at random. You are on timeout during the next player's first encounter."
+                    }
+                },
+                "6": {
+                    "name": {
+                        "pt": "Colônia",
+                        "en": "Colony"
+                    },
+                    "body": {
+                        "pt": "Incentivo: Redistribua suas naves entre suas colônias como achar melhor. Punição: A Babá envia uma de suas colônias para o warp. Você está em tempo limite durante o turno do próximo jogador.",
+                        "en": "Incentive: Redistribute your ships among your colonies as you see fit. Punishment: The Nanny sends one of your colonies to the warp. You are on timeout during the next player's turn."
+                    }
+                },
+                "7": {
+                    "name": {
+                        "pt": "Carta",
+                        "en": "Card"
+                    },
+                    "body": {
+                        "pt": "Incentivo: Compre uma carta do baralho cósmico ou (se disponível) de recompensas. Punição: A Babá descarta uma carta da sua mão aleatoriamente. Você está em tempo limite durante o primeiro encontro do próximo jogador.",
+                        "en": "Incentive: Draw one card from the cosmic or (if available) reward deck. Punishment: The Nanny discards one card from your hand at random. You are on timeout during the next player's first encounter."
+                    }
+                },
+                "8": {
+                    "name": {
+                        "pt": "Aliado",
+                        "en": "Ally"
+                    },
+                    "body": {
+                        "pt": "Incentivo: Receba uma recompensa por cada jogador que se juntou ao seu lado como aliado. Punição: A Babá dispensa um de seus aliados deste encontro e esse jogador retorna suas naves para as colônias. Você está em tempo limite durante o primeiro encontro do próximo jogador.",
+                        "en": "Incentive: Receive a reward for every player who joined your side as an ally. Punishment: The Nanny dismisses one of your allies from this encounter and that player returns his or her ships to colonies. You are on timeout during the next player's first encounter."
+                    }
+                }
+            }
+        },
         "history": {
             "pt": "As Babás estão engajadas em uma campanha de castigo em todo o Cosmos.",
             "en": "The Nannies are engaged in a time out campaign throughout the Cosmos."
@@ -1744,6 +2086,114 @@ window.aliensData.push(
             "pt": "<b>Você tem o poder do Pesadelo.</b> Uma vez por encontro, quando um jogador principal recusou em convidar você para aliar ou outro jogador está no lado vencedor de um encontro quando você está no lado perdedor, você <b>pode usar</b> este poder para colocar um pesadelo de sua reserva de cartas de essence virada para baixo perto do jogador. Você pode dar uma carta de pesadelo para um jogador que já tenha uma.<br/><br/>Você pode revelar uma carta de pesadelo a qualquer hora. Aquele jogador lê a carta e aplica seus efeitos (se aplicável). Cartas de pesadelos reveladas retornam para você.",
             "en": "<b>You have the power of Bad Dreams.</b> Once per encounter, when a main player has declined to invite you to ally, or another player is on the winning side of an encounter when you are on the losing side, you <b>may use</b> this power to place a bad dream from your essence card cache facedown near that player. You cannot give a bad dream card to a player who already has one.<br/><br/>You may reveal a player's bad dream card at any time. That player reads the card and carries out its effects (if they apply). Revealed bad dream cards are returned to you."
         },
+        essence: {
+            "name": {
+                "pt": "Pesadelo",
+                "en": "Bad Dream"
+            },
+            "list": {
+                "1": {
+                    "name": {
+                        "pt": "Despreparado",
+                        "en": "Unprepared"
+                    },
+                    "body": {
+                        "pt": "Se você estiver selecionando uma carta de encontro como jogador principal, em vez disso, você está comprando cartas do baralho, dando todas as cartas que não sejam de encontro compradas para o Pesadelo, e jogando a primeira carta de encontro que você comprar virada para baixo como sua carta de encontro.",
+                        "en": "If you are selecting an encounter card as a main player, instead you are actually drawing cards from the deck, giving all non-encounter cards drawn to the Nightmare, and playing the first encounter card you draw facedown as your encounter card."
+                    }
+                },
+                "2": {
+                    "name": {
+                        "pt": "Dentes Caindo",
+                        "en": "Teeth Falling Out"
+                    },
+                    "body": {
+                        "pt": "Se você estiver revelando uma carta de ataque, em vez de seu valor nominal, o valor da carta é dividido por 2 (arredondado para baixo).",
+                        "en": "If you are revealing an attack card, instead of its face value, the card's value is divided by 2 (rounded down)."
+                    }
+                },
+                "3": {
+                    "name": {
+                        "pt": "Vendo os Mortos",
+                        "en": "Seeing the Dead"
+                    },
+                    "body": {
+                        "pt": "Se você estiver recuperando uma nave do warp durante sua fase de reagrupamento, em vez disso, todos os outros jogadores estão recuperando uma nave do warp.",
+                        "en": "If you are retrieving one ship from the warp during your regroup phase, instead every other player is retrieving one ship from the warp."
+                    }
+                },
+                "4": {
+                    "name": {
+                        "pt": "Correndo sem Sair do Lugar",
+                        "en": "Running but Getting Nowhere"
+                    },
+                    "body": {
+                        "pt": "Se você estiver aceitando um convite de aliança, em vez disso, você está recusando todos os convites.",
+                        "en": "If you are accepting an alliance invitation, instead you are actually declining all invitations."
+                    }
+                },
+                "5": {
+                    "name": {
+                        "pt": "Sem Combustível",
+                        "en": "Out of Fuel"
+                    },
+                    "body": {
+                        "pt": "Se você estiver começando seu segundo encontro, em vez disso, você está terminando seu turno.",
+                        "en": "If you are starting your second encounter, instead you are actually ending your turn."
+                    }
+                },
+                "6": {
+                    "name": {
+                        "pt": "Nu em Público",
+                        "en": "Naked in Public"
+                    },
+                    "body": {
+                        "pt": "Se você estiver vencendo o jogo junto com um ou mais outros jogadores, em vez disso, esses outros jogadores estão vencendo sem você.",
+                        "en": "If you are winning the game along with one or more other players, instead those other players are actually winning without you."
+                    }
+                },
+                "7": {
+                    "name": {
+                        "pt": "Perdeu o Caminho de Casa",
+                        "en": "Lost the Way Home"
+                    },
+                    "body": {
+                        "pt": "Se você estiver concordando com um acordo que envolve receber uma colônia, em vez disso, você está concordando com uma versão diferente desse acordo que substitui a colônia que você receberia por uma carta aleatória da mão do outro jogador.",
+                        "en": "If you are agreeing to a deal that involves receiving a colony, instead you are actually agreeing to a different version of that deal that replaces the colony you would receive with a card at random from the other player's hand."
+                    }
+                },
+                "8": {
+                    "name": {
+                        "pt": "Atrasado para o Trabalho",
+                        "en": "Late for Work"
+                    },
+                    "body": {
+                        "pt": "Se você estiver começando sua fase de reagrupamento, em vez disso, você está pulando sua fase de reagrupamento.",
+                        "en": "If you are starting your regroup phase, instead you are actually skipping your regroup phase."
+                    }
+                },
+                "9": {
+                    "name": {
+                        "pt": "Caindo para Sempre",
+                        "en": "Falling Forever"
+                    },
+                    "body": {
+                        "pt": "Se você estiver pousando naves no planeta alvo como vencedor em um encontro, em vez disso, suas naves estão caindo no warp.",
+                        "en": "If you are landing ships on the targeted planet as a winner in an encounter, instead your ships are falling into the warp."
+                    }
+                },
+                "10": {
+                    "name": {
+                        "pt": "Sendo Perseguido",
+                        "en": "Being Chased"
+                    },
+                    "body": {
+                        "pt": "Se outro jogador estiver apontando o portal do hiperespaço para uma colônia ou planeta natal que não seja seu, em vez disso, esse jogador está encontrando você como a defesa em seu sistema natal.",
+                        "en": "If another player is aiming the hyperspace gate at a colony or home planet which is not yours, instead that player is actually encountering you as the defense in your home system."
+                    }
+                }
+            }
+        },
         "history": {
             "pt": "\"Existem conhecimentos - coisas que nós sabemos. E desconhecimentos. Coisas importantes que nós sabemos que não sabemos. E desconhecidos desconhecidos - coisas que nós somos ignorantes de não saber.\" (Encontrado em um diário no planeta no fim do mundo.)",
             "en": "\"There are knowns – things we know. And unknowns. Meaning things we know we don't know. And unknown unknowns – things we are ignorant of not knowing.\" (Found in a journal on a backwater planet.)"
@@ -1834,6 +2284,64 @@ window.aliensData.push(
         "power": {
             "pt": "<b>Preparação de Jogo:</b> Pegue seus 5 privilégios como reserva de cartas de essence. Você automaticamente inicia o jogo como o primeiro jogador.\n        <br/><br/><b>Você tem o poder da Ganância.</b> Toda vez que você compra uma nova mão de cartas, incluindo no início do jogo, compre uma carta adicional.\n        <br/><br/>Você acumula privilégios até o maior número de colônias estrangeiras alcançadas por qualquer jogador.\n        <br/><br/><b>Use</b> este poder sempre que qualquer jogador tenha mais colônias estrangeiras do que o número de suas cartas de privilégio viradas para cima. Olhe sua reserva de cartas de essence, escolha um privilégio e jogue-o virado para cima próximo a esta ficha. Se você for cancelado, o privilégio que você tentou jogar é removido do jogo.",
             "en": "<b>Game Setup:</b> Take your 5 privileges as your essence card cache. You automatically start the game as the first player.\n        <br/><br/><b>You have the power of Greed.</b> Every time you draw a new hand of cards, including at the beginning of the game, draw one additional card.\n        <br/><br/>You accumulate privileges up to the highest number of foreign colonies that has been reached by any player.\n        <br/><br/><b>Use</b> this power whenever any one player has more foreign colonies than the number of your faceup privilege cards. Look through your essence card cache, choose one privilege, and play it faceup next to this sheet. If you are zapped, the privilege you attempted to play is removed from the game."
+        },
+        essence: {
+            "name": {
+                "pt": "Privilégio",
+                "en": "Privilege"
+            },
+            "list": {
+                "1": {
+                    "name": {
+                        "pt": "Controle de Compensação",
+                        "en": "Compensation Control"
+                    },
+                    "body": {
+                        "pt": "Quando você deve receber compensação, receba mais duas compensações. Todos os outros jogadores que devem receber compensação recebem duas compensações a menos.",
+                        "en": "When you should collect compensation, collect two more compensation. All other players who should collect compensation collect two less compensation."
+                    }
+                },
+                "2": {
+                    "name": {
+                        "pt": "Inveja de Encontro",
+                        "en": "Encounter Envy"
+                    },
+                    "body": {
+                        "pt": "Quando você é um jogador principal e revela uma carta de ataque, adicione 3 ao seu total. Todos os outros jogadores principais que revelam cartas de ataque subtraem 2 de seus totais.",
+                        "en": "When you are a main player and reveal an attack card, add 3 to your total. All other main players who reveal attack cards subtract 2 from their totals."
+                    }
+                },
+                "3": {
+                    "name": {
+                        "pt": "Sifão de Recompensas",
+                        "en": "Rewards Siphon"
+                    },
+                    "body": {
+                        "pt": "Quando você deve receber recompensas, receba mais duas recompensas. Todos os outros jogadores que devem receber recompensas recebem uma recompensa a menos.",
+                        "en": "When you should receive rewards, receive two more rewards. All other players who should receive rewards receive one less reward."
+                    }
+                },
+                "4": {
+                    "name": {
+                        "pt": "Posse de Vitória",
+                        "en": "Victory Possession"
+                    },
+                    "body": {
+                        "pt": "Você precisa de uma colônia estrangeira a menos que o normal para vencer o jogo pelo método normal. Todos os outros jogadores precisam de uma a mais que o normal.",
+                        "en": "You need one foreign colony fewer than normal to win the game via the normal method. All other players need one more than normal."
+                    }
+                },
+                "5": {
+                    "name": {
+                        "pt": "Reivindicação de Warp",
+                        "en": "Warp Claim"
+                    },
+                    "body": {
+                        "pt": "Quando você deve perder nave(s) para o warp, perca duas naves a menos para o warp. Todos os outros jogadores que devem perder uma ou mais naves para o warp perdem uma nave a mais para o warp. Naves que teriam sido perdidas retornam para outras colônias.",
+                        "en": "When you should lose ship(s) to the warp, lose two fewer ships to the warp. All other players who should lose one or more ships to the warp lose one more ship to the warp. Ships which would have been lost return to other colonies."
+                    }
+                }
+            }
         },
         "history": {
             "pt": "Ouvido por acaso no Clube Elite de Squash do Oligarca: \"Não é o suficiente saber que eu é que estou controlando o Universo dos meus holodecks. É que eu quero saber que os meus 'amigos' vejam suas vidas imensamente e permanentemente menos bem sucedidas que a minha.\"",
@@ -2380,6 +2888,104 @@ window.aliensData.push(
         "power": {
             "pt": "<b>Você tem o poder de Multar.</b> Uma vez durante o turno de cada jogador, você <b>pode usar</b> este poder para escolher uma notificação da sua reserva de cartas de essence e pode descartá-la ou dá-la para qualquer jogador que está cometendo a infração da notificacão e tem as cartas ou naves necessárias para pagar a multa. Aquele jogador imediatamente paga a multa. Se a multa for em cartas, você as escolhe aleatoriamente da mão dele ou dela. Se a multa for em naves, o jogador escolhe quais naves dele ou dela perder. O jogador mantém o bilhete virado para cima.<br/><br/>Assim que a multa for paga, você <b>pode usar</b> este poder para confiscá-la como uma gratificação. Adicione algumas ou todas as cartas para a sua mão ao invés de descartá-las ou recupere um número de naves do warp até o número multado. Então o jogador vira a notificação para baixo e ganha imunidade contra notificações futuras enquanto ele ou ela tem a notificação virada para baixo. Quando todos os outros jogadores tiverem imunidade ou você não tiver notificações, todas as notificações voltam para você.",
             "en": "<b>You have the power to Ticket.</b> Once during each player's turn, you <b>may use</b> this power to choose a ticket from your essence card cache and either discard it, or give it to any player who is committing the infraction on that ticket and has the cards or ships needed to pay the fine. That player immediately pays the fine. If the fine is in cards, you select them at random from his or her hand. If the fine is in ships, the player chooses which of his or her ships to lose. The player keeps the ticket faceup.<br/><br/>As the fine is being paid, you <b>may use</b> this power to seize it as a gratuity. Add some or all of the cards to your hand instead of discarding them, or retrieve a number of your ships from the warp up to the number fined. Then the player flips the ticket facedown and gains immunity against further tickets while he or she has a facedown ticketWhen all other players have immunity or you have no tickets remaining, all tickets are returned to you."
+        },
+        essence: {
+            "name": {
+                "pt": "Multa",
+                "en": "Ticket"
+            },
+            "list": {
+                "1": {
+                    "name": {
+                        "pt": "Força Excessiva",
+                        "en": "Excessive Force"
+                    },
+                    "body": {
+                        "pt": "Infração: Vencer um encontro por mais de 10 ou revelar uma carta de ataque de 20 ou mais como jogador principal. Multa: Descarte três cartas.",
+                        "en": "Infraction: Winning an encounter by more than 10 or revealing an attack card of 20 or higher as a main player. Fine: Discard three cards."
+                    }
+                },
+                "2": {
+                    "name": {
+                        "pt": "Engarrafamento",
+                        "en": "Gridlock"
+                    },
+                    "body": {
+                        "pt": "Infração: Ter mais de dez naves no warp. Multa: Descarte duas cartas.",
+                        "en": "Infraction: Having more than ten ships in the warp. Fine: Discard two cards."
+                    }
+                },
+                "3": {
+                    "name": {
+                        "pt": "Estacionamento Ilegal",
+                        "en": "Illegal Parking"
+                    },
+                    "body": {
+                        "pt": "Infração: Ter mais de quatro de suas naves em um planeta. Multa: Descarte uma carta.",
+                        "en": "Infraction: Having more than four of your ships on a planet. Fine: Discard one card."
+                    }
+                },
+                "4": {
+                    "name": {
+                        "pt": "Jogar Lixo",
+                        "en": "Littering"
+                    },
+                    "body": {
+                        "pt": "Infração: Descartar mais de três cartas de uma vez. Multa: Perca duas naves para o warp.",
+                        "en": "Infraction: Discarding more than three cards at one time. Fine: Lose two ships to the warp."
+                    }
+                },
+                "5": {
+                    "name": {
+                        "pt": "Vadiagem",
+                        "en": "Loitering"
+                    },
+                    "body": {
+                        "pt": "Infração: Não aceitar um convite de aliança. Multa: Descarte uma carta.",
+                        "en": "Infraction: Not accepting an alliance invitation. Fine: Discard one card."
+                    }
+                },
+                "6": {
+                    "name": {
+                        "pt": "Obstrução",
+                        "en": "Obstruction"
+                    },
+                    "body": {
+                        "pt": "Infração: Cancelar a carta ou ação de um jogador. Multa: Descarte duas cartas.",
+                        "en": "Infraction: Canceling a player's card or action. Fine: Discard two cards."
+                    }
+                },
+                "7": {
+                    "name": {
+                        "pt": "Mendicância",
+                        "en": "Panhandling"
+                    },
+                    "body": {
+                        "pt": "Infração: Poder enviar várias naves como aliado, mas enviar apenas uma. Multa: Perca 2 naves para o warp.",
+                        "en": "Infraction: Being able to send multiple ships as an ally but sending only one. Fine: Lose 2 ships to the warp."
+                    }
+                },
+                "8": {
+                    "name": {
+                        "pt": "Invasão",
+                        "en": "Trespassing"
+                    },
+                    "body": {
+                        "pt": "Infração: Apontar o portal do hiperespaço para um planeta com uma ou menos naves. Multa: Perca uma nave para o warp.",
+                        "en": "Infraction: Aiming the hyperspace gate at a planet with one or fewer ships. Fine: Lose one ship to the warp."
+                    }
+                },
+                "9": {
+                    "name": {
+                        "pt": "Vadiagem",
+                        "en": "Vagrancy"
+                    },
+                    "body": {
+                        "pt": "Infração: Ter apenas uma nave em uma colônia estrangeira. Multa: Descarte duas cartas.",
+                        "en": "Infraction: Having only one ship on a foreign colony. Fine: Discard two cards."
+                    }
+                }
+            }
         },
         "history": {
             "pt": "Os Xerifes reconhecem que pequenos delitos não controlados levarão ao caos. O fato de que o rápido serviço à justiça parece servir a seus próprios sonhos intergalácticos é apenas um subproduto de sua vigilância.",

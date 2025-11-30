@@ -1471,6 +1471,43 @@ window.aliensData.push(
             "pt": "<b>Preparação de Jogo:</b> Pegue as seis cartas do esquizoide, escolha uma delas e coloque-a virada para baixo nesta ficha. Coloque as outras cinco cartas viradas para baixo como um baralho próximo a esta ficha.<br/><br/><b>Você tem o poder de Alterar a Realidade.</b> A carta do esquizoide virada para baixo nesta ficha lista as condições de vitórias que os jogadores devem cumprir para vencer o jogo. Estas condições substituem a condição de vitória normal de acumular colônias estrangeiras para vencer e você deve anunciar quando algum jogador tiver alcançado as condições. Condições alternativas de vitória (como aquelas do Masoquista ou do Tic-tac) não são afetadas por este poder. Qualquer jogador que tenha completado a condição normal de vitória pode jogar uma carta de Cosmic Zap em você a qualquer hora.<br/><br/>Cada vez que você está no lado perdedor de um encontro, o jogador principal vencedor escolhe uma carta do baralho do esquizoide aleatoriamente e a revela para o(s) vencedor(es) do encontro. Então, embaralhe a carta escolhida de volta no baralho.",
             "en": "<b>You have the power to Alter Reality.</b> The facedown schizoid card on this sheet lists the victory conditions players must fulfill in order to win the game. These conditions replace the normal victory condition of accumulating enough foreign colonies to win, and you must announce when any player(s) have fulfilled them. Alternate victory conditions (such as those of the Masochist or Tick-Tock) are not affected by this power. Any player who has completed the normal victory condition may play a Cosmic Zap on you at any time.<br/><br/>Each time you are on the losing side of an encounter, the winning main player chooses a card from the schizoid deck at random and reveals it to the winner(s) of the encounter. Then, shuffle the chosen card back into the deck."
         },
+        essence: {
+                "name": "Condition",
+                "list": {
+                        "1": {
+                                "name": "Bluffer",
+                                "body": "After you fail to make a deal, if you have at least four foreign colonies, you win the game!"
+                        },
+                        "2": {
+                                "name": "Colonizer",
+                                "body": "After you draw a new hand, if you have at least three foreign colonies, you win the game!"
+                        },
+                        "3": {
+                                "name": "Conciliator",
+                                "body": "After you make a deal, if you have at least three foreign colonies, you win the game!"
+                        },
+                        "4": {
+                                "name": "Intruder",
+                                "body": "If three of your foreign colonies each have at least four ships, you win the game!"
+                        },
+                        "5": {
+                                "name": "Relocator",
+                                "body": "If you have at least three foreign colonies in the same system, you win the game!"
+                        },
+                        "6": {
+                                "name": "Traditionalist",
+                                "body": "If you have at least five foreign colonies and at least three home colonies, you win the game!"
+                        },
+                        "7": {
+                                "name": "Wanderer",
+                                "body": "If you have foreign colonies in at least three different systems and have three or fewer home colonies, you win the game! This condition cannot be chosen in a three player game."
+                        },
+                        "8": {
+                                "name": "Xenophobe",
+                                "body": "After you re-establish a home colony, if you have at least two foreign colonies, you win the game!"
+                        }
+                }
+        },
         "history": {
             "pt": "Há muito tempo, seu sistema caiu em uma série em cascata de espaços-tempos alternativos. Agora, os esquizóides acreditam que a aceitação universal de sua realidade atual acabará com sua loucura.",
             "en": "Long ago their system slipped into a cascading series of alternate spacetimes. Now the Schizoids believe that universal acceptance of their current reality will end their madness."
