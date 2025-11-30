@@ -948,6 +948,15 @@
         }
 
         function filterCurrentView() {
+            const textTerm = document.getElementById('searchInput').value;
+            const clearBtn = document.getElementById('clearSearch');
+
+            if (textTerm.length > 0) {
+                clearBtn.style.display = 'block';
+            } else {
+                clearBtn.style.display = 'none';
+            }
+
             if (currentVariant === 'aliens') {
                 filterAliens();
             } else {
