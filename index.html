@@ -615,6 +615,46 @@
             font-size: 0.9rem;
         }
 
+        /* Like/Dislike Styles */
+        .like-dislike-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .like-btn,
+        .dislike-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .like-btn:hover,
+        .dislike-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .like-btn.active {
+            background: rgba(34, 197, 94, 0.2);
+            border-color: var(--c-green);
+            color: var(--c-green);
+        }
+
+        .dislike-btn.active {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: var(--c-red);
+            color: var(--c-red);
+        }
+
         /* Side Menu Styles */
         .menu-btn {
             background: none;
@@ -765,6 +805,13 @@
                 <label class="checkbox-label" title="Com Cartas de Essência"><input type="checkbox" id="checkEssence"
                         onchange="filterCurrentView()"> ✨ <span id="labelEssence">Essência</span></label>
             </div>
+            <div class="filter-group extras" style="border-left: 1px solid var(--border); padding-left: 15px;">
+                <span class="filter-label" id="labelPrefs">Preferências:</span>
+                <label class="checkbox-label"><input type="checkbox" id="checkLiked" onchange="filterCurrentView()">
+                    👍</label>
+                <label class="checkbox-label"><input type="checkbox" id="checkDisliked" onchange="filterCurrentView()">
+                    👎</label>
+            </div>
         </div>
     </header>
 
@@ -870,6 +917,41 @@
             });
         }
 
+
+        // --- LIKE/DISLIKE LOGIC ---
+        function getLikeState(alienId) {
+            return localStorage.getItem(`alien_state_${alienId}`);
+        }
+
+        function setLikeState(alienId, state) {
+            if (state) {
+                localStorage.setItem(`alien_state_${alienId}`, state);
+            } else {
+                localStorage.removeItem(`alien_state_${alienId}`);
+            }
+            // Re-render to update UI (could be optimized to just update class)
+            // But since we might be filtering, full re-render is safer/easier
+            filterCurrentView();
+        }
+
+        function toggleLike(alienId) {
+            const currentState = getLikeState(alienId);
+            if (currentState === 'like') {
+                setLikeState(alienId, null);
+            } else {
+                setLikeState(alienId, 'like');
+            }
+        }
+
+        function toggleDislike(alienId) {
+            const currentState = getLikeState(alienId);
+            if (currentState === 'dislike') {
+                setLikeState(alienId, null);
+            } else {
+                setLikeState(alienId, 'dislike');
+            }
+        }
+
         let currentVariant = 'aliens';
 
         function toggleMenu() {
@@ -898,6 +980,7 @@
                 labelSetup.innerText = "Preparação";
                 labelTokens.innerText = "Fichas";
                 if (document.getElementById('labelEssence')) document.getElementById('labelEssence').innerText = "Essência";
+                if (document.getElementById('labelPrefs')) document.getElementById('labelPrefs').innerText = "Preferências:";
                 if (document.getElementById('menuCampaign')) document.getElementById('menuCampaign').innerText = "Campanha";
             } else {
                 btn.innerText = "🇧🇷 Português";
@@ -906,6 +989,7 @@
                 labelSetup.innerText = "Setup";
                 labelTokens.innerText = "Tokens";
                 if (document.getElementById('labelEssence')) document.getElementById('labelEssence').innerText = "Essence";
+                if (document.getElementById('labelPrefs')) document.getElementById('labelPrefs').innerText = "Preferences:";
                 if (document.getElementById('menuCampaign')) document.getElementById('menuCampaign').innerText = "Campaign";
             }
             updateExpansionCounts();
@@ -1431,6 +1515,9 @@
             const requireComponents = document.getElementById('checkComponents').checked;
             const requireEssence = document.getElementById('checkEssence').checked;
 
+            const showLiked = document.getElementById('checkLiked').checked;
+            const showDisliked = document.getElementById('checkDisliked').checked;
+
             const grid = document.getElementById('alienGrid');
             const resultCount = document.getElementById('resultCount');
             grid.innerHTML = '';
@@ -1478,7 +1565,24 @@
                     console.log(`Checking ${id}: Text=${matchesText} (${textTerm}), Exp=${matchesExpansion} (${alien.expansion}), Color=${matchesColor} (${alien.alert}), Setup=${matchesSetup}, Comp=${matchesComp}, Essence=${matchesEssence}`);
                 }
 
-                return matchesText && matchesExpansion && matchesColor && matchesSetup && matchesComp && matchesEssence;
+                const likeState = getLikeState(alien.id);
+                let matchesPrefs = true;
+
+                // Logic: 
+                // If neither checked: show all
+                // If Liked checked: show ONLY liked (unless Disliked also checked)
+                // If Disliked checked: show ONLY disliked (unless Liked also checked)
+                // If both checked: show Liked OR Disliked
+
+                if (showLiked && !showDisliked) {
+                    if (likeState !== 'like') matchesPrefs = false;
+                } else if (!showLiked && showDisliked) {
+                    if (likeState !== 'dislike') matchesPrefs = false;
+                } else if (showLiked && showDisliked) {
+                    if (likeState !== 'like' && likeState !== 'dislike') matchesPrefs = false;
+                }
+
+                return matchesText && matchesExpansion && matchesColor && matchesSetup && matchesComp && matchesEssence && matchesPrefs;
             });
 
             const foundText = currentLang === 'pt' ? 'encontrado(s)' : 'found';
@@ -1596,29 +1700,43 @@
 
                 const timingHtml = createTimingHtml(alien.timing);
 
-                // Adiciona fallback de imagem vazio.jpg no onError
+                const likeState = getLikeState(alien.id);
+                const likeActive = likeState === 'like' ? 'active' : '';
+                const dislikeActive = likeState === 'dislike' ? 'active' : '';
+
                 card.innerHTML = `
-                <div class="card-image-container${borderClass}">
-                    <img src="${imageUrl}" alt="${name}" class="card-image" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='img/vazio.jpg';">
-                    <div class="card-image-title">${name}</div>
-                    <div class="expansion-tag">${alien.expansion}</div>
-                    <div class="badges-container">${badgesHtml}</div>
-                </div>
-                <div class="card-content">
-                    ${akaField}
-                    <div class="power-summary">${summary}</div>
-                    <div class="power-block">${powerText}</div>
-                    ${timingHtml}
-                    ${flareHtml}
-                    ${essenceHtml}
-                    <button class="action-btn history-btn" onclick="toggleHistory(this)">
-                        ${currentLang === 'pt' ? 'Ver História' : 'Show History'}
-                    </button>
-                    <div class="expandable-text history-text">${history}</div>
-                </div>
-            `;
+                    <div class="card-image-container${borderClass}">
+                        <img src="${imageUrl}" class="card-image" alt="${name}" onerror="this.src='img/vazio.jpg'">
+                        <div class="card-image-title">${name}</div>
+                        <div class="badges-container">
+                            ${badgesHtml}
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        ${akaField}
+                        <div class="power-summary">${summary}</div>
+                        <div class="power-block">
+                            ${powerText}
+                        </div>
+                        
+                        ${timingHtml}
+                        ${flareHtml}
+                        ${essenceHtml}
+                        
+                        <button class="action-btn" onclick="toggleHistory(this)">${currentLang === 'pt' ? 'Ver História' : 'Show History'}</button>
+                        <div class="expandable-text history-text">
+                            ${history}
+                        </div>
+
+                        <div class="like-dislike-container">
+                            <button class="like-btn ${likeActive}" onclick="toggleLike('${alien.id}')" title="Like">👍</button>
+                            <button class="dislike-btn ${dislikeActive}" onclick="toggleDislike('${alien.id}')" title="Dislike">👎</button>
+                        </div>
+                    </div>
+                `;
                 grid.appendChild(card);
             });
+
 
             if (filtered.length === 0) {
                 grid.innerHTML = `<div style="color: #94a3b8; grid-column: 1/-1; text-align: center; padding: 40px; font-size: 1.2rem;">
