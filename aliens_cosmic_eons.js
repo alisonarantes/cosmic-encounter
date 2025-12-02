@@ -28,10 +28,6 @@ window.aliensData.push(
                         "pt": "Apenas Defesa",
                         "en": "Defense Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -51,10 +47,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -217,10 +209,6 @@ window.aliensData.push(
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": false,
@@ -240,10 +228,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Não Ataque",
                         "en": "Not Offense"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -396,10 +380,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": true,
@@ -419,10 +399,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Aliado",
                         "en": "Ally Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -487,10 +463,6 @@ window.aliensData.push(
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -510,10 +482,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -646,10 +614,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": true,
@@ -669,10 +633,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -737,10 +697,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -760,10 +716,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -828,10 +780,6 @@ window.aliensData.push(
                         "pt": "Apenas Jogador Principal ou Aliado",
                         "en": "Main Player or Ally Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -851,10 +799,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -919,10 +863,6 @@ window.aliensData.push(
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -942,10 +882,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -1010,10 +946,6 @@ window.aliensData.push(
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -1033,10 +965,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -1101,10 +1029,6 @@ window.aliensData.push(
                         "pt": "Não Jogador Principal ou Aliado",
                         "en": "Not Main Player or Ally"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -1124,10 +1048,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -1192,10 +1112,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": true,
@@ -1215,10 +1131,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -1283,10 +1195,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -1306,10 +1214,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -1374,10 +1278,6 @@ window.aliensData.push(
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -1397,10 +1297,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Não Ataque",
                         "en": "Not Offense"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -1465,10 +1361,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": true,
@@ -1488,10 +1380,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Jogador Principal ou Aliado",
                         "en": "Main Player or Ally Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -1556,10 +1444,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": true,
@@ -1579,10 +1463,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Jogador Principal ou Aliado",
                         "en": "Main Player or Ally Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -1647,10 +1527,6 @@ window.aliensData.push(
                         "pt": "Não Jogador Principal ou Aliado",
                         "en": "Not Main Player or Ally"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -1670,10 +1546,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Não Jogador Principal ou Aliado",
                         "en": "Not Main Player or Ally"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -1738,10 +1610,6 @@ window.aliensData.push(
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -1761,10 +1629,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Não Jogador Principal ou Aliado",
                         "en": "Not Main Player or Ally"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -1829,10 +1693,6 @@ window.aliensData.push(
                         "pt": "Apenas Aliado",
                         "en": "Ally Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -1852,10 +1712,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -2008,10 +1864,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -2031,10 +1883,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -2207,10 +2055,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": true,
@@ -2230,10 +2074,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -2356,10 +2196,6 @@ window.aliensData.push(
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": false,
@@ -2379,10 +2215,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -2447,10 +2279,6 @@ window.aliensData.push(
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": false,
@@ -2470,10 +2298,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -2538,10 +2362,6 @@ window.aliensData.push(
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": false,
@@ -2561,10 +2381,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Defesa",
                         "en": "Defense Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -2629,10 +2445,6 @@ window.aliensData.push(
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": false,
@@ -2652,10 +2464,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -2720,10 +2528,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": true,
@@ -2743,10 +2547,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -2811,10 +2611,6 @@ window.aliensData.push(
                         "pt": "Não Ataque",
                         "en": "Not Offense"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": false,
@@ -2834,10 +2630,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
@@ -3000,10 +2792,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": false,
@@ -3023,10 +2811,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -3091,10 +2875,6 @@ window.aliensData.push(
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": true,
                         "regroup": true,
@@ -3114,10 +2894,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -3182,10 +2958,6 @@ window.aliensData.push(
                         "pt": "Apenas Jogador Principal",
                         "en": "Main Player Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -3205,10 +2977,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Como Qualquer Jogador",
                         "en": "As Any Player"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": true,
@@ -3273,10 +3041,6 @@ window.aliensData.push(
                         "pt": "Apenas Ataque",
                         "en": "Offense Only"
                     },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
-                    },
                     "phases": {
                         "startTurn": false,
                         "regroup": false,
@@ -3296,10 +3060,6 @@ window.aliensData.push(
                     "player": {
                         "pt": "Apenas Defesa",
                         "en": "Defense Only"
-                    },
-                    "choice": {
-                        "pt": "Opcional",
-                        "en": "Optional"
                     },
                     "phases": {
                         "startTurn": false,
