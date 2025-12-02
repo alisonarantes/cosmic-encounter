@@ -941,6 +941,18 @@
             } else {
                 setLikeState(alienId, 'like');
             }
+            saveFilters(); // Save state (though like state is already in localStorage, we might want to save other filters if they changed implicitly?) 
+            // Actually, saveFilters saves the *filter checkboxes*, not the individual alien likes.
+            // But wait, saveFilters saves 'liked' and 'disliked' checkboxes state.
+            // Individual alien likes are saved in setLikeState via localStorage.setItem(`alien_state_${alienId}`).
+            // So we don't strictly need saveFilters here unless we want to persist the fact that we are filtering by likes?
+            // The user request is "keep the last filter used".
+            // So if I toggle a like, I am not changing the filter *criteria*, just the data.
+            // However, if I am *filtering* by likes, and I toggle a like, the view updates.
+            // The filter state (checkboxes) doesn't change.
+            // So this might be redundant but harmless. Let's leave it out to be clean, 
+            // OR include it if we think 'state' might drift. 
+            // Actually, let's NOT include it here, as toggleLike doesn't change the global filters.
         }
 
         function toggleDislike(alienId) {
@@ -950,6 +962,7 @@
             } else {
                 setLikeState(alienId, 'dislike');
             }
+            // Same reasoning as above.
         }
 
         let currentVariant = 'aliens';
@@ -995,6 +1008,7 @@
             updateExpansionCounts();
             updateExpansionCounts();
             updateView();
+            saveFilters();
         }
 
         function selectVariant(variant) {
@@ -1013,6 +1027,7 @@
             });
 
             updateView();
+            saveFilters();
         }
 
         function updateView() {
@@ -1085,6 +1100,7 @@
             } else {
                 updateView();
             }
+            saveFilters();
         }
 
         function renderHazards() {
@@ -1759,10 +1775,82 @@
             }
         }
 
+        // --- PERSISTENCE LOGIC ---
+        function saveFilters() {
+            const state = {
+                lang: currentLang,
+                variant: currentVariant,
+                search: document.getElementById('searchInput').value,
+                expansion: document.getElementById('expansionFilter').value,
+                green: document.querySelector('.cb-green').checked,
+                yellow: document.querySelector('.cb-yellow').checked,
+                red: document.querySelector('.cb-red').checked,
+                setup: document.getElementById('checkSetup').checked,
+                components: document.getElementById('checkComponents').checked,
+                essence: document.getElementById('checkEssence').checked,
+                liked: document.getElementById('checkLiked').checked,
+                disliked: document.getElementById('checkDisliked').checked
+            };
+            localStorage.setItem('cosmic_filters_state', JSON.stringify(state));
+        }
+
+        function loadFilters() {
+            const saved = localStorage.getItem('cosmic_filters_state');
+            if (!saved) return;
+
+            try {
+                const state = JSON.parse(saved);
+
+                // Restore Language
+                if (state.lang && state.lang !== currentLang) {
+                    toggleLanguage(); // This toggles, so if we are default PT and saved is EN, it switches to EN
+                }
+
+                // Restore Variant
+                if (state.variant) {
+                    currentVariant = state.variant;
+                    // Update menu active state
+                    document.querySelectorAll('.menu-item').forEach(item => {
+                        item.classList.remove('active');
+                        if (item.innerText.toLowerCase().includes(currentVariant === 'techs' ? 'technology' : currentVariant)) {
+                            item.classList.add('active');
+                        } else if (currentVariant === 'stations' && item.innerText.toLowerCase().includes('stations')) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+
+                // Restore Inputs
+                if (state.search !== undefined) document.getElementById('searchInput').value = state.search;
+                if (state.expansion) document.getElementById('expansionFilter').value = state.expansion;
+
+                // Restore Checkboxes
+                if (state.green !== undefined) document.querySelector('.cb-green').checked = state.green;
+                if (state.yellow !== undefined) document.querySelector('.cb-yellow').checked = state.yellow;
+                if (state.red !== undefined) document.querySelector('.cb-red').checked = state.red;
+
+                if (state.setup !== undefined) document.getElementById('checkSetup').checked = state.setup;
+                if (state.components !== undefined) document.getElementById('checkComponents').checked = state.components;
+                if (state.essence !== undefined) document.getElementById('checkEssence').checked = state.essence;
+
+                if (state.liked !== undefined) document.getElementById('checkLiked').checked = state.liked;
+                if (state.disliked !== undefined) document.getElementById('checkDisliked').checked = state.disliked;
+
+            } catch (e) {
+                console.error("Error loading filters:", e);
+            }
+        }
+
         window.onload = function () {
             enrichAlienData();
             updateExpansionCounts();
-            filterAliens();
+
+            // Load filters BEFORE initial render
+            loadFilters();
+
+            // If variant is not aliens, we need to make sure the correct grid is shown
+            // updateView handles hiding/showing based on currentVariant
+            updateView();
 
             let lastScrollTop = 0;
             const header = document.querySelector('header');
